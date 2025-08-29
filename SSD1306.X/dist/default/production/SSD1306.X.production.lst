@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V3.00 build 20241204225717 
-                                                                                               Sat Aug 30 00:26:15 2025
+                                                                                               Sat Aug 30 02:22:52 2025
 
 Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1 
      1                           	processor	18F4580
@@ -683,7 +683,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    669 ;;
    670 ;; *************** function _main *****************
    671 ;; Defined at:
-   672 ;;		line 91 in file "main.c"
+   672 ;;		line 92 in file "main.c"
    673 ;; Parameters:    Size  Location     Type
    674 ;;		None
    675 ;; Auto vars:     Size  Location     Type
@@ -719,17 +719,17 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    705   000644                     _main:
    706                           	callstack 27
    707   000644                     
-   708                           ;main.c: 92:     OSCCON = 0b01100010;
+   708                           ;main.c: 93:     OSCCON = 0b01100010;
    709   000644  0E62               	movlw	98
    710   000646  6ED3               	movwf	211,c	;volatile
    711   000648                     
-   712                           ;main.c: 93:     TRISD = 0x00;
+   712                           ;main.c: 94:     TRISD = 0x00;
    713   000648  6A95               	clrf	149,c	;volatile
    714   00064A                     
-   715                           ;main.c: 94:     TRISC = 0xFF;
+   715                           ;main.c: 95:     TRISC = 0xFF;
    716   00064A  6894               	setf	148,c	;volatile
    717   00064C                     
-   718                           ;main.c: 96:     _delay((unsigned long)((500)*(4000000/4000.0)));
+   718                           ;main.c: 97:     _delay((unsigned long)((500)*(4000000/4000.0)));
    719   00064C  0E03               	movlw	3
    720   00064E  6E0C               	movwf	(??_main+1)^0,c
    721   000650  0E8A               	movlw	138
@@ -743,10 +743,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    729   00065E  2E0C               	decfsz	(??_main+1)^0,f,c
    730   000660  D7FA               	bra	u107
    731   000662                     
-   732                           ;main.c: 97:     I2C_Init();
+   732                           ;main.c: 98:     I2C_Init();
    733   000662  ECCC  F004         	call	_I2C_Init	;wreg free
    734   000666                     
-   735                           ;main.c: 98:     _delay((unsigned long)((500)*(4000000/4000.0)));
+   735                           ;main.c: 99:     _delay((unsigned long)((500)*(4000000/4000.0)));
    736   000666  0E03               	movlw	3
    737   000668  6E0C               	movwf	(??_main+1)^0,c
    738   00066A  0E8A               	movlw	138
@@ -760,10 +760,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    746   000678  2E0C               	decfsz	(??_main+1)^0,f,c
    747   00067A  D7FA               	bra	u117
    748   00067C                     
-   749                           ;main.c: 99:     SSD1306_Init();
+   749                           ;main.c: 100:     SSD1306_Init();
    750   00067C  EC87  F003         	call	_SSD1306_Init	;wreg free
    751   000680                     
-   752                           ;main.c: 100:     _delay((unsigned long)((500)*(4000000/4000.0)));
+   752                           ;main.c: 101:     _delay((unsigned long)((500)*(4000000/4000.0)));
    753   000680  0E03               	movlw	3
    754   000682  6E0C               	movwf	(??_main+1)^0,c
    755   000684  0E8A               	movlw	138
@@ -777,10 +777,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    763   000692  2E0C               	decfsz	(??_main+1)^0,f,c
    764   000694  D7FA               	bra	u127
    765   000696                     
-   766                           ;main.c: 101:     SSD1306_ClearScreen();
+   766                           ;main.c: 102:     SSD1306_ClearScreen();
    767   000696  ECDD  F003         	call	_SSD1306_ClearScreen	;wreg free
    768   00069A                     
-   769                           ;main.c: 102:     _delay((unsigned long)((500)*(4000000/4000.0)));
+   769                           ;main.c: 103:     _delay((unsigned long)((500)*(4000000/4000.0)));
    770   00069A  0E03               	movlw	3
    771   00069C  6E0C               	movwf	(??_main+1)^0,c
    772   00069E  0E8A               	movlw	138
@@ -794,7 +794,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    780   0006AC  2E0C               	decfsz	(??_main+1)^0,f,c
    781   0006AE  D7FA               	bra	u137
    782   0006B0                     
-   783                           ;main.c: 103:     SSD1306_String(11, &TestStr);
+   783                           ;main.c: 104:     SSD1306_String(11, &TestStr);
    784   0006B0  0E00               	movlw	0
    785   0006B2  6E04               	movwf	(SSD1306_String@numChar+1)^0,c
    786   0006B4  0E0B               	movlw	11
@@ -803,7 +803,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    789   0006BA  6E05               	movwf	SSD1306_String@data^0,c
    790   0006BC  EC2F  F004         	call	_SSD1306_String	;wreg free
    791   0006C0                     
-   792                           ;main.c: 104:     _delay((unsigned long)((500)*(4000000/4000.0)));
+   792                           ;main.c: 105:     _delay((unsigned long)((500)*(4000000/4000.0)));
    793   0006C0  0E03               	movlw	3
    794   0006C2  6E0C               	movwf	(??_main+1)^0,c
    795   0006C4  0E8A               	movlw	138
@@ -818,10 +818,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    804   0006D4  D7FA               	bra	u147
    805   0006D6                     l902:
    806                           
-   807                           ;main.c: 107:         LATDbits.LATD1 = 0;
+   807                           ;main.c: 108:         LATDbits.LATD1 = 0;
    808   0006D6  928C               	bcf	140,1,c	;volatile
    809   0006D8                     
-   810                           ;main.c: 108:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   810                           ;main.c: 109:         _delay((unsigned long)((1000)*(4000000/4000.0)));
    811   0006D8  0E06               	movlw	6
    812   0006DA  6E0C               	movwf	(??_main+1)^0,c
    813   0006DC  0E13               	movlw	19
@@ -835,10 +835,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    821   0006EA  2E0C               	decfsz	(??_main+1)^0,f,c
    822   0006EC  D7FA               	bra	u157
    823   0006EE                     
-   824                           ;main.c: 109:         LATDbits.LATD1 = 1;
+   824                           ;main.c: 110:         LATDbits.LATD1 = 1;
    825   0006EE  828C               	bsf	140,1,c	;volatile
    826   0006F0                     
-   827                           ;main.c: 110:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   827                           ;main.c: 111:         _delay((unsigned long)((1000)*(4000000/4000.0)));
    828   0006F0  0E06               	movlw	6
    829   0006F2  6E0C               	movwf	(??_main+1)^0,c
    830   0006F4  0E13               	movlw	19
@@ -858,7 +858,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    844                           
    845 ;; *************** function _SSD1306_String *****************
    846 ;; Defined at:
-   847 ;;		line 187 in file "main.c"
+   847 ;;		line 188 in file "main.c"
    848 ;; Parameters:    Size  Location     Type
    849 ;;  numChar         2    2[COMRAM] int 
    850 ;;  data            1    4[COMRAM] PTR const unsigned char 
@@ -896,45 +896,45 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    882   00085E                     _SSD1306_String:
    883                           	callstack 28
    884   00085E                     
-   885                           ;main.c: 188:  I2C_Start();
+   885                           ;main.c: 189:  I2C_Start();
    886   00085E  ECBA  F004         	call	_I2C_Start	;wreg free
    887                           
-   888                           ;main.c: 189:  I2C_Write(0x78);
+   888                           ;main.c: 190:  I2C_Write(0x78);
    889   000862  0E78               	movlw	120
    890   000864  ECA1  F004         	call	_I2C_Write
    891                           
-   892                           ;main.c: 190:  I2C_Write(0x00);
+   892                           ;main.c: 191:  I2C_Write(0x00);
    893   000868  0E00               	movlw	0
    894   00086A  ECA1  F004         	call	_I2C_Write
    895                           
-   896                           ;main.c: 191:  I2C_Write(0x21);
+   896                           ;main.c: 192:  I2C_Write(0x21);
    897   00086E  0E21               	movlw	33
    898   000870  ECA1  F004         	call	_I2C_Write
    899                           
-   900                           ;main.c: 192:  I2C_Write(0);
+   900                           ;main.c: 193:  I2C_Write(0);
    901   000874  0E00               	movlw	0
    902   000876  ECA1  F004         	call	_I2C_Write
    903                           
-   904                           ;main.c: 193:  I2C_Write(127);
+   904                           ;main.c: 194:  I2C_Write(127);
    905   00087A  0E7F               	movlw	127
    906   00087C  ECA1  F004         	call	_I2C_Write
    907                           
-   908                           ;main.c: 194:  I2C_Write(0x22);
+   908                           ;main.c: 195:  I2C_Write(0x22);
    909   000880  0E22               	movlw	34
    910   000882  ECA1  F004         	call	_I2C_Write
    911                           
-   912                           ;main.c: 195:  I2C_Write(0);
+   912                           ;main.c: 196:  I2C_Write(0);
    913   000886  0E00               	movlw	0
    914   000888  ECA1  F004         	call	_I2C_Write
    915                           
-   916                           ;main.c: 196:  I2C_Write(7);
+   916                           ;main.c: 197:  I2C_Write(7);
    917   00088C  0E07               	movlw	7
    918   00088E  ECA1  F004         	call	_I2C_Write
    919                           
-   920                           ;main.c: 197:  I2C_Stop();
+   920                           ;main.c: 198:  I2C_Stop();
    921   000892  ECAF  F004         	call	_I2C_Stop	;wreg free
    922   000896                     
-   923                           ;main.c: 199:  for (int i=0; i<(numChar*6); i++){
+   923                           ;main.c: 200:  for (int i=0; i<(numChar*6); i++){
    924   000896  0E00               	movlw	0
    925   000898  6E0A               	movwf	(SSD1306_String@i+1)^0,c
    926   00089A  0E00               	movlw	0
@@ -942,18 +942,18 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    928   00089E  EF66  F004         	goto	l876
    929   0008A2                     l868:
    930                           
-   931                           ;main.c: 200:   I2C_Start();
+   931                           ;main.c: 201:   I2C_Start();
    932   0008A2  ECBA  F004         	call	_I2C_Start	;wreg free
    933                           
-   934                           ;main.c: 201:   I2C_Write(0x78);
+   934                           ;main.c: 202:   I2C_Write(0x78);
    935   0008A6  0E78               	movlw	120
    936   0008A8  ECA1  F004         	call	_I2C_Write
    937                           
-   938                           ;main.c: 202:   I2C_Write(0x40);
+   938                           ;main.c: 203:   I2C_Write(0x40);
    939   0008AC  0E40               	movlw	64
    940   0008AE  ECA1  F004         	call	_I2C_Write
    941   0008B2                     
-   942                           ;main.c: 203:   I2C_Write(data[i]);
+   942                           ;main.c: 204:   I2C_Write(data[i]);
    943   0008B2  5005               	movf	SSD1306_String@data^0,w,c
    944   0008B4  2409               	addwf	SSD1306_String@i^0,w,c
    945   0008B6  6E06               	movwf	??_SSD1306_String^0,c
@@ -968,10 +968,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    954   0008BE  50F5               	movf	tablat,w,c
    955   0008C0  ECA1  F004         	call	_I2C_Write
    956   0008C4                     
-   957                           ;main.c: 204:   I2C_Stop();
+   957                           ;main.c: 205:   I2C_Stop();
    958   0008C4  ECAF  F004         	call	_I2C_Stop	;wreg free
    959   0008C8                     
-   960                           ;main.c: 205:  }
+   960                           ;main.c: 206:  }
    961   0008C8  4A09               	infsnz	SSD1306_String@i^0,f,c
    962   0008CA  2A0A               	incf	(SSD1306_String@i+1)^0,f,c
    963   0008CC                     l876:
@@ -1002,7 +1002,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
    988                           
    989 ;; *************** function _SSD1306_Init *****************
    990 ;; Defined at:
-   991 ;;		line 153 in file "main.c"
+   991 ;;		line 154 in file "main.c"
    992 ;; Parameters:    Size  Location     Type
    993 ;;		None
    994 ;; Auto vars:     Size  Location     Type
@@ -1039,118 +1039,118 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1025   00070E                     _SSD1306_Init:
   1026                           	callstack 27
   1027   00070E                     
-  1028                           ;main.c: 154:  I2C_Start();
+  1028                           ;main.c: 155:  I2C_Start();
   1029   00070E  ECBA  F004         	call	_I2C_Start	;wreg free
   1030                           
-  1031                           ;main.c: 155:  I2C_Write(0x78);
+  1031                           ;main.c: 156:  I2C_Write(0x78);
   1032   000712  0E78               	movlw	120
   1033   000714  ECA1  F004         	call	_I2C_Write
   1034                           
-  1035                           ;main.c: 156:  I2C_Write(0x00);
+  1035                           ;main.c: 157:  I2C_Write(0x00);
   1036   000718  0E00               	movlw	0
   1037   00071A  ECA1  F004         	call	_I2C_Write
   1038                           
-  1039                           ;main.c: 158:  SSD1306_WriteCommand(0xAE);
+  1039                           ;main.c: 159:  SSD1306_WriteCommand(0xAE);
   1040   00071E  0EAE               	movlw	174
   1041   000720  EC92  F004         	call	_SSD1306_WriteCommand
   1042                           
-  1043                           ;main.c: 159:  SSD1306_WriteCommand(0xD5);
+  1043                           ;main.c: 160:  SSD1306_WriteCommand(0xD5);
   1044   000724  0ED5               	movlw	213
   1045   000726  EC92  F004         	call	_SSD1306_WriteCommand
   1046                           
-  1047                           ;main.c: 160:  SSD1306_WriteCommand(0x80);
+  1047                           ;main.c: 161:  SSD1306_WriteCommand(0x80);
   1048   00072A  0E80               	movlw	128
   1049   00072C  EC92  F004         	call	_SSD1306_WriteCommand
   1050                           
-  1051                           ;main.c: 161:  SSD1306_WriteCommand(0xA8);
+  1051                           ;main.c: 162:  SSD1306_WriteCommand(0xA8);
   1052   000730  0EA8               	movlw	168
   1053   000732  EC92  F004         	call	_SSD1306_WriteCommand
   1054                           
-  1055                           ;main.c: 162:  SSD1306_WriteCommand(0x3F);
+  1055                           ;main.c: 163:  SSD1306_WriteCommand(0x3F);
   1056   000736  0E3F               	movlw	63
   1057   000738  EC92  F004         	call	_SSD1306_WriteCommand
   1058                           
-  1059                           ;main.c: 163:  SSD1306_WriteCommand(0xD3);
+  1059                           ;main.c: 164:  SSD1306_WriteCommand(0xD3);
   1060   00073C  0ED3               	movlw	211
   1061   00073E  EC92  F004         	call	_SSD1306_WriteCommand
   1062                           
-  1063                           ;main.c: 164:  SSD1306_WriteCommand(0x00);
+  1063                           ;main.c: 165:  SSD1306_WriteCommand(0x00);
   1064   000742  0E00               	movlw	0
   1065   000744  EC92  F004         	call	_SSD1306_WriteCommand
   1066                           
-  1067                           ;main.c: 165:  SSD1306_WriteCommand(0x40);
+  1067                           ;main.c: 166:  SSD1306_WriteCommand(0x40);
   1068   000748  0E40               	movlw	64
   1069   00074A  EC92  F004         	call	_SSD1306_WriteCommand
   1070                           
-  1071                           ;main.c: 166:  SSD1306_WriteCommand(0x8D);
+  1071                           ;main.c: 167:  SSD1306_WriteCommand(0x8D);
   1072   00074E  0E8D               	movlw	141
   1073   000750  EC92  F004         	call	_SSD1306_WriteCommand
   1074                           
-  1075                           ;main.c: 167:  SSD1306_WriteCommand(0x14);
+  1075                           ;main.c: 168:  SSD1306_WriteCommand(0x14);
   1076   000754  0E14               	movlw	20
   1077   000756  EC92  F004         	call	_SSD1306_WriteCommand
   1078                           
-  1079                           ;main.c: 168:  SSD1306_WriteCommand(0x20);
+  1079                           ;main.c: 169:  SSD1306_WriteCommand(0x20);
   1080   00075A  0E20               	movlw	32
   1081   00075C  EC92  F004         	call	_SSD1306_WriteCommand
   1082                           
-  1083                           ;main.c: 169:  SSD1306_WriteCommand(0x00);
+  1083                           ;main.c: 170:  SSD1306_WriteCommand(0x00);
   1084   000760  0E00               	movlw	0
   1085   000762  EC92  F004         	call	_SSD1306_WriteCommand
   1086                           
-  1087                           ;main.c: 170:  SSD1306_WriteCommand(0xA1);
+  1087                           ;main.c: 171:  SSD1306_WriteCommand(0xA1);
   1088   000766  0EA1               	movlw	161
   1089   000768  EC92  F004         	call	_SSD1306_WriteCommand
   1090                           
-  1091                           ;main.c: 171:  SSD1306_WriteCommand(0xC8);
+  1091                           ;main.c: 172:  SSD1306_WriteCommand(0xC8);
   1092   00076C  0EC8               	movlw	200
   1093   00076E  EC92  F004         	call	_SSD1306_WriteCommand
   1094                           
-  1095                           ;main.c: 172:  SSD1306_WriteCommand(0xDA);
+  1095                           ;main.c: 173:  SSD1306_WriteCommand(0xDA);
   1096   000772  0EDA               	movlw	218
   1097   000774  EC92  F004         	call	_SSD1306_WriteCommand
   1098                           
-  1099                           ;main.c: 173:  SSD1306_WriteCommand(0x12);
+  1099                           ;main.c: 174:  SSD1306_WriteCommand(0x12);
   1100   000778  0E12               	movlw	18
   1101   00077A  EC92  F004         	call	_SSD1306_WriteCommand
   1102                           
-  1103                           ;main.c: 174:  SSD1306_WriteCommand(0x81);
+  1103                           ;main.c: 175:  SSD1306_WriteCommand(0x81);
   1104   00077E  0E81               	movlw	129
   1105   000780  EC92  F004         	call	_SSD1306_WriteCommand
   1106                           
-  1107                           ;main.c: 175:  SSD1306_WriteCommand(0x7F);
+  1107                           ;main.c: 176:  SSD1306_WriteCommand(0x7F);
   1108   000784  0E7F               	movlw	127
   1109   000786  EC92  F004         	call	_SSD1306_WriteCommand
   1110                           
-  1111                           ;main.c: 176:  SSD1306_WriteCommand(0xD9);
+  1111                           ;main.c: 177:  SSD1306_WriteCommand(0xD9);
   1112   00078A  0ED9               	movlw	217
   1113   00078C  EC92  F004         	call	_SSD1306_WriteCommand
   1114                           
-  1115                           ;main.c: 177:  SSD1306_WriteCommand(0xF1);
+  1115                           ;main.c: 178:  SSD1306_WriteCommand(0xF1);
   1116   000790  0EF1               	movlw	241
   1117   000792  EC92  F004         	call	_SSD1306_WriteCommand
   1118                           
-  1119                           ;main.c: 178:  SSD1306_WriteCommand(0xDB);
+  1119                           ;main.c: 179:  SSD1306_WriteCommand(0xDB);
   1120   000796  0EDB               	movlw	219
   1121   000798  EC92  F004         	call	_SSD1306_WriteCommand
   1122                           
-  1123                           ;main.c: 179:  SSD1306_WriteCommand(0x40);
+  1123                           ;main.c: 180:  SSD1306_WriteCommand(0x40);
   1124   00079C  0E40               	movlw	64
   1125   00079E  EC92  F004         	call	_SSD1306_WriteCommand
   1126                           
-  1127                           ;main.c: 180:  SSD1306_WriteCommand(0xA4);
+  1127                           ;main.c: 181:  SSD1306_WriteCommand(0xA4);
   1128   0007A2  0EA4               	movlw	164
   1129   0007A4  EC92  F004         	call	_SSD1306_WriteCommand
   1130                           
-  1131                           ;main.c: 181:  SSD1306_WriteCommand(0xA6);
+  1131                           ;main.c: 182:  SSD1306_WriteCommand(0xA6);
   1132   0007A8  0EA6               	movlw	166
   1133   0007AA  EC92  F004         	call	_SSD1306_WriteCommand
   1134                           
-  1135                           ;main.c: 182:  SSD1306_WriteCommand(0xAF);
+  1135                           ;main.c: 183:  SSD1306_WriteCommand(0xAF);
   1136   0007AE  0EAF               	movlw	175
   1137   0007B0  EC92  F004         	call	_SSD1306_WriteCommand
   1138                           
-  1139                           ;main.c: 184:  I2C_Stop();
+  1139                           ;main.c: 185:  I2C_Stop();
   1140   0007B4  ECAF  F004         	call	_I2C_Stop	;wreg free
   1141   0007B8  0012               	return		;funcret
   1142   0007BA                     __end_of_SSD1306_Init:
@@ -1158,7 +1158,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1144                           
   1145 ;; *************** function _SSD1306_WriteCommand *****************
   1146 ;; Defined at:
-  1147 ;;		line 145 in file "main.c"
+  1147 ;;		line 146 in file "main.c"
   1148 ;; Parameters:    Size  Location     Type
   1149 ;;  cmd             1    wreg     unsigned char 
   1150 ;; Auto vars:     Size  Location     Type
@@ -1198,22 +1198,22 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1184                           ;SSD1306_WriteCommand@cmd stored from wreg
   1185   000924  6E03               	movwf	SSD1306_WriteCommand@cmd^0,c
   1186   000926                     
-  1187                           ;main.c: 146:  I2C_Start();
+  1187                           ;main.c: 147:  I2C_Start();
   1188   000926  ECBA  F004         	call	_I2C_Start	;wreg free
   1189                           
-  1190                           ;main.c: 147:  I2C_Write(0x78);
+  1190                           ;main.c: 148:  I2C_Write(0x78);
   1191   00092A  0E78               	movlw	120
   1192   00092C  ECA1  F004         	call	_I2C_Write
   1193                           
-  1194                           ;main.c: 148:  I2C_Write(0x00);
+  1194                           ;main.c: 149:  I2C_Write(0x00);
   1195   000930  0E00               	movlw	0
   1196   000932  ECA1  F004         	call	_I2C_Write
   1197                           
-  1198                           ;main.c: 149:  I2C_Write(cmd);
+  1198                           ;main.c: 150:  I2C_Write(cmd);
   1199   000936  5003               	movf	SSD1306_WriteCommand@cmd^0,w,c
   1200   000938  ECA1  F004         	call	_I2C_Write
   1201                           
-  1202                           ;main.c: 150:  I2C_Stop();
+  1202                           ;main.c: 151:  I2C_Stop();
   1203   00093C  ECAF  F004         	call	_I2C_Stop	;wreg free
   1204   000940  0012               	return		;funcret
   1205   000942                     __end_of_SSD1306_WriteCommand:
@@ -1221,7 +1221,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1207                           
   1208 ;; *************** function _SSD1306_ClearScreen *****************
   1209 ;; Defined at:
-  1210 ;;		line 208 in file "main.c"
+  1210 ;;		line 209 in file "main.c"
   1211 ;; Parameters:    Size  Location     Type
   1212 ;;		None
   1213 ;; Auto vars:     Size  Location     Type
@@ -1258,77 +1258,77 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1244   0007BA                     _SSD1306_ClearScreen:
   1245                           	callstack 28
   1246   0007BA                     
-  1247                           ;main.c: 209:  I2C_Start();
+  1247                           ;main.c: 210:  I2C_Start();
   1248   0007BA  ECBA  F004         	call	_I2C_Start	;wreg free
   1249                           
-  1250                           ;main.c: 210:  I2C_Write(0x78);
+  1250                           ;main.c: 211:  I2C_Write(0x78);
   1251   0007BE  0E78               	movlw	120
   1252   0007C0  ECA1  F004         	call	_I2C_Write
   1253                           
-  1254                           ;main.c: 211:  I2C_Write(0x00);
+  1254                           ;main.c: 212:  I2C_Write(0x00);
   1255   0007C4  0E00               	movlw	0
   1256   0007C6  ECA1  F004         	call	_I2C_Write
   1257                           
-  1258                           ;main.c: 212:  I2C_Write(0x21);
+  1258                           ;main.c: 213:  I2C_Write(0x21);
   1259   0007CA  0E21               	movlw	33
   1260   0007CC  ECA1  F004         	call	_I2C_Write
   1261                           
-  1262                           ;main.c: 213:  I2C_Write(0);
+  1262                           ;main.c: 214:  I2C_Write(0);
   1263   0007D0  0E00               	movlw	0
   1264   0007D2  ECA1  F004         	call	_I2C_Write
   1265                           
-  1266                           ;main.c: 214:  I2C_Write(127);
+  1266                           ;main.c: 215:  I2C_Write(127);
   1267   0007D6  0E7F               	movlw	127
   1268   0007D8  ECA1  F004         	call	_I2C_Write
   1269                           
-  1270                           ;main.c: 215:  I2C_Write(0x22);
+  1270                           ;main.c: 216:  I2C_Write(0x22);
   1271   0007DC  0E22               	movlw	34
   1272   0007DE  ECA1  F004         	call	_I2C_Write
   1273                           
-  1274                           ;main.c: 216:  I2C_Write(0);
+  1274                           ;main.c: 217:  I2C_Write(0);
   1275   0007E2  0E00               	movlw	0
   1276   0007E4  ECA1  F004         	call	_I2C_Write
   1277                           
-  1278                           ;main.c: 217:  I2C_Write(7);
+  1278                           ;main.c: 218:  I2C_Write(7);
   1279   0007E8  0E07               	movlw	7
   1280   0007EA  ECA1  F004         	call	_I2C_Write
   1281                           
-  1282                           ;main.c: 218:  I2C_Stop();
+  1282                           ;main.c: 219:  I2C_Stop();
   1283   0007EE  ECAF  F004         	call	_I2C_Stop	;wreg free
   1284   0007F2                     
-  1285                           ;main.c: 220:  for (int i=0; i<8; i++) {
+  1285                           ;main.c: 221:  for (int i=0; i<8; i++) {
   1286   0007F2  0E00               	movlw	0
   1287   0007F4  6E04               	movwf	(SSD1306_ClearScreen@i+1)^0,c
   1288   0007F6  0E00               	movlw	0
   1289   0007F8  6E03               	movwf	SSD1306_ClearScreen@i^0,c
   1290   0007FA                     l802:
   1291                           
-  1292                           ;main.c: 221:   for (int j=0; j<128; j++) {
+  1292                           ;main.c: 222:   for (int j=0; j<128; j++) {
   1293   0007FA  0E00               	movlw	0
   1294   0007FC  6E06               	movwf	(SSD1306_ClearScreen@j+1)^0,c
   1295   0007FE  0E00               	movlw	0
   1296   000800  6E05               	movwf	SSD1306_ClearScreen@j^0,c
   1297   000802                     l808:
   1298                           
-  1299                           ;main.c: 222:    I2C_Start();
+  1299                           ;main.c: 223:    I2C_Start();
   1300   000802  ECBA  F004         	call	_I2C_Start	;wreg free
   1301                           
-  1302                           ;main.c: 223:    I2C_Write(0x78);
+  1302                           ;main.c: 224:    I2C_Write(0x78);
   1303   000806  0E78               	movlw	120
   1304   000808  ECA1  F004         	call	_I2C_Write
   1305                           
-  1306                           ;main.c: 224:    I2C_Write(0x40);
+  1306                           ;main.c: 225:    I2C_Write(0x40);
   1307   00080C  0E40               	movlw	64
   1308   00080E  ECA1  F004         	call	_I2C_Write
   1309                           
-  1310                           ;main.c: 225:    I2C_Write(0x00);
+  1310                           ;main.c: 226:    I2C_Write(0x00);
   1311   000812  0E00               	movlw	0
   1312   000814  ECA1  F004         	call	_I2C_Write
   1313                           
-  1314                           ;main.c: 226:    I2C_Stop();
+  1314                           ;main.c: 227:    I2C_Stop();
   1315   000818  ECAF  F004         	call	_I2C_Stop	;wreg free
   1316   00081C                     
-  1317                           ;main.c: 227:   }
+  1317                           ;main.c: 228:   }
   1318   00081C  4A05               	infsnz	SSD1306_ClearScreen@j^0,f,c
   1319   00081E  2A06               	incf	(SSD1306_ClearScreen@j+1)^0,f,c
   1320   000820  BE06               	btfsc	(SSD1306_ClearScreen@j+1)^0,7,c
@@ -1344,7 +1344,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1330   000838  EF01  F004         	goto	l808
   1331   00083C                     u60:
   1332   00083C                     
-  1333                           ;main.c: 228:  }
+  1333                           ;main.c: 229:  }
   1334   00083C  4A03               	infsnz	SSD1306_ClearScreen@i^0,f,c
   1335   00083E  2A04               	incf	(SSD1306_ClearScreen@i+1)^0,f,c
   1336   000840  BE04               	btfsc	(SSD1306_ClearScreen@i+1)^0,7,c
@@ -1365,7 +1365,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1351                           
   1352 ;; *************** function _I2C_Write *****************
   1353 ;; Defined at:
-  1354 ;;		line 138 in file "main.c"
+  1354 ;;		line 139 in file "main.c"
   1355 ;; Parameters:    Size  Location     Type
   1356 ;;  data            1    wreg     unsigned char 
   1357 ;; Auto vars:     Size  Location     Type
@@ -1406,10 +1406,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1392                           ;I2C_Write@data stored from wreg
   1393   000942  6E02               	movwf	I2C_Write@data^0,c
   1394   000944                     
-  1395                           ;main.c: 139:  I2C_Hold();
+  1395                           ;main.c: 140:  I2C_Hold();
   1396   000944  EC7F  F004         	call	_I2C_Hold	;wreg free
   1397   000948                     
-  1398                           ;main.c: 140:  SSPBUF = data;
+  1398                           ;main.c: 141:  SSPBUF = data;
   1399   000948  C002  FFC9         	movff	I2C_Write@data,4041	;volatile
   1400   00094C                     l68:
   1401   00094C  A69E               	btfss	3998,3,c	;volatile
@@ -1419,7 +1419,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1405   000956  EFA6  F004         	goto	l68
   1406   00095A                     u50:
   1407   00095A                     
-  1408                           ;main.c: 142:  SSPIF = 0;
+  1408                           ;main.c: 143:  SSPIF = 0;
   1409   00095A  969E               	bcf	3998,3,c	;volatile
   1410   00095C  0012               	return		;funcret
   1411   00095E                     __end_of_I2C_Write:
@@ -1427,7 +1427,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1413                           
   1414 ;; *************** function _I2C_Stop *****************
   1415 ;; Defined at:
-  1416 ;;		line 132 in file "main.c"
+  1416 ;;		line 133 in file "main.c"
   1417 ;; Parameters:    Size  Location     Type
   1418 ;;		None
   1419 ;; Auto vars:     Size  Location     Type
@@ -1464,10 +1464,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1450   00095E                     _I2C_Stop:
   1451                           	callstack 28
   1452   00095E                     
-  1453                           ;main.c: 133:  I2C_Hold();
+  1453                           ;main.c: 134:  I2C_Hold();
   1454   00095E  EC7F  F004         	call	_I2C_Hold	;wreg free
   1455   000962                     
-  1456                           ;main.c: 134:  PEN = 1;
+  1456                           ;main.c: 135:  PEN = 1;
   1457   000962  84C5               	bsf	4037,2,c	;volatile
   1458   000964                     l62:
   1459   000964  B4C5               	btfsc	4037,2,c	;volatile
@@ -1482,7 +1482,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1468                           
   1469 ;; *************** function _I2C_Start *****************
   1470 ;; Defined at:
-  1471 ;;		line 126 in file "main.c"
+  1471 ;;		line 127 in file "main.c"
   1472 ;; Parameters:    Size  Location     Type
   1473 ;;		None
   1474 ;; Auto vars:     Size  Location     Type
@@ -1519,10 +1519,10 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1505   000974                     _I2C_Start:
   1506                           	callstack 28
   1507   000974                     
-  1508                           ;main.c: 127:  I2C_Hold();
+  1508                           ;main.c: 128:  I2C_Hold();
   1509   000974  EC7F  F004         	call	_I2C_Hold	;wreg free
   1510   000978                     
-  1511                           ;main.c: 128:  SEN = 1;
+  1511                           ;main.c: 129:  SEN = 1;
   1512   000978  80C5               	bsf	4037,0,c	;volatile
   1513   00097A                     l56:
   1514   00097A  B0C5               	btfsc	4037,0,c	;volatile
@@ -1537,7 +1537,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1523                           
   1524 ;; *************** function _I2C_Hold *****************
   1525 ;; Defined at:
-  1526 ;;		line 122 in file "main.c"
+  1526 ;;		line 123 in file "main.c"
   1527 ;; Parameters:    Size  Location     Type
   1528 ;;		None
   1529 ;; Auto vars:     Size  Location     Type
@@ -1593,7 +1593,7 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1579                           
   1580 ;; *************** function _I2C_Init *****************
   1581 ;; Defined at:
-  1582 ;;		line 115 in file "main.c"
+  1582 ;;		line 116 in file "main.c"
   1583 ;; Parameters:    Size  Location     Type
   1584 ;;		None
   1585 ;; Auto vars:     Size  Location     Type
@@ -1626,18 +1626,18 @@ Microchip MPLAB XC8 C Compiler v3.00 (Free license) build 20241204225717 Og1
   1612   000998                     _I2C_Init:
   1613                           	callstack 30
   1614   000998                     
-  1615                           ;main.c: 116:  SSPCON1 = 0b00101000;
+  1615                           ;main.c: 117:  SSPCON1 = 0b00101000;
   1616   000998  0E28               	movlw	40
   1617   00099A  6EC6               	movwf	198,c	;volatile
   1618   00099C                     
-  1619                           ;main.c: 117:  SSPCON2 = 0b00000000;
+  1619                           ;main.c: 118:  SSPCON2 = 0b00000000;
   1620   00099C  6AC5               	clrf	197,c	;volatile
   1621                           
-  1622                           ;main.c: 118:  SSPADD = ((4000000 / 4) / 100000) - 1;
+  1622                           ;main.c: 119:  SSPADD = ((4000000 / 4) / 100000) - 1;
   1623   00099E  0E09               	movlw	9
   1624   0009A0  6EC8               	movwf	200,c	;volatile
   1625   0009A2                     
-  1626                           ;main.c: 119:  SSPSTAT = 0b00000000;
+  1626                           ;main.c: 120:  SSPSTAT = 0b00000000;
   1627   0009A2  6AC7               	clrf	199,c	;volatile
   1628   0009A4  0012               	return		;funcret
   1629   0009A6                     __end_of_I2C_Init:
@@ -1981,7 +1981,7 @@ DATA                 0      0      12      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V3.00 build 20241204225717 
-Symbol Table                                                                                   Sat Aug 30 00:26:15 2025
+Symbol Table                                                                                   Sat Aug 30 02:22:52 2025
 
                           l53 0922                            l62 0964                            l70 095A  
                           l47 09A4                            l71 095C                            l56 097A  
