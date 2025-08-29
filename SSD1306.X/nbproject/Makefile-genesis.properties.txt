@@ -1,0 +1,13 @@
+#
+#Mon Dec 23 02:33:19 IST 2024
+default.languagetoolchain.version=2.50
+default.Pack.dfplocation=/opt/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159
+conf.ids=default
+default.languagetoolchain.dir=/opt/microchip/xc8/v2.50/bin
+host.id=1hp4-jf06-lr
+default.platformTool.md5=null
+configurations-xml=f1219b258b7f331eb82c10196717b147
+com-microchip-mplab-nbide-embedded-makeproject-MakeProject.md5=f612087c95360c842296d189edfe3321
+default.com-microchip-mplab-nbide-toolchain-xc8-XC8LanguageToolchain.md5=bf89cdcdd6c0a49174fe4b605ef2b42d
+proj.dir=/home/seshadri/MPLABXProjects/SSD1306.X
+host.platform=linux
