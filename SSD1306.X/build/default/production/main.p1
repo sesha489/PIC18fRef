@@ -1,46 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"31559 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 31559: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"27503
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 27503: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"27281
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 27281: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
-"69 main.c
-[; ;main.c: 69: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"74
-[; ;main.c: 74: void SSD1306_Init(void);
-[v _SSD1306_Init `(v ~T0 @X0 0 ef ]
-"77
-[; ;main.c: 77: void SSD1306_ClearScreen(void);
-[v _SSD1306_ClearScreen `(v ~T0 @X0 0 ef ]
-"76
-[; ;main.c: 76: void SSD1306_String(int numChar, const unsigned char *data);
-[v _SSD1306_String `(v ~T0 @X0 0 ef2`i`*Cuc ]
-"26679 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26679:     struct {
-[s S854 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S854 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"26689
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26689:     struct {
-[s S855 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S855 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"26678
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26678: typedef union {
-[u S853 `S854 1 `S855 1 ]
-[n S853 . . . ]
-"26700
-[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26700: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-[v _LATDbits `VS853 ~T0 @X0 0 e@3980 ]
-"30475
+"30475 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30475: extern volatile unsigned char SSPCON1 __attribute__((address(0xFC6)));
 [v _SSPCON1 `Vuc ~T0 @X0 0 e@4038 ]
 "30413
@@ -64,6 +23,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38905
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 38905: extern volatile __bit SSPIF __attribute__((address(0x7CF3)));
 [v _SSPIF `Vb ~T0 @X0 0 e@31987 ]
+[v F374 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+[v __delay `JF374 ~T0 @X0 0 e ]
+[p i __delay ]
+"27 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h
+[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+[p mainexit ]
+"31559 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 31559: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"27503
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 27503: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"27281
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 27281: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"26679
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26679:     struct {
+[s S855 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S855 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"26689
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26689:     struct {
+[s S856 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S856 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"26678
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26678: typedef union {
+[u S854 `S855 1 `S856 1 ]
+[n S854 . . . ]
+"26700
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 26700: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
+[v _LATDbits `VS854 ~T0 @X0 0 e@3980 ]
 "7 main.c
 [p x OSC  =  IRCIO67     ]
 "8
@@ -130,6 +121,686 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "59
 [p x EBTRB  =  OFF       ]
+[v F173 `Cuc ~T0 @X0 -> 5 `i t ]
+"17 ./font.h
+[; ;./font.h: 17: const char TEXT5x8[96][5] ={0x00, 0x00, 0x00, 0x00, 0x00,
+[v _TEXT5x8 `F173 ~T0 @X0 -> 96 `i e ]
+[i _TEXT5x8
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 95 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 20 `i `uc
+-> -> 62 `i `uc
+-> -> 20 `i `uc
+-> -> 62 `i `uc
+-> -> 20 `i `uc
+..
+:U ..
+-> -> 36 `i `uc
+-> -> 42 `i `uc
+-> -> 127 `i `uc
+-> -> 42 `i `uc
+-> -> 18 `i `uc
+..
+:U ..
+-> -> 67 `i `uc
+-> -> 51 `i `uc
+-> -> 8 `i `uc
+-> -> 102 `i `uc
+-> -> 97 `i `uc
+..
+:U ..
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 85 `i `uc
+-> -> 34 `i `uc
+-> -> 80 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 28 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 80 `i `uc
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 96 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 81 `i `uc
+-> -> 73 `i `uc
+-> -> 69 `i `uc
+-> -> 62 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 66 `i `uc
+-> -> 97 `i `uc
+-> -> 81 `i `uc
+-> -> 73 `i `uc
+-> -> 70 `i `uc
+..
+:U ..
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+..
+:U ..
+-> -> 24 `i `uc
+-> -> 20 `i `uc
+-> -> 18 `i `uc
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+..
+:U ..
+-> -> 39 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 57 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 50 `i `uc
+..
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 113 `i `uc
+-> -> 9 `i `uc
+-> -> 7 `i `uc
+..
+:U ..
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+..
+:U ..
+-> -> 38 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 62 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 54 `i `uc
+-> -> 54 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 86 `i `uc
+-> -> 54 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+..
+:U ..
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 81 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 89 `i `uc
+-> -> 85 `i `uc
+-> -> 94 `i `uc
+..
+:U ..
+-> -> 126 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 126 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 65 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 73 `i `uc
+-> -> 58 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 48 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 2 `i `uc
+-> -> 12 `i `uc
+-> -> 2 `i `uc
+-> -> 127 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+..
+:U ..
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+..
+:U ..
+-> -> 30 `i `uc
+-> -> 33 `i `uc
+-> -> 33 `i `uc
+-> -> 33 `i `uc
+-> -> 94 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 118 `i `uc
+..
+:U ..
+-> -> 38 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 50 `i `uc
+..
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 127 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 63 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+..
+:U ..
+-> -> 31 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 31 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+-> -> 127 `i `uc
+..
+:U ..
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 28 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+..
+:U ..
+-> -> 7 `i `uc
+-> -> 8 `i `uc
+-> -> 112 `i `uc
+-> -> 8 `i `uc
+-> -> 7 `i `uc
+..
+:U ..
+-> -> 97 `i `uc
+-> -> 81 `i `uc
+-> -> 73 `i `uc
+-> -> 69 `i `uc
+-> -> 67 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+..
+:U ..
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 32 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 120 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+..
+:U ..
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+..
+:U ..
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 127 `i `uc
+..
+:U ..
+-> -> 56 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 24 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 126 `i `uc
+-> -> 5 `i `uc
+-> -> 5 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 60 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 68 `i `uc
+-> -> 125 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 68 `i `uc
+-> -> 61 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 124 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+..
+:U ..
+-> -> 124 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+..
+:U ..
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+..
+:U ..
+-> -> 124 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 124 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 124 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+..
+:U ..
+-> -> 72 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 32 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 63 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+..
+:U ..
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 124 `i `uc
+..
+:U ..
+-> -> 28 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 28 `i `uc
+..
+:U ..
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 48 `i `uc
+-> -> 64 `i `uc
+-> -> 60 `i `uc
+..
+:U ..
+-> -> 68 `i `uc
+-> -> 40 `i `uc
+-> -> 16 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+..
+:U ..
+-> -> 12 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 60 `i `uc
+..
+:U ..
+-> -> 68 `i `uc
+-> -> 100 `i `uc
+-> -> 84 `i `uc
+-> -> 76 `i `uc
+-> -> 68 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 54 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 54 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 255 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 255 `i `uc
+..
+..
+]
 "54 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 54: __asm("RXF6SIDH equ 0D60h");
 [; <" RXF6SIDH equ 0D60h ;# ">
@@ -1369,543 +2040,482 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32464
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 32464: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"80 main.c
-[; ;main.c: 80: const unsigned char TestStr[66] = {0x00, 0x7F, 0x08, 0x08, 0x08, 0x7F,
-[v _TestStr `Cuc ~T0 @X0 -> 66 `i e ]
-[i _TestStr
-:U ..
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 127 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 73 `i `uc
--> -> 73 `i `uc
--> -> 73 `i `uc
--> -> 65 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 62 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 62 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 32 `i `uc
--> -> 16 `i `uc
--> -> 32 `i `uc
--> -> 127 `i `uc
--> -> 0 `i `uc
--> -> 62 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 62 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 9 `i `uc
--> -> 9 `i `uc
--> -> 9 `i `uc
--> -> 118 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 0 `i `uc
--> -> 127 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 62 `i `uc
-..
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"92
-[; ;main.c: 92: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[e :U _main ]
-[f ]
-"93
-[; ;main.c: 93:     OSCCON = 0b01100010;
-[e = _OSCCON -> -> 98 `i `uc ]
-"94
-[; ;main.c: 94:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"95
-[; ;main.c: 95:     TRISC = 0xFF;
-[e = _TRISC -> -> 255 `i `uc ]
-"97
-[; ;main.c: 97:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"98
-[; ;main.c: 98:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"99
-[; ;main.c: 99:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"100
-[; ;main.c: 100:     SSD1306_Init();
-[e ( _SSD1306_Init ..  ]
-"101
-[; ;main.c: 101:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"102
-[; ;main.c: 102:     SSD1306_ClearScreen();
-[e ( _SSD1306_ClearScreen ..  ]
-"103
-[; ;main.c: 103:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"104
-[; ;main.c: 104:     SSD1306_String(11, &TestStr);
-[e ( _SSD1306_String (2 , -> 11 `i -> &U _TestStr `*Cuc ]
-"105
-[; ;main.c: 105:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"107
-[; ;main.c: 107:     while (1) {
-[e :U 1090 ]
-{
-"108
-[; ;main.c: 108:         LATDbits.LATD1 = 0;
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-"109
-[; ;main.c: 109:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"110
-[; ;main.c: 110:         LATDbits.LATD1 = 1;
-[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
-"111
-[; ;main.c: 111:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"112
-[; ;main.c: 112:     }
-}
-[e :U 1089 ]
-[e $U 1090  ]
-[e :U 1091 ]
-"113
-[; ;main.c: 113:     return;
-[e $UE 1088  ]
-"114
-[; ;main.c: 114: }
-[e :UE 1088 ]
-}
-"116
-[; ;main.c: 116: void I2C_Init(void) {
+"23 ./I2C.h
+[; ;./I2C.h: 23: void I2C_Init(void) {
 [v _I2C_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _I2C_Init ]
 [f ]
-"117
-[; ;main.c: 117:  SSPCON1 = 0b00101000;
+"24
+[; ;./I2C.h: 24:  SSPCON1 = 0b00101000;
 [e = _SSPCON1 -> -> 40 `i `uc ]
-"118
-[; ;main.c: 118:  SSPCON2 = 0b00000000;
+"25
+[; ;./I2C.h: 25:  SSPCON2 = 0b00000000;
 [e = _SSPCON2 -> -> 0 `i `uc ]
-"119
-[; ;main.c: 119:  SSPADD = ((4000000 / 4) / 100000) - 1;
+"26
+[; ;./I2C.h: 26:  SSPADD = ((4000000 / 4) / 100000) - 1;
 [e = _SSPADD -> - / / -> 4000000 `l -> -> 4 `i `l -> 100000 `l -> -> 1 `i `l `uc ]
-"120
-[; ;main.c: 120:  SSPSTAT = 0b00000000;
+"27
+[; ;./I2C.h: 27:  SSPSTAT = 0b00000000;
 [e = _SSPSTAT -> -> 0 `i `uc ]
-"121
-[; ;main.c: 121: }
-[e :UE 1092 ]
+"28
+[; ;./I2C.h: 28: }
+[e :UE 1089 ]
 }
-"123
-[; ;main.c: 123: void I2C_Hold(void) {
+"30
+[; ;./I2C.h: 30: void I2C_Hold(void) {
 [v _I2C_Hold `(v ~T0 @X0 1 ef ]
 {
 [e :U _I2C_Hold ]
 [f ]
-"124
-[; ;main.c: 124:  while ((SSPCON2 & 0b00011111) || (SSPSTAT & 0b00000100));
-[e $U 1094  ]
-[e :U 1095 ]
-[e :U 1094 ]
-[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 1095  ]
-[e :U 1096 ]
-"125
-[; ;main.c: 125: }
-[e :UE 1093 ]
+"31
+[; ;./I2C.h: 31:  while ((SSPCON2 & 0b00011111) || (SSPSTAT & 0b00000100));
+[e $U 1091  ]
+[e :U 1092 ]
+[e :U 1091 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 1092  ]
+[e :U 1093 ]
+"32
+[; ;./I2C.h: 32: }
+[e :UE 1090 ]
 }
-"127
-[; ;main.c: 127: void I2C_Start(void) {
+"34
+[; ;./I2C.h: 34: void I2C_Start(void) {
 [v _I2C_Start `(v ~T0 @X0 1 ef ]
 {
 [e :U _I2C_Start ]
 [f ]
-"128
-[; ;main.c: 128:  I2C_Hold();
+"35
+[; ;./I2C.h: 35:  I2C_Hold();
 [e ( _I2C_Hold ..  ]
-"129
-[; ;main.c: 129:  SEN = 1;
+"36
+[; ;./I2C.h: 36:  SEN = 1;
 [e = _SEN -> -> 1 `i `b ]
-"130
-[; ;main.c: 130:  while (SEN);
-[e $U 1098  ]
-[e :U 1099 ]
-[e :U 1098 ]
-[e $ _SEN 1099  ]
-[e :U 1100 ]
-"131
-[; ;main.c: 131: }
-[e :UE 1097 ]
+"37
+[; ;./I2C.h: 37:  while (SEN);
+[e $U 1095  ]
+[e :U 1096 ]
+[e :U 1095 ]
+[e $ _SEN 1096  ]
+[e :U 1097 ]
+"38
+[; ;./I2C.h: 38: }
+[e :UE 1094 ]
 }
-"133
-[; ;main.c: 133: void I2C_Stop(void) {
+"40
+[; ;./I2C.h: 40: void I2C_Stop(void) {
 [v _I2C_Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _I2C_Stop ]
 [f ]
-"134
-[; ;main.c: 134:  I2C_Hold();
+"41
+[; ;./I2C.h: 41:  I2C_Hold();
 [e ( _I2C_Hold ..  ]
-"135
-[; ;main.c: 135:  PEN = 1;
+"42
+[; ;./I2C.h: 42:  PEN = 1;
 [e = _PEN -> -> 1 `i `b ]
-"136
-[; ;main.c: 136:  while(PEN);
-[e $U 1102  ]
-[e :U 1103 ]
-[e :U 1102 ]
-[e $ _PEN 1103  ]
-[e :U 1104 ]
-"137
-[; ;main.c: 137: }
-[e :UE 1101 ]
+"43
+[; ;./I2C.h: 43:  while(PEN);
+[e $U 1099  ]
+[e :U 1100 ]
+[e :U 1099 ]
+[e $ _PEN 1100  ]
+[e :U 1101 ]
+"44
+[; ;./I2C.h: 44: }
+[e :UE 1098 ]
 }
-"139
-[; ;main.c: 139: void I2C_Write(unsigned char data) {
+"46
+[; ;./I2C.h: 46: void I2C_Write(unsigned char data) {
 [v _I2C_Write `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _I2C_Write ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"140
-[; ;main.c: 140:  I2C_Hold();
+"47
+[; ;./I2C.h: 47:  I2C_Hold();
 [e ( _I2C_Hold ..  ]
-"141
-[; ;main.c: 141:  SSPBUF = data;
+"48
+[; ;./I2C.h: 48:  SSPBUF = data;
 [e = _SSPBUF _data ]
-"142
-[; ;main.c: 142:  while(!SSPIF);
-[e $U 1106  ]
-[e :U 1107 ]
-[e :U 1106 ]
-[e $ ! _SSPIF 1107  ]
-[e :U 1108 ]
-"143
-[; ;main.c: 143:  SSPIF = 0;
+"49
+[; ;./I2C.h: 49:  while(!SSPIF);
+[e $U 1103  ]
+[e :U 1104 ]
+[e :U 1103 ]
+[e $ ! _SSPIF 1104  ]
+[e :U 1105 ]
+"50
+[; ;./I2C.h: 50:  SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"144
-[; ;main.c: 144: }
-[e :UE 1105 ]
+"51
+[; ;./I2C.h: 51: }
+[e :UE 1102 ]
 }
-"146
-[; ;main.c: 146: void SSD1306_WriteCommand(unsigned char cmd) {
+"37 ./SSD1306.h
+[; ;./SSD1306.h: 37: void SSD1306_WriteCommand(unsigned char cmd) {
 [v _SSD1306_WriteCommand `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _SSD1306_WriteCommand ]
 [v _cmd `uc ~T0 @X0 1 r1 ]
 [f ]
-"147
-[; ;main.c: 147:  I2C_Start();
+"38
+[; ;./SSD1306.h: 38:  I2C_Start();
 [e ( _I2C_Start ..  ]
-"148
-[; ;main.c: 148:  I2C_Write(0x78);
+"39
+[; ;./SSD1306.h: 39:  I2C_Write(0x78);
 [e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"149
-[; ;main.c: 149:  I2C_Write(0x00);
+"40
+[; ;./SSD1306.h: 40:  I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"150
-[; ;main.c: 150:  I2C_Write(cmd);
+"41
+[; ;./SSD1306.h: 41:  I2C_Write(cmd);
 [e ( _I2C_Write (1 _cmd ]
-"151
-[; ;main.c: 151:  I2C_Stop();
+"42
+[; ;./SSD1306.h: 42:  I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"152
-[; ;main.c: 152: }
-[e :UE 1109 ]
+"43
+[; ;./SSD1306.h: 43: }
+[e :UE 1106 ]
 }
-"154
-[; ;main.c: 154: void SSD1306_Init(void) {
+"45
+[; ;./SSD1306.h: 45: void SSD1306_Init(void) {
 [v _SSD1306_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _SSD1306_Init ]
 [f ]
-"155
-[; ;main.c: 155:  I2C_Start();
+"46
+[; ;./SSD1306.h: 46:  I2C_Start();
 [e ( _I2C_Start ..  ]
-"156
-[; ;main.c: 156:  I2C_Write(0x78);
+"47
+[; ;./SSD1306.h: 47:  I2C_Write(0x78);
 [e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"157
-[; ;main.c: 157:  I2C_Write(0x00);
+"48
+[; ;./SSD1306.h: 48:  I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"159
-[; ;main.c: 159:  SSD1306_WriteCommand(0xAE);
+"50
+[; ;./SSD1306.h: 50:  SSD1306_WriteCommand(0xAE);
 [e ( _SSD1306_WriteCommand (1 -> -> 174 `i `uc ]
-"160
-[; ;main.c: 160:  SSD1306_WriteCommand(0xD5);
+"51
+[; ;./SSD1306.h: 51:  SSD1306_WriteCommand(0xD5);
 [e ( _SSD1306_WriteCommand (1 -> -> 213 `i `uc ]
-"161
-[; ;main.c: 161:  SSD1306_WriteCommand(0x80);
+"52
+[; ;./SSD1306.h: 52:  SSD1306_WriteCommand(0x80);
 [e ( _SSD1306_WriteCommand (1 -> -> 128 `i `uc ]
-"162
-[; ;main.c: 162:  SSD1306_WriteCommand(0xA8);
+"53
+[; ;./SSD1306.h: 53:  SSD1306_WriteCommand(0xA8);
 [e ( _SSD1306_WriteCommand (1 -> -> 168 `i `uc ]
-"163
-[; ;main.c: 163:  SSD1306_WriteCommand(0x3F);
+"54
+[; ;./SSD1306.h: 54:  SSD1306_WriteCommand(0x3F);
 [e ( _SSD1306_WriteCommand (1 -> -> 63 `i `uc ]
-"164
-[; ;main.c: 164:  SSD1306_WriteCommand(0xD3);
+"55
+[; ;./SSD1306.h: 55:  SSD1306_WriteCommand(0xD3);
 [e ( _SSD1306_WriteCommand (1 -> -> 211 `i `uc ]
-"165
-[; ;main.c: 165:  SSD1306_WriteCommand(0x00);
+"56
+[; ;./SSD1306.h: 56:  SSD1306_WriteCommand(0x00);
 [e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
-"166
-[; ;main.c: 166:  SSD1306_WriteCommand(0x40);
+"57
+[; ;./SSD1306.h: 57:  SSD1306_WriteCommand(0x40);
 [e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
-"167
-[; ;main.c: 167:  SSD1306_WriteCommand(0x8D);
+"58
+[; ;./SSD1306.h: 58:  SSD1306_WriteCommand(0x8D);
 [e ( _SSD1306_WriteCommand (1 -> -> 141 `i `uc ]
-"168
-[; ;main.c: 168:  SSD1306_WriteCommand(0x14);
+"59
+[; ;./SSD1306.h: 59:  SSD1306_WriteCommand(0x14);
 [e ( _SSD1306_WriteCommand (1 -> -> 20 `i `uc ]
-"169
-[; ;main.c: 169:  SSD1306_WriteCommand(0x20);
+"60
+[; ;./SSD1306.h: 60:  SSD1306_WriteCommand(0x20);
 [e ( _SSD1306_WriteCommand (1 -> -> 32 `i `uc ]
-"170
-[; ;main.c: 170:  SSD1306_WriteCommand(0x00);
+"61
+[; ;./SSD1306.h: 61:  SSD1306_WriteCommand(0x00);
 [e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:  SSD1306_WriteCommand(0xA1);
+"64
+[; ;./SSD1306.h: 64:  SSD1306_WriteCommand(0xA1);
 [e ( _SSD1306_WriteCommand (1 -> -> 161 `i `uc ]
-"172
-[; ;main.c: 172:  SSD1306_WriteCommand(0xC8);
+"65
+[; ;./SSD1306.h: 65:  SSD1306_WriteCommand(0xC8);
 [e ( _SSD1306_WriteCommand (1 -> -> 200 `i `uc ]
-"173
-[; ;main.c: 173:  SSD1306_WriteCommand(0xDA);
+"66
+[; ;./SSD1306.h: 66:  SSD1306_WriteCommand(0xDA);
 [e ( _SSD1306_WriteCommand (1 -> -> 218 `i `uc ]
-"174
-[; ;main.c: 174:  SSD1306_WriteCommand(0x12);
+"67
+[; ;./SSD1306.h: 67:  SSD1306_WriteCommand(0x12);
 [e ( _SSD1306_WriteCommand (1 -> -> 18 `i `uc ]
-"175
-[; ;main.c: 175:  SSD1306_WriteCommand(0x81);
+"69
+[; ;./SSD1306.h: 69:  SSD1306_WriteCommand(0x81);
 [e ( _SSD1306_WriteCommand (1 -> -> 129 `i `uc ]
-"176
-[; ;main.c: 176:  SSD1306_WriteCommand(0x7F);
+"70
+[; ;./SSD1306.h: 70:  SSD1306_WriteCommand(0x7F);
 [e ( _SSD1306_WriteCommand (1 -> -> 127 `i `uc ]
-"177
-[; ;main.c: 177:  SSD1306_WriteCommand(0xD9);
+"71
+[; ;./SSD1306.h: 71:  SSD1306_WriteCommand(0xD9);
 [e ( _SSD1306_WriteCommand (1 -> -> 217 `i `uc ]
-"178
-[; ;main.c: 178:  SSD1306_WriteCommand(0xF1);
+"72
+[; ;./SSD1306.h: 72:  SSD1306_WriteCommand(0xF1);
 [e ( _SSD1306_WriteCommand (1 -> -> 241 `i `uc ]
-"179
-[; ;main.c: 179:  SSD1306_WriteCommand(0xDB);
+"73
+[; ;./SSD1306.h: 73:  SSD1306_WriteCommand(0xDB);
 [e ( _SSD1306_WriteCommand (1 -> -> 219 `i `uc ]
-"180
-[; ;main.c: 180:  SSD1306_WriteCommand(0x40);
+"74
+[; ;./SSD1306.h: 74:  SSD1306_WriteCommand(0x40);
 [e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
-"181
-[; ;main.c: 181:  SSD1306_WriteCommand(0xA4);
+"75
+[; ;./SSD1306.h: 75:  SSD1306_WriteCommand(0xA4);
 [e ( _SSD1306_WriteCommand (1 -> -> 164 `i `uc ]
-"182
-[; ;main.c: 182:  SSD1306_WriteCommand(0xA6);
+"76
+[; ;./SSD1306.h: 76:  SSD1306_WriteCommand(0xA6);
 [e ( _SSD1306_WriteCommand (1 -> -> 166 `i `uc ]
-"183
-[; ;main.c: 183:  SSD1306_WriteCommand(0xAF);
+"77
+[; ;./SSD1306.h: 77:  SSD1306_WriteCommand(0xAF);
 [e ( _SSD1306_WriteCommand (1 -> -> 175 `i `uc ]
-"185
-[; ;main.c: 185:  I2C_Stop();
+"79
+[; ;./SSD1306.h: 79:  I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"186
-[; ;main.c: 186: }
-[e :UE 1110 ]
+"81
+[; ;./SSD1306.h: 81:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"82
+[; ;./SSD1306.h: 82:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"83
+[; ;./SSD1306.h: 83:  I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"84
+[; ;./SSD1306.h: 84:  I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"85
+[; ;./SSD1306.h: 85:  I2C_Write(0x21);
+[e ( _I2C_Write (1 -> -> 33 `i `uc ]
+"86
+[; ;./SSD1306.h: 86:  I2C_Write(0);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"87
+[; ;./SSD1306.h: 87:  I2C_Write(127);
+[e ( _I2C_Write (1 -> -> 127 `i `uc ]
+"88
+[; ;./SSD1306.h: 88:  I2C_Write(0x22);
+[e ( _I2C_Write (1 -> -> 34 `i `uc ]
+"89
+[; ;./SSD1306.h: 89:  I2C_Write(0);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"90
+[; ;./SSD1306.h: 90:  I2C_Write(7);
+[e ( _I2C_Write (1 -> -> 7 `i `uc ]
+"91
+[; ;./SSD1306.h: 91:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"92
+[; ;./SSD1306.h: 92: }
+[e :UE 1107 ]
 }
-"188
-[; ;main.c: 188: void SSD1306_String(int numChar, const unsigned char *data) {
-[v _SSD1306_String `(v ~T0 @X0 1 ef2`i`*Cuc ]
+"94
+[; ;./SSD1306.h: 94: void SSD1306_String(const unsigned char *data) {
+[v _SSD1306_String `(v ~T0 @X0 1 ef1`*Cuc ]
 {
 [e :U _SSD1306_String ]
-[v _numChar `i ~T0 @X0 1 r1 ]
-[v _data `*Cuc ~T0 @X0 1 r2 ]
+[v _data `*Cuc ~T0 @X0 1 r1 ]
 [f ]
-"189
-[; ;main.c: 189:  I2C_Start();
+"96
+[; ;./SSD1306.h: 96:     char pixData[5];
+[v _pixData `uc ~T0 @X0 -> 5 `i a ]
+"98
+[; ;./SSD1306.h: 98:     for (int a=0; data[a]!='\0'; a++){
+{
+[v _a `i ~T0 @X0 1 a ]
+[e = _a -> 0 `i ]
+[e $U 1112  ]
+[e :U 1109 ]
+{
+"99
+[; ;./SSD1306.h: 99:         if (data[a] <= '~'){
+[e $ ! <= -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 126 `ui 1113  ]
+{
+"100
+[; ;./SSD1306.h: 100:             memcpy(pixData, TEXT5x8[data[a]-' '], 5);
+[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> - -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 32 `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
+"101
+[; ;./SSD1306.h: 101:         }else{
+}
+[e $U 1114  ]
+[e :U 1113 ]
+{
+"102
+[; ;./SSD1306.h: 102:             memcpy(pixData, TEXT5x8[95], 5);
+[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> -> -> 95 `i `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
+"103
+[; ;./SSD1306.h: 103:         }
+}
+[e :U 1114 ]
+"105
+[; ;./SSD1306.h: 105:         I2C_Start();
 [e ( _I2C_Start ..  ]
-"190
-[; ;main.c: 190:  I2C_Write(0x78);
+"106
+[; ;./SSD1306.h: 106:         I2C_Write(0x78);
 [e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"191
-[; ;main.c: 191:  I2C_Write(0x00);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"192
-[; ;main.c: 192:  I2C_Write(0x21);
-[e ( _I2C_Write (1 -> -> 33 `i `uc ]
-"193
-[; ;main.c: 193:  I2C_Write(0);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"194
-[; ;main.c: 194:  I2C_Write(127);
-[e ( _I2C_Write (1 -> -> 127 `i `uc ]
-"195
-[; ;main.c: 195:  I2C_Write(0x22);
-[e ( _I2C_Write (1 -> -> 34 `i `uc ]
-"196
-[; ;main.c: 196:  I2C_Write(0);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"197
-[; ;main.c: 197:  I2C_Write(7);
-[e ( _I2C_Write (1 -> -> 7 `i `uc ]
-"198
-[; ;main.c: 198:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"200
-[; ;main.c: 200:  for (int i=0; i<(numChar*6); i++){
+"107
+[; ;./SSD1306.h: 107:         I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"108
+[; ;./SSD1306.h: 108:         for (int i=0; i<5; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 1115  ]
-[e :U 1112 ]
+[e $ < _i -> 5 `i 1115  ]
+[e $U 1116  ]
+[e :U 1115 ]
 {
-"201
-[; ;main.c: 201:   I2C_Start();
-[e ( _I2C_Start ..  ]
-"202
-[; ;main.c: 202:   I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"203
-[; ;main.c: 203:   I2C_Write(0x40);
-[e ( _I2C_Write (1 -> -> 64 `i `uc ]
-"204
-[; ;main.c: 204:   I2C_Write(data[i]);
-[e ( _I2C_Write (1 *U + _data * -> _i `x -> -> # *U _data `i `x ]
-"205
-[; ;main.c: 205:   I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"206
-[; ;main.c: 206:  }
+"109
+[; ;./SSD1306.h: 109:             I2C_Write(pixData[i]);
+[e ( _I2C_Write (1 -> *U + &U _pixData * -> -> _i `ui `ux -> -> # *U &U _pixData `ui `ux `uc ]
+"110
+[; ;./SSD1306.h: 110:         }
 }
 [e ++ _i -> 1 `i ]
-[e :U 1115 ]
-[e $ < _i * _numChar -> 6 `i 1112  ]
-[e :U 1113 ]
+[e $ < _i -> 5 `i 1115  ]
+[e :U 1116 ]
 }
-"207
-[; ;main.c: 207: }
-[e :UE 1111 ]
+"111
+[; ;./SSD1306.h: 111:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"112
+[; ;./SSD1306.h: 112:     }
 }
-"209
-[; ;main.c: 209: void SSD1306_ClearScreen(void) {
+[e ++ _a -> 1 `i ]
+[e :U 1112 ]
+[e $ != -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 0 `ui 1109  ]
+[e :U 1110 ]
+}
+"113
+[; ;./SSD1306.h: 113: }
+[e :UE 1108 ]
+}
+"115
+[; ;./SSD1306.h: 115: void SSD1306_ClearScreen(void) {
 [v _SSD1306_ClearScreen `(v ~T0 @X0 1 ef ]
 {
 [e :U _SSD1306_ClearScreen ]
 [f ]
-"210
-[; ;main.c: 210:  I2C_Start();
+"116
+[; ;./SSD1306.h: 116:     I2C_Start();
 [e ( _I2C_Start ..  ]
-"211
-[; ;main.c: 211:  I2C_Write(0x78);
+"117
+[; ;./SSD1306.h: 117:  I2C_Write(0x78);
 [e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"212
-[; ;main.c: 212:  I2C_Write(0x00);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"213
-[; ;main.c: 213:  I2C_Write(0x21);
-[e ( _I2C_Write (1 -> -> 33 `i `uc ]
-"214
-[; ;main.c: 214:  I2C_Write(0);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"215
-[; ;main.c: 215:  I2C_Write(127);
-[e ( _I2C_Write (1 -> -> 127 `i `uc ]
-"216
-[; ;main.c: 216:  I2C_Write(0x22);
-[e ( _I2C_Write (1 -> -> 34 `i `uc ]
-"217
-[; ;main.c: 217:  I2C_Write(0);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"218
-[; ;main.c: 218:  I2C_Write(7);
-[e ( _I2C_Write (1 -> -> 7 `i `uc ]
-"219
-[; ;main.c: 219:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"221
-[; ;main.c: 221:  for (int i=0; i<8; i++) {
+"118
+[; ;./SSD1306.h: 118:  I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"119
+[; ;./SSD1306.h: 119:  for (int i=0; i<8; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 1117  ]
-[e $U 1118  ]
-[e :U 1117 ]
+[e $ < _i -> 8 `i 1119  ]
+[e $U 1120  ]
+[e :U 1119 ]
 {
-"222
-[; ;main.c: 222:   for (int j=0; j<128; j++) {
+"120
+[; ;./SSD1306.h: 120:   for (int j=0; j<128; j++) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-[e $ < _j -> 128 `i 1120  ]
-[e $U 1121  ]
-[e :U 1120 ]
+[e $ < _j -> 128 `i 1122  ]
+[e $U 1123  ]
+[e :U 1122 ]
 {
-"223
-[; ;main.c: 223:    I2C_Start();
-[e ( _I2C_Start ..  ]
-"224
-[; ;main.c: 224:    I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"225
-[; ;main.c: 225:    I2C_Write(0x40);
-[e ( _I2C_Write (1 -> -> 64 `i `uc ]
-"226
-[; ;main.c: 226:    I2C_Write(0x00);
+"121
+[; ;./SSD1306.h: 121:    I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"227
-[; ;main.c: 227:    I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"228
-[; ;main.c: 228:   }
+"122
+[; ;./SSD1306.h: 122:   }
 }
 [e ++ _j -> 1 `i ]
-[e $ < _j -> 128 `i 1120  ]
-[e :U 1121 ]
+[e $ < _j -> 128 `i 1122  ]
+[e :U 1123 ]
 }
-"229
-[; ;main.c: 229:  }
+"123
+[; ;./SSD1306.h: 123:  }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 1117  ]
-[e :U 1118 ]
+[e $ < _i -> 8 `i 1119  ]
+[e :U 1120 ]
 }
-"230
-[; ;main.c: 230: }
-[e :UE 1116 ]
+"124
+[; ;./SSD1306.h: 124:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"125
+[; ;./SSD1306.h: 125: }
+[e :UE 1118 ]
 }
+[v $root$_main `(v ~T0 @X0 0 e ]
+"69 main.c
+[; ;main.c: 69: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"70
+[; ;main.c: 70:     OSCCON = 0b01100010;
+[e = _OSCCON -> -> 98 `i `uc ]
+"71
+[; ;main.c: 71:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"72
+[; ;main.c: 72:     TRISC = 0xFF;
+[e = _TRISC -> -> 255 `i `uc ]
+"74
+[; ;main.c: 74:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"75
+[; ;main.c: 75:     I2C_Init();
+[e ( _I2C_Init ..  ]
+"76
+[; ;main.c: 76:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"77
+[; ;main.c: 77:     SSD1306_Init();
+[e ( _SSD1306_Init ..  ]
+"78
+[; ;main.c: 78:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"79
+[; ;main.c: 79:     SSD1306_ClearScreen();
+[e ( _SSD1306_ClearScreen ..  ]
+"80
+[; ;main.c: 80:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"81
+[; ;main.c: 81:     SSD1306_String("Hello world");
+[e ( _SSD1306_String (1 :s 1C ]
+"82
+[; ;main.c: 82:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"84
+[; ;main.c: 84:     while (1) {
+[e :U 1127 ]
+{
+"85
+[; ;main.c: 85:         LATDbits.LATD1 = 0;
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+"86
+[; ;main.c: 86:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"87
+[; ;main.c: 87:         LATDbits.LATD1 = 1;
+[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
+"88
+[; ;main.c: 88:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"89
+[; ;main.c: 89:     }
+}
+[e :U 1126 ]
+[e $U 1127  ]
+[e :U 1128 ]
+"90
+[; ;main.c: 90:     return;
+[e $UE 1125  ]
+"91
+[; ;main.c: 91: }
+[e :UE 1125 ]
+}
+[a 1C 72 101 108 108 111 32 119 111 114 108 100 0 ]

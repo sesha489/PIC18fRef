@@ -64,30 +64,7 @@
 #define _XTAL_FREQ 4000000
 #define SSD1306_I2C_ADDRESS 0x78 // SSD1306 I2C ADDRESS (0x3C << 1)
 
-#include <xc.h>
-
-void I2C_Init(void);
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Write(unsigned char data);
-void I2C_Hold(void);
-void SSD1306_Init(void);
-void SSD1306_WriteCommand(unsigned char cmd);
-void SSD1306_String(int numChar, const unsigned char *data);
-void SSD1306_ClearScreen(void);
-
-//Have to add font.h
-const unsigned char TestStr[66] = {0x00, 0x7F, 0x08, 0x08, 0x08, 0x7F,		//H
-				0x00, 0x7F, 0x49, 0x49, 0x49, 0x41,		//E
-				0x00, 0x7F, 0x40, 0x40, 0x40, 0x40,		//L
-				0x00, 0x7F, 0x40, 0x40, 0x40, 0x40,		//L
-				0x00, 0x3E, 0x41, 0x41, 0x41, 0x3E,		//O
-				0x00, 0x00, 0x00, 0x00, 0x00, 0x00,		//Space
-				0x00, 0x7F, 0x20, 0x10, 0x20, 0x7F,		//W
-				0x00, 0x3E, 0x41, 0x41, 0x41, 0x3E,		//O
-				0x00, 0x7F, 0x09, 0x09, 0x09, 0x76,		//R
-				0x00, 0x7F, 0x40, 0x40, 0x40, 0x40,		//L
-				0x00, 0x7F, 0x41, 0x41, 0x41, 0x3E,};	//D
+#include"SSD1306.h"
 
 void main(void) {
     OSCCON = 0b01100010;
@@ -101,8 +78,8 @@ void main(void) {
     __delay_ms(500);
     SSD1306_ClearScreen();
     __delay_ms(500);
-    SSD1306_String(11, &TestStr);
-    __delay_ms(500);
+    SSD1306_String("Hello world");
+    __delay_ms(1000);
 
     while (1) {
         LATDbits.LATD1 = 0; //Make RD1 high to glow LED
@@ -111,120 +88,4 @@ void main(void) {
         __delay_ms(1000);
     }
     return;
-}
-
-void I2C_Init(void) {
-	SSPCON1 = 0b00101000;
-	SSPCON2 = 0b00000000;
-	SSPADD = ((_XTAL_FREQ / 4) / 100000) - 1;
-	SSPSTAT = 0b00000000;
-}
-
-void I2C_Hold(void) {
-	while ((SSPCON2 & 0b00011111) || (SSPSTAT & 0b00000100));
-}
-
-void I2C_Start(void) {
-	I2C_Hold();
-	SEN = 1;
-	while (SEN);
-}
-
-void I2C_Stop(void) {
-	I2C_Hold();
-	PEN = 1;
-	while(PEN);
-}
-
-void I2C_Write(unsigned char data) {
-	I2C_Hold();
-	SSPBUF = data;
-	while(!SSPIF);
-	SSPIF = 0;
-}
-
-void SSD1306_WriteCommand(unsigned char cmd) {
-	I2C_Start();
-	I2C_Write(SSD1306_I2C_ADDRESS);
-	I2C_Write(0x00);
-	I2C_Write(cmd);
-	I2C_Stop();
-}
-
-void SSD1306_Init(void) {
-	I2C_Start();
-	I2C_Write(SSD1306_I2C_ADDRESS);
-	I2C_Write(0x00);
-	
-	SSD1306_WriteCommand(0xAE);
-	SSD1306_WriteCommand(0xD5);
-	SSD1306_WriteCommand(0x80);
-	SSD1306_WriteCommand(0xA8);
-	SSD1306_WriteCommand(0x3F);
-	SSD1306_WriteCommand(0xD3);
-	SSD1306_WriteCommand(0x00);
-	SSD1306_WriteCommand(0x40);
-	SSD1306_WriteCommand(0x8D);
-	SSD1306_WriteCommand(0x14);
-	SSD1306_WriteCommand(0x20);
-	SSD1306_WriteCommand(0x00);
-	SSD1306_WriteCommand(0xA1);
-	SSD1306_WriteCommand(0xC8);
-	SSD1306_WriteCommand(0xDA);
-	SSD1306_WriteCommand(0x12);
-	SSD1306_WriteCommand(0x81);
-	SSD1306_WriteCommand(0x7F);
-	SSD1306_WriteCommand(0xD9);
-	SSD1306_WriteCommand(0xF1);
-	SSD1306_WriteCommand(0xDB);
-	SSD1306_WriteCommand(0x40);
-	SSD1306_WriteCommand(0xA4);
-	SSD1306_WriteCommand(0xA6);
-	SSD1306_WriteCommand(0xAF);
-	
-	I2C_Stop();
-}
-
-void SSD1306_String(int numChar, const unsigned char *data) {
-	I2C_Start();
-	I2C_Write(SSD1306_I2C_ADDRESS);
-	I2C_Write(0x00);
-	I2C_Write(0x21);
-	I2C_Write(0);
-	I2C_Write(127);
-	I2C_Write(0x22);
-	I2C_Write(0);
-	I2C_Write(7);
-	I2C_Stop();
-	
-	for (int i=0; i<(numChar*6); i++){
-		I2C_Start();
-		I2C_Write(SSD1306_I2C_ADDRESS);
-		I2C_Write(0x40);
-		I2C_Write(data[i]);
-		I2C_Stop();
-	}
-}
-
-void SSD1306_ClearScreen(void) {
-	I2C_Start();
-	I2C_Write(SSD1306_I2C_ADDRESS);
-	I2C_Write(0x00);
-	I2C_Write(0x21);
-	I2C_Write(0);
-	I2C_Write(127);
-	I2C_Write(0x22);
-	I2C_Write(0);
-	I2C_Write(7);
-	I2C_Stop();
-	
-	for (int i=0; i<8; i++) {
-		for (int j=0; j<128; j++) {
-			I2C_Start();
-			I2C_Write(SSD1306_I2C_ADDRESS);
-			I2C_Write(0x40);
-			I2C_Write(0x00);
-			I2C_Stop();
-		}
-	}
 }
