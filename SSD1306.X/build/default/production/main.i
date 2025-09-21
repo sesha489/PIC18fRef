@@ -73,186 +73,6 @@
 
 
 
-# 1 "./SSD1306.h" 1
-# 15 "./SSD1306.h"
-# 1 "./font.h" 1
-# 15 "./font.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
-# 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned size_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 421 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-
-
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 16 "./font.h" 2
-
-const char TEXT5x8[96][5] ={0x00, 0x00, 0x00, 0x00, 0x00,
-                         0x00, 0x00, 0x5F, 0x00, 0x00,
-                         0x00, 0x03, 0x00, 0x03, 0x00,
-                         0x14, 0x3E, 0x14, 0x3E, 0x14,
-                         0x24, 0x2A, 0x7F, 0x2A, 0x12,
-                         0x43, 0x33, 0x08, 0x66, 0x61,
-                         0x36, 0x49, 0x55, 0x22, 0x50,
-                         0x00, 0x05, 0x03, 0x00, 0x00,
-                         0x00, 0x1C, 0x22, 0x41, 0x00,
-                         0x00, 0x41, 0x22, 0x1C, 0x00,
-                         0x14, 0x08, 0x3E, 0x08, 0x14,
-                         0x08, 0x08, 0x3E, 0x08, 0x08,
-                         0x00, 0x50, 0x30, 0x00, 0x00,
-                         0x08, 0x08, 0x08, 0x08, 0x08,
-                         0x00, 0x60, 0x60, 0x00, 0x00,
-                         0x20, 0x10, 0x08, 0x04, 0x02,
-                         0x3E, 0x51, 0x49, 0x45, 0x3E,
-                         0x04, 0x02, 0x7F, 0x00, 0x00,
-                         0x42, 0x61, 0x51, 0x49, 0x46,
-                         0x22, 0x41, 0x49, 0x49, 0x36,
-                         0x18, 0x14, 0x12, 0x7F, 0x10,
-                         0x27, 0x45, 0x45, 0x45, 0x39,
-                         0x3E, 0x49, 0x49, 0x49, 0x32,
-                         0x01, 0x01, 0x71, 0x09, 0x07,
-                         0x36, 0x49, 0x49, 0x49, 0x36,
-                         0x26, 0x49, 0x49, 0x49, 0x3E,
-                         0x00, 0x36, 0x36, 0x00, 0x00,
-                         0x00, 0x56, 0x36, 0x00, 0x00,
-                         0x08, 0x14, 0x22, 0x41, 0x00,
-                         0x14, 0x14, 0x14, 0x14, 0x14,
-                         0x00, 0x41, 0x22, 0x14, 0x08,
-                         0x02, 0x01, 0x51, 0x09, 0x06,
-                         0x3E, 0x41, 0x59, 0x55, 0x5E,
-                         0x7E, 0x09, 0x09, 0x09, 0x7E,
-                         0x7F, 0x49, 0x49, 0x49, 0x36,
-                         0x3E, 0x41, 0x41, 0x41, 0x22,
-                         0x7F, 0x41, 0x41, 0x41, 0x3E,
-                         0x7F, 0x49, 0x49, 0x49, 0x41,
-                         0x7F, 0x09, 0x09, 0x09, 0x01,
-                         0x3E, 0x41, 0x41, 0x49, 0x3A,
-                         0x7F, 0x08, 0x08, 0x08, 0x7F,
-                         0x00, 0x41, 0x7F, 0x41, 0x00,
-                         0x30, 0x40, 0x40, 0x40, 0x3F,
-                         0x7F, 0x08, 0x14, 0x22, 0x41,
-                         0x7F, 0x40, 0x40, 0x40, 0x40,
-                         0x7F, 0x02, 0x0C, 0x02, 0x7F,
-                         0x7F, 0x02, 0x04, 0x08, 0x7F,
-                         0x3E, 0x41, 0x41, 0x41, 0x3E,
-                         0x7F, 0x09, 0x09, 0x09, 0x06,
-                         0x1E, 0x21, 0x21, 0x21, 0x5E,
-                         0x7F, 0x09, 0x09, 0x09, 0x76,
-                         0x26, 0x49, 0x49, 0x49, 0x32,
-                         0x01, 0x01, 0x7F, 0x01, 0x01,
-                         0x3F, 0x40, 0x40, 0x40, 0x3F,
-                         0x1F, 0x20, 0x40, 0x20, 0x1F,
-                         0x7F, 0x20, 0x10, 0x20, 0x7F,
-                         0x41, 0x22, 0x1C, 0x22, 0x41,
-                         0x07, 0x08, 0x70, 0x08, 0x07,
-                         0x61, 0x51, 0x49, 0x45, 0x43,
-                         0x00, 0x7F, 0x41, 0x00, 0x00,
-                         0x02, 0x04, 0x08, 0x10, 0x20,
-                         0x00, 0x00, 0x41, 0x7F, 0x00,
-                         0x04, 0x02, 0x01, 0x02, 0x04,
-                         0x40, 0x40, 0x40, 0x40, 0x40,
-                         0x00, 0x01, 0x02, 0x04, 0x00,
-                         0x20, 0x54, 0x54, 0x54, 0x78,
-                         0x7F, 0x44, 0x44, 0x44, 0x38,
-                         0x38, 0x44, 0x44, 0x44, 0x44,
-                         0x38, 0x44, 0x44, 0x44, 0x7F,
-                         0x38, 0x54, 0x54, 0x54, 0x18,
-                         0x04, 0x04, 0x7E, 0x05, 0x05,
-                         0x08, 0x54, 0x54, 0x54, 0x3C,
-                         0x7F, 0x08, 0x04, 0x04, 0x78,
-                         0x00, 0x44, 0x7D, 0x40, 0x00,
-                         0x20, 0x40, 0x44, 0x3D, 0x00,
-                         0x7F, 0x10, 0x28, 0x44, 0x00,
-                         0x00, 0x41, 0x7F, 0x40, 0x00,
-                         0x7C, 0x04, 0x78, 0x04, 0x78,
-                         0x7C, 0x08, 0x04, 0x04, 0x78,
-                         0x38, 0x44, 0x44, 0x44, 0x38,
-                         0x7C, 0x14, 0x14, 0x14, 0x08,
-                         0x08, 0x14, 0x14, 0x14, 0x7C,
-                         0x00, 0x7C, 0x08, 0x04, 0x04,
-                         0x48, 0x54, 0x54, 0x54, 0x20,
-                         0x04, 0x04, 0x3F, 0x44, 0x44,
-                         0x3C, 0x40, 0x40, 0x20, 0x7C,
-                         0x1C, 0x20, 0x40, 0x20, 0x1C,
-                         0x3C, 0x40, 0x30, 0x40, 0x3C,
-                         0x44, 0x28, 0x10, 0x28, 0x44,
-                         0x0C, 0x50, 0x50, 0x50, 0x3C,
-                         0x44, 0x64, 0x54, 0x4C, 0x44,
-                         0x00, 0x08, 0x36, 0x41, 0x41,
-                         0x00, 0x00, 0x7F, 0x00, 0x00,
-                         0x41, 0x41, 0x36, 0x08, 0x00,
-                         0x02, 0x01, 0x02, 0x04, 0x02,
-                         0xFF, 0x81, 0x81, 0x81, 0xFF};
-# 16 "./SSD1306.h" 2
-# 1 "./I2C.h" 1
-# 15 "./I2C.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -265,10 +85,28 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
 typedef long int wchar_t;
+# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
@@ -18238,8 +18076,170 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 16 "./I2C.h" 2
+# 68 "main.c" 2
 
+# 1 "./SSD1306.h" 1
+# 15 "./SSD1306.h"
+# 1 "./font.h" 1
+# 15 "./font.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 16 "./font.h" 2
+
+const char TEXT5x8[96][5] ={0x00, 0x00, 0x00, 0x00, 0x00,
+                         0x00, 0x00, 0x5F, 0x00, 0x00,
+                         0x00, 0x03, 0x00, 0x03, 0x00,
+                         0x14, 0x3E, 0x14, 0x3E, 0x14,
+                         0x24, 0x2A, 0x7F, 0x2A, 0x12,
+                         0x43, 0x33, 0x08, 0x66, 0x61,
+                         0x36, 0x49, 0x55, 0x22, 0x50,
+                         0x00, 0x05, 0x03, 0x00, 0x00,
+                         0x00, 0x1C, 0x22, 0x41, 0x00,
+                         0x00, 0x41, 0x22, 0x1C, 0x00,
+                         0x14, 0x08, 0x3E, 0x08, 0x14,
+                         0x08, 0x08, 0x3E, 0x08, 0x08,
+                         0x00, 0x50, 0x30, 0x00, 0x00,
+                         0x08, 0x08, 0x08, 0x08, 0x08,
+                         0x00, 0x60, 0x60, 0x00, 0x00,
+                         0x20, 0x10, 0x08, 0x04, 0x02,
+                         0x3E, 0x51, 0x49, 0x45, 0x3E,
+                         0x04, 0x02, 0x7F, 0x00, 0x00,
+                         0x42, 0x61, 0x51, 0x49, 0x46,
+                         0x22, 0x41, 0x49, 0x49, 0x36,
+                         0x18, 0x14, 0x12, 0x7F, 0x10,
+                         0x27, 0x45, 0x45, 0x45, 0x39,
+                         0x3E, 0x49, 0x49, 0x49, 0x32,
+                         0x01, 0x01, 0x71, 0x09, 0x07,
+                         0x36, 0x49, 0x49, 0x49, 0x36,
+                         0x26, 0x49, 0x49, 0x49, 0x3E,
+                         0x00, 0x36, 0x36, 0x00, 0x00,
+                         0x00, 0x56, 0x36, 0x00, 0x00,
+                         0x08, 0x14, 0x22, 0x41, 0x00,
+                         0x14, 0x14, 0x14, 0x14, 0x14,
+                         0x00, 0x41, 0x22, 0x14, 0x08,
+                         0x02, 0x01, 0x51, 0x09, 0x06,
+                         0x3E, 0x41, 0x59, 0x55, 0x5E,
+                         0x7E, 0x09, 0x09, 0x09, 0x7E,
+                         0x7F, 0x49, 0x49, 0x49, 0x36,
+                         0x3E, 0x41, 0x41, 0x41, 0x22,
+                         0x7F, 0x41, 0x41, 0x41, 0x3E,
+                         0x7F, 0x49, 0x49, 0x49, 0x41,
+                         0x7F, 0x09, 0x09, 0x09, 0x01,
+                         0x3E, 0x41, 0x41, 0x49, 0x3A,
+                         0x7F, 0x08, 0x08, 0x08, 0x7F,
+                         0x00, 0x41, 0x7F, 0x41, 0x00,
+                         0x30, 0x40, 0x40, 0x40, 0x3F,
+                         0x7F, 0x08, 0x14, 0x22, 0x41,
+                         0x7F, 0x40, 0x40, 0x40, 0x40,
+                         0x7F, 0x02, 0x0C, 0x02, 0x7F,
+                         0x7F, 0x02, 0x04, 0x08, 0x7F,
+                         0x3E, 0x41, 0x41, 0x41, 0x3E,
+                         0x7F, 0x09, 0x09, 0x09, 0x06,
+                         0x1E, 0x21, 0x21, 0x21, 0x5E,
+                         0x7F, 0x09, 0x09, 0x09, 0x76,
+                         0x26, 0x49, 0x49, 0x49, 0x32,
+                         0x01, 0x01, 0x7F, 0x01, 0x01,
+                         0x3F, 0x40, 0x40, 0x40, 0x3F,
+                         0x1F, 0x20, 0x40, 0x20, 0x1F,
+                         0x7F, 0x20, 0x10, 0x20, 0x7F,
+                         0x41, 0x22, 0x1C, 0x22, 0x41,
+                         0x07, 0x08, 0x70, 0x08, 0x07,
+                         0x61, 0x51, 0x49, 0x45, 0x43,
+                         0x00, 0x7F, 0x41, 0x00, 0x00,
+                         0x02, 0x04, 0x08, 0x10, 0x20,
+                         0x00, 0x00, 0x41, 0x7F, 0x00,
+                         0x04, 0x02, 0x01, 0x02, 0x04,
+                         0x40, 0x40, 0x40, 0x40, 0x40,
+                         0x00, 0x01, 0x02, 0x04, 0x00,
+                         0x20, 0x54, 0x54, 0x54, 0x78,
+                         0x7F, 0x44, 0x44, 0x44, 0x38,
+                         0x38, 0x44, 0x44, 0x44, 0x44,
+                         0x38, 0x44, 0x44, 0x44, 0x7F,
+                         0x38, 0x54, 0x54, 0x54, 0x18,
+                         0x04, 0x04, 0x7E, 0x05, 0x05,
+                         0x08, 0x54, 0x54, 0x54, 0x3C,
+                         0x7F, 0x08, 0x04, 0x04, 0x78,
+                         0x00, 0x44, 0x7D, 0x40, 0x00,
+                         0x20, 0x40, 0x44, 0x3D, 0x00,
+                         0x7F, 0x10, 0x28, 0x44, 0x00,
+                         0x00, 0x41, 0x7F, 0x40, 0x00,
+                         0x7C, 0x04, 0x78, 0x04, 0x78,
+                         0x7C, 0x08, 0x04, 0x04, 0x78,
+                         0x38, 0x44, 0x44, 0x44, 0x38,
+                         0x7C, 0x14, 0x14, 0x14, 0x08,
+                         0x08, 0x14, 0x14, 0x14, 0x7C,
+                         0x00, 0x7C, 0x08, 0x04, 0x04,
+                         0x48, 0x54, 0x54, 0x54, 0x20,
+                         0x04, 0x04, 0x3F, 0x44, 0x44,
+                         0x3C, 0x40, 0x40, 0x20, 0x7C,
+                         0x1C, 0x20, 0x40, 0x20, 0x1C,
+                         0x3C, 0x40, 0x30, 0x40, 0x3C,
+                         0x44, 0x28, 0x10, 0x28, 0x44,
+                         0x0C, 0x50, 0x50, 0x50, 0x3C,
+                         0x44, 0x64, 0x54, 0x4C, 0x44,
+                         0x00, 0x08, 0x36, 0x41, 0x41,
+                         0x00, 0x00, 0x7F, 0x00, 0x00,
+                         0x41, 0x41, 0x36, 0x08, 0x00,
+                         0x02, 0x01, 0x02, 0x04, 0x02,
+                         0xFF, 0x81, 0x81, 0x81, 0xFF};
+# 16 "./SSD1306.h" 2
+# 1 "./I2C.h" 1
+# 17 "./I2C.h"
 void I2C_Init(void);
 void I2C_Start(void);
 void I2C_Stop(void);
@@ -18371,12 +18371,199 @@ void SSD1306_ClearScreen(void) {
  }
     I2C_Stop();
 }
-# 68 "main.c" 2
+# 70 "main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 71 "main.c" 2
+
+
+
+void USART_Init()
+{
+ SPBRG = 103;
+
+ TXEN = 1;
+ BRGH = 1;
+    TX9 = 0;
+    SYNC = 0;
+
+ SPEN = 1;
+ CREN = 1;
+    RX9 = 0;
+
+ BRG16 = 1;
+
+
+
+}
+
+void SendByte(unsigned char ch)
+{
+    while(!TXIF);
+    TXREG = ch;
+}
+
+unsigned char GetByte()
+{
+    while(!RCIF);
+    return RCREG;
+}
 
 void main(void) {
     OSCCON = 0b01100010;
     TRISD = 0x00;
     TRISC = 0xFF;
+    TRISCbits.TRISC6 = 0;
 
     _delay((unsigned long)((500)*(4000000/4000.0)));
     I2C_Init();
@@ -18387,8 +18574,20 @@ void main(void) {
     _delay((unsigned long)((500)*(4000000/4000.0)));
     SSD1306_String("Hello world");
     _delay((unsigned long)((1000)*(4000000/4000.0)));
+    USART_Init();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
+    SendByte('2');
+
+    unsigned char data, a[3];
 
     while (1) {
+        data = GetByte();
+        sprintf(a, "%c", data);
+        SSD1306_String(a);
+        SendByte('<');
+        SendByte(data);
+        SendByte('>');
+
         LATDbits.LATD1 = 0;
         _delay((unsigned long)((1000)*(4000000/4000.0)));
         LATDbits.LATD1 = 1;
