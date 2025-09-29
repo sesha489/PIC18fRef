@@ -93,7 +93,7 @@ void SSD1306_Init(void) {
 
 void SSD1306_String(const unsigned char *data) {
     
-    char pixData[5];
+    unsigned char pixData[5];
     
     for (int a=0; data[a]!='\0'; a++){
         if (data[a] <= '~'){

@@ -13,6 +13,7 @@ extern "C" {
 #endif
 
 #include <xc.h>
+#include <pic18f4580.h>
 
 void I2C_Init(void);
 void I2C_Start(void);

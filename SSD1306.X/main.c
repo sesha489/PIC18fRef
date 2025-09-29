@@ -64,49 +64,27 @@
 #define _XTAL_FREQ 4000000
 #define SSD1306_I2C_ADDRESS 0x78 // SSD1306 I2C ADDRESS (0x3C << 1)
 
-#include <xc.h>
+#include "SSD1306.h"
+#include "EUSART.h"
 
-#include"SSD1306.h"
-#include <stdio.h>
-
-//Its sending only one character successfully. Gets stuck if its 4 characters. Also waits at GetByte inside while loop
-
-void USART_Init()
-{
-	SPBRG = 103;
-
-	TXEN = 1;
-	BRGH = 1;
-    TX9 = 0;
-    SYNC = 0;
-
-	SPEN = 1;
-	CREN = 1;
-    RX9 = 0;
-
-	BRG16 = 1;
-    //TXSTA = 0x24;
-    //RCSTA = 0x90;
-    //BAUDCON = 0x08;
+void __interrupt() _ISR(void) {
+    if (PIR1bits.RCIF) {
+        EUSART_Rx_InterruptHandler();
+    }
 }
 
-void SendByte(unsigned char ch)
-{
-    while(!TXIF);
-    TXREG = ch;
-}
-
-unsigned char GetByte()
-{
-    while(!RCIF);
-    return RCREG;
+void UpdateScreen(unsigned char command) {
+    
+    unsigned char printVar[4] = {command, ',', ' ', '\0'};
+    SSD1306_String(&printVar);
+    
 }
 
 void main(void) {
     OSCCON = 0b01100010;
-    TRISD = 0x00; //RD1 declared as output pin
-    TRISC = 0xFF;
-    TRISCbits.TRISC6 = 0;
+    TRISD = 0x00;           //RD1 declared as output pin for blinking LED
+    TRISC = 0xFF;           //PORTC declared as input
+    TRISCbits.TRISC6 = 0;   //RC6 made output for USART Tx
     
     __delay_ms(500);
     I2C_Init();
@@ -115,26 +93,39 @@ void main(void) {
     __delay_ms(500);
     SSD1306_ClearScreen();
     __delay_ms(500);
-    SSD1306_String("Hello world");
+    SSD1306_String("USART test: ");
     __delay_ms(1000);
     USART_Init();
     __delay_ms(100);
-    SendByte('2');
     
-    unsigned char data, a[3];
+    SendString("Connected to HC-06");
+    unsigned char cmd = 0;
+    unsigned char oldCmd = 0;
+    unsigned char updateScn = 0;
 
     while (1) {
-        data = GetByte();
-        sprintf(a, "%c", data);
-        SSD1306_String(a);
-        SendByte('<');
-        SendByte(data);
-        SendByte('>');
         
-        LATDbits.LATD1 = 0; //Make RD1 high to glow LED
-        __delay_ms(1000);
-        LATDbits.LATD1 = 1; //Make RD1 low to OFF LED
-        __delay_ms(1000);
+        if (cmd != oldCmd) {
+            if (cmd == '1') {
+                LATDbits.LATD1 = 1;         //Make RD1 low to OFF LED
+            } else if (cmd == '0') {
+                LATDbits.LATD1 = 0;         //Make RD1 high to glow LED
+            }
+            oldCmd = cmd;
+            updateScn = 1;
+        }
+        
+        if (updateScn == 1) {
+            UpdateScreen(oldCmd);
+            updateScn = 0;
+        }
+        
+        if (rxFlag) {
+            cmd = rxData;
+            SendByte(cmd);
+            rxFlag = 0;
+        }
     }
+    
     return;
 }
