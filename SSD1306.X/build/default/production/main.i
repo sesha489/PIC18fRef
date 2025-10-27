@@ -18282,6 +18282,7 @@ void SSD1306_Init(void);
 void SSD1306_WriteCommand(unsigned char cmd);
 void SSD1306_String(const unsigned char *data);
 void SSD1306_ClearScreen(void);
+void SSD1306_GotoStart(void);
 
 void SSD1306_WriteCommand(unsigned char cmd) {
  I2C_Start();
@@ -18328,6 +18329,19 @@ void SSD1306_Init(void) {
  I2C_Stop();
 
     _delay((unsigned long)((500)*(4000000/4000.0)));
+    I2C_Start();
+ I2C_Write(0x78);
+ I2C_Write(0x00);
+ I2C_Write(0x21);
+ I2C_Write(0);
+ I2C_Write(127);
+ I2C_Write(0x22);
+ I2C_Write(0);
+ I2C_Write(7);
+ I2C_Stop();
+}
+
+void SSD1306_GotoStart(void) {
     I2C_Start();
  I2C_Write(0x78);
  I2C_Write(0x00);
@@ -18602,11 +18616,60 @@ void UpdateScreen(unsigned char command) {
 
 }
 
+unsigned int GetDistance (void) {
+    unsigned int distance_cm = 0;
+    unsigned int pulseWidth = 0;
+
+    unsigned long timeout = 0;
+
+    timeout = 0;
+    LATDbits.LATD2 = 0;
+    _delay((unsigned long)((2)*(4000000/4000000.0)));
+    LATDbits.LATD2 = 1;
+    _delay((unsigned long)((10)*(4000000/4000000.0)));
+    LATDbits.LATD2 = 0;
+
+    while(!PORTBbits.RB0 && timeout++ < 60000);
+
+    if (timeout >= 60000)
+        return 61000;
+
+    TMR1H = 0;
+    TMR1L = 0;
+    PIR1bits.TMR1IF = 0;
+    T1CONbits.TMR1ON = 1;
+
+    timeout = 0;
+    while(PORTBbits.RB0 && timeout++ < 60000);
+
+    T1CONbits.TMR1ON = 0;
+
+    if (timeout >= 60000 || PIR1bits.TMR1IF)
+        return 62000;
+
+    pulseWidth = ((TMR1H << 8) | TMR1L);
+
+    distance_cm = pulseWidth;
+
+    return distance_cm;
+}
+
 void main(void) {
     OSCCON = 0b01100010;
+    ADCON1 = 0x0F;
+    CMCON = 0x07;
     TRISD = 0x00;
     TRISC = 0xFF;
     TRISCbits.TRISC6 = 0;
+    TRISDbits.TRISD3 = 1;
+    TRISDbits.TRISD2 = 0;
+    TRISB = 0xFF;
+    TRISBbits.TRISB0 = 1;
+
+
+
+
+    T1CON = 0x10;
 
     _delay((unsigned long)((500)*(4000000/4000.0)));
     I2C_Init();
@@ -18620,10 +18683,13 @@ void main(void) {
     USART_Init();
     _delay((unsigned long)((100)*(4000000/4000.0)));
 
-    SendString("Connected to HC-06");
+    SendString("Connected to HC-06\n");
     unsigned char cmd = 0;
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
+    unsigned int dist = 0;
+    unsigned char a[7];
+    unsigned int counter = 0;
 
     while (1) {
 
@@ -18647,6 +18713,40 @@ void main(void) {
             SendByte(cmd);
             rxFlag = 0;
         }
+
+        if (PORTDbits.RD3) {
+            LATDbits.LATD1 = 0;
+        } else {
+            LATDbits.LATD1 = 1;
+        }
+# 208 "main.c"
+        LATDbits.LATD2 = 0;
+        _delay((unsigned long)((2)*(4000000/4000000.0)));
+        LATDbits.LATD2 = 1;
+        _delay((unsigned long)((10)*(4000000/4000000.0)));
+        LATDbits.LATD2 = 0;
+# 231 "main.c"
+        while(!PORTDbits.RD3){
+            SendString("Echo not yet high\n");
+        }
+
+        TMR1H = 0;
+        TMR1L = 0;
+        PIR1bits.TMR1IF = 0;
+        T1CONbits.TMR1ON = 1;
+
+        while(PORTDbits.RD3){
+            SendString("Echo stuck high\n");
+        }
+
+        T1CONbits.TMR1ON = 0;
+
+        dist = ((TMR1H << 8) | TMR1L);
+        sprintf(a, "%u cm\n", dist);
+        SendString(a);
+
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+
     }
 
     return;

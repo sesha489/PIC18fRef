@@ -33,6 +33,7 @@ void SSD1306_Init(void);
 void SSD1306_WriteCommand(unsigned char cmd);
 void SSD1306_String(const unsigned char *data);
 void SSD1306_ClearScreen(void);
+void SSD1306_GotoStart(void);
 
 void SSD1306_WriteCommand(unsigned char cmd) {
 	I2C_Start();
@@ -79,6 +80,19 @@ void SSD1306_Init(void) {
 	I2C_Stop();
     
     __delay_ms(500);
+    I2C_Start();
+	I2C_Write(SSD1306_I2C_ADDRESS);
+	I2C_Write(0x00);
+	I2C_Write(0x21);
+	I2C_Write(0);
+	I2C_Write(127);
+	I2C_Write(0x22);
+	I2C_Write(0);
+	I2C_Write(7);
+	I2C_Stop();
+}
+
+void SSD1306_GotoStart(void) {
     I2C_Start();
 	I2C_Write(SSD1306_I2C_ADDRESS);
 	I2C_Write(0x00);

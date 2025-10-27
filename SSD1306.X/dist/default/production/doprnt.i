@@ -839,6 +839,9 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 12 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c" 2
+# 97 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+typedef signed int vfpf_sint_t;
+typedef unsigned int vfpf_uint_t;
 # 153 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
 static int prec, width;
 static char flags;
@@ -892,27 +895,54 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 {
     char c, *cp;
     _Bool done;
+
+ union {
+
+  vfpf_sint_t sint;
+  vfpf_uint_t uint;
+
+  long double f;
+ } convarg;
 # 1201 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
     if ((*fmt)[0] == '%') {
         ++*fmt;
 
         flags = width = 0;
         prec = -1;
-# 1273 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-        if ((*fmt)[0] == 'c') {
-            ++*fmt;
-            c = (unsigned char)(*(int *)__va_arg(*(int **)ap, (int)0));
+# 1291 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+  cp = *fmt;
+# 1439 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+  if (0
+# 1450 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+    || *cp == 'u'
 
-   fputc(c, fp);
+    ) {
+# 1495 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+   convarg.uint = (vfpf_uint_t)(unsigned int)(*(unsigned int *)__va_arg(*(unsigned int **)ap, (unsigned int)0));
+
+   *fmt = cp+1;
+   switch (*cp) {
+# 1523 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+    case 'u':
+
+     c = sizeof(dbuf);
+     do {
+      dbuf[--c] = (convarg.uint % 10) + '0';
+      convarg.uint /= 10;
 
 
 
-   return;
+     } while (convarg.uint != 0 && c != 0);
+     while (c != sizeof(dbuf)) {
+      fputc(dbuf[c++], fp);
+     }
 
 
 
-
-        }
+     return;
+# 1589 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+   }
+  }
 # 1806 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
         ++*fmt;
         return (void) 0;
