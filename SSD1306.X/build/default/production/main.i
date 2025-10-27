@@ -18620,36 +18620,25 @@ unsigned int GetDistance (void) {
     unsigned int distance_cm = 0;
     unsigned int pulseWidth = 0;
 
-    unsigned long timeout = 0;
-
-    timeout = 0;
-    LATDbits.LATD2 = 0;
-    _delay((unsigned long)((2)*(4000000/4000000.0)));
-    LATDbits.LATD2 = 1;
-    _delay((unsigned long)((10)*(4000000/4000000.0)));
-    LATDbits.LATD2 = 0;
-
-    while(!PORTBbits.RB0 && timeout++ < 60000);
-
-    if (timeout >= 60000)
-        return 61000;
-
     TMR1H = 0;
     TMR1L = 0;
     PIR1bits.TMR1IF = 0;
+
+    LATDbits.LATD2 = 0;
+    _delay((unsigned long)((2)*(4000000/4000000.0)));
+    LATDbits.LATD2 = 1;
+    _delay((unsigned long)((11)*(4000000/4000000.0)));
+    LATDbits.LATD2 = 0;
+
+    while (!PORTDbits.RD3);
     T1CONbits.TMR1ON = 1;
-
-    timeout = 0;
-    while(PORTBbits.RB0 && timeout++ < 60000);
-
+    LATDbits.LATD1 = 1;
+    while (PORTDbits.RD3);
     T1CONbits.TMR1ON = 0;
-
-    if (timeout >= 60000 || PIR1bits.TMR1IF)
-        return 62000;
+    LATDbits.LATD1 = 0;
 
     pulseWidth = ((TMR1H << 8) | TMR1L);
-
-    distance_cm = pulseWidth;
+    distance_cm = pulseWidth * 0.0343;
 
     return distance_cm;
 }
@@ -18663,10 +18652,6 @@ void main(void) {
     TRISCbits.TRISC6 = 0;
     TRISDbits.TRISD3 = 1;
     TRISDbits.TRISD2 = 0;
-    TRISB = 0xFF;
-    TRISBbits.TRISB0 = 1;
-
-
 
 
     T1CON = 0x10;
@@ -18688,8 +18673,8 @@ void main(void) {
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
     unsigned int dist = 0;
+    unsigned int dist_cm = 0;
     unsigned char a[7];
-    unsigned int counter = 0;
 
     while (1) {
 
@@ -18714,39 +18699,15 @@ void main(void) {
             rxFlag = 0;
         }
 
-        if (PORTDbits.RD3) {
-            LATDbits.LATD1 = 0;
-        } else {
-            LATDbits.LATD1 = 1;
-        }
-# 208 "main.c"
-        LATDbits.LATD2 = 0;
-        _delay((unsigned long)((2)*(4000000/4000000.0)));
-        LATDbits.LATD2 = 1;
-        _delay((unsigned long)((10)*(4000000/4000000.0)));
-        LATDbits.LATD2 = 0;
-# 231 "main.c"
-        while(!PORTDbits.RD3){
-            SendString("Echo not yet high\n");
-        }
+        dist = GetDistance();
 
-        TMR1H = 0;
-        TMR1L = 0;
-        PIR1bits.TMR1IF = 0;
-        T1CONbits.TMR1ON = 1;
-
-        while(PORTDbits.RD3){
-            SendString("Echo stuck high\n");
-        }
-
-        T1CONbits.TMR1ON = 0;
-
-        dist = ((TMR1H << 8) | TMR1L);
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
         sprintf(a, "%u cm\n", dist);
         SendString(a);
+        SSD1306_String(a);
 
         _delay((unsigned long)((1000)*(4000000/4000.0)));
-
     }
 
     return;
