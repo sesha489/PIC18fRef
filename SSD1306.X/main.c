@@ -67,16 +67,34 @@
 #include "SSD1306.h"
 #include "EUSART.h"
 
+volatile unsigned long tone_toggle_count = 0; // how many toggles left
+
 void __interrupt() _ISR(void) {
     if (PIR1bits.RCIF) {
         EUSART_Rx_InterruptHandler();
     }
+    
+    if (PIR1bits.TMR2IF) {
+        PIR1bits.TMR2IF = 0;
+
+        if (tone_toggle_count > 0) {
+            LATDbits.LATD1 ^= 1;  // toggle buzzer pin
+            tone_toggle_count--;
+        } else {
+            T2CONbits.TMR2ON = 0; // stop timer
+            LATDbits.LATD1 = 0;
+        }
+    }
 }
 
-void UpdateScreen(unsigned char command) {
+void UpdateScreen(unsigned int dist) {
     
-    unsigned char printVar[4] = {command, ',', ' ', '\0'};
-    SSD1306_String(&printVar);
+    unsigned char a[7];
+    SSD1306_ClearScreen();
+    SSD1306_GotoStart();
+    sprintf(a, "%u cm\n", dist);
+    SendString(a);
+    SSD1306_String(a);
     
 }
 
@@ -96,10 +114,8 @@ unsigned int GetDistance (void) {
     
     while (!PORTDbits.RD3);
     T1CONbits.TMR1ON = 1;
-    LATDbits.LATD1 = 1;
     while (PORTDbits.RD3);
     T1CONbits.TMR1ON = 0;
-    LATDbits.LATD1 = 0;
     
     pulseWidth = ((TMR1H << 8) | TMR1L);
     distance_cm = pulseWidth * 0.0343;
@@ -107,18 +123,118 @@ unsigned int GetDistance (void) {
     return distance_cm;
 }
 
+void tone(unsigned int frequency, unsigned int duration_ms) {
+    if (frequency == 0) return;
+
+    // Stop timer and put buzzer low before reconfig
+    T2CONbits.TMR2ON = 0;
+    LATDbits.LATD1 = 0;
+
+    // compute half-period in microseconds
+    unsigned long period_us = 1000000UL / (unsigned long)frequency;  // full period
+    unsigned int toggle_time_us = (unsigned int)(period_us / 2UL);    // half period
+
+    // choose prescaler and PR2
+    unsigned char prescaler_bits = 0; // T2CKPS bits value (00 => 1:1, 01 => 1:4, 1x => 1:16)
+    unsigned int pr = 0;
+
+    // Try prescaler 1, then 4, then 16
+    if (toggle_time_us <= 256) {
+        prescaler_bits = 0; // 1:1
+        pr = toggle_time_us - 1;
+    } else if ((toggle_time_us / 4) <= 256) {
+        prescaler_bits = 1; // 1:4
+        pr = (toggle_time_us / 4) - 1;
+    } else if ((toggle_time_us / 16) <= 256) {
+        prescaler_bits = 2; // 1:16
+        pr = (toggle_time_us / 16) - 1;
+    } else {
+        // frequency too low for Timer2 resolution
+        return;
+    }
+
+    // Configure T2CON prescaler bits
+    T2CONbits.T2CKPS = prescaler_bits; // 00, 01 or 10
+    // Leave postscaler at 1:1 (TOUTPS = 0000)
+
+    PR2 = (unsigned char)pr;
+    TMR2 = 0;
+    PIR1bits.TMR2IF = 0;
+
+    // compute number of toggles (each interrupt toggles the pin once -> half-period)
+    tone_toggle_count = ((unsigned long)duration_ms * 1000UL) / (unsigned long)toggle_time_us;
+
+    // small settle (optional, helps in practice)
+    __delay_us(10);
+
+    // start Timer2
+    T2CONbits.TMR2ON = 1;
+}
+
+void playNotes (void) {
+    tone(262, 500);   //261Hz for 1s
+    __delay_ms(500);
+    tone(294, 500);
+    __delay_ms(500);
+    tone(330, 500);
+    __delay_ms(500);
+    tone(349, 500);
+    __delay_ms(500);
+    tone(392, 500);
+    __delay_ms(500);
+    tone(440, 500);
+    __delay_ms(500);
+    tone(466, 500);
+    __delay_ms(500);
+    tone(523, 500);
+}
+
+void playConfusedTone(void) {
+    tone(440, 150);
+    __delay_ms(150);
+    tone(392, 150);
+    __delay_ms(150);
+    tone(370, 150);
+    __delay_ms(150);
+    tone(392, 150);
+    __delay_ms(150);
+    tone(415, 150);
+    __delay_ms(150);
+    tone(370, 200);
+}
+
+void playHappyTone(void) {
+    tone(880, 80);  // C5
+    __delay_ms(80);
+    tone(988, 80);  // E5
+    __delay_ms(80);
+    tone(1175, 100);  // G5
+    __delay_ms(140);
+    tone(1568, 120); // C6
+    __delay_ms(120);
+    tone(1760, 180); // C6
+}
+
 void main(void) {
     OSCCON = 0b01100010;
     ADCON1 = 0x0F;
     CMCON = 0x07;
-    TRISD = 0x00;           //RD1 declared as output pin for blinking LED
+    TRISD = 0x00;           //PORTD declared as output
     TRISC = 0xFF;           //PORTC declared as input
     TRISCbits.TRISC6 = 0;   //RC6 made output for USART Tx
-    TRISDbits.TRISD3 = 1;
-    TRISDbits.TRISD2 = 0;
+    TRISDbits.TRISD3 = 1;   //HC-SR04 Echo
+    TRISDbits.TRISD2 = 0;   //HC-SR04 Trigger
+    TRISDbits.TRISD1 = 0;   //Output for passive buzzer
 
-    
+    //Timer-1 for HC-SR04
     T1CON = 0x10;
+    //Timer-2 for passive buzzer
+    T2CON = 0x00;           //Prescaler 1:1, Timer2 off
+    PIE1bits.TMR2IE = 1;    // Enable Timer2 interrupt
+    PIR1bits.TMR2IF = 0;    // Clear interrupt flag
+    
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
     
     __delay_ms(500);
     I2C_Init();
@@ -127,33 +243,32 @@ void main(void) {
     __delay_ms(500);
     SSD1306_ClearScreen();
     __delay_ms(500);
-    SSD1306_String("USART test: ");
-    __delay_ms(1000);
     USART_Init();
     __delay_ms(100);
     
-    SendString("Connected to HC-06\n");
     unsigned char cmd = 0;
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
     unsigned int dist = 0;
-    unsigned int dist_cm = 0;
-    unsigned char a[7];
 
     while (1) {
         
         if (cmd != oldCmd) {
             if (cmd == '1') {
-                LATDbits.LATD1 = 1;         //Make RD1 low to OFF LED
-            } else if (cmd == '0') {
-                LATDbits.LATD1 = 0;         //Make RD1 high to glow LED
+                dist = GetDistance();
+            }else if (cmd == '2') {
+                playNotes();
+            }else if (cmd == '3') {
+                playConfusedTone();
+            }else if (cmd == '4') {
+                playHappyTone();
             }
             oldCmd = cmd;
             updateScn = 1;
         }
         
         if (updateScn == 1) {
-            UpdateScreen(oldCmd);
+            UpdateScreen(dist);
             updateScn = 0;
         }
         
@@ -163,15 +278,6 @@ void main(void) {
             rxFlag = 0;
         }
         
-        dist = GetDistance();
-        
-        SSD1306_ClearScreen();
-        SSD1306_GotoStart();
-        sprintf(a, "%u cm\n", dist);
-        SendString(a);
-        SSD1306_String(a);
-        
-        __delay_ms(1000);
     }
     
     return;

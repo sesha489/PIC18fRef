@@ -18603,16 +18603,34 @@ void EUSART_Rx_InterruptHandler (void) {
 }
 # 69 "main.c" 2
 
+volatile unsigned long tone_toggle_count = 0;
+
 void __attribute__((picinterrupt(("")))) _ISR(void) {
     if (PIR1bits.RCIF) {
         EUSART_Rx_InterruptHandler();
     }
+
+    if (PIR1bits.TMR2IF) {
+        PIR1bits.TMR2IF = 0;
+
+        if (tone_toggle_count > 0) {
+            LATDbits.LATD1 ^= 1;
+            tone_toggle_count--;
+        } else {
+            T2CONbits.TMR2ON = 0;
+            LATDbits.LATD1 = 0;
+        }
+    }
 }
 
-void UpdateScreen(unsigned char command) {
+void UpdateScreen(unsigned int dist) {
 
-    unsigned char printVar[4] = {command, ',', ' ', '\0'};
-    SSD1306_String(&printVar);
+    unsigned char a[7];
+    SSD1306_ClearScreen();
+    SSD1306_GotoStart();
+    sprintf(a, "%u cm\n", dist);
+    SendString(a);
+    SSD1306_String(a);
 
 }
 
@@ -18632,15 +18650,105 @@ unsigned int GetDistance (void) {
 
     while (!PORTDbits.RD3);
     T1CONbits.TMR1ON = 1;
-    LATDbits.LATD1 = 1;
     while (PORTDbits.RD3);
     T1CONbits.TMR1ON = 0;
-    LATDbits.LATD1 = 0;
 
     pulseWidth = ((TMR1H << 8) | TMR1L);
     distance_cm = pulseWidth * 0.0343;
 
     return distance_cm;
+}
+
+void tone(unsigned int frequency, unsigned int duration_ms) {
+    if (frequency == 0) return;
+
+
+    T2CONbits.TMR2ON = 0;
+    LATDbits.LATD1 = 0;
+
+
+    unsigned long period_us = 1000000UL / (unsigned long)frequency;
+    unsigned int toggle_time_us = (unsigned int)(period_us / 2UL);
+
+
+    unsigned char prescaler_bits = 0;
+    unsigned int pr = 0;
+
+
+    if (toggle_time_us <= 256) {
+        prescaler_bits = 0;
+        pr = toggle_time_us - 1;
+    } else if ((toggle_time_us / 4) <= 256) {
+        prescaler_bits = 1;
+        pr = (toggle_time_us / 4) - 1;
+    } else if ((toggle_time_us / 16) <= 256) {
+        prescaler_bits = 2;
+        pr = (toggle_time_us / 16) - 1;
+    } else {
+
+        return;
+    }
+
+
+    T2CONbits.T2CKPS = prescaler_bits;
+
+
+    PR2 = (unsigned char)pr;
+    TMR2 = 0;
+    PIR1bits.TMR2IF = 0;
+
+
+    tone_toggle_count = ((unsigned long)duration_ms * 1000UL) / (unsigned long)toggle_time_us;
+
+
+    _delay((unsigned long)((10)*(4000000/4000000.0)));
+
+
+    T2CONbits.TMR2ON = 1;
+}
+
+void playNotes (void) {
+    tone(262, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(294, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(330, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(349, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(392, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(440, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(466, 500);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    tone(523, 500);
+}
+
+void playConfusedTone(void) {
+    tone(440, 150);
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+    tone(392, 150);
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+    tone(370, 150);
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+    tone(392, 150);
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+    tone(415, 150);
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+    tone(370, 200);
+}
+
+void playHappyTone(void) {
+    tone(880, 80);
+    _delay((unsigned long)((80)*(4000000/4000.0)));
+    tone(988, 80);
+    _delay((unsigned long)((80)*(4000000/4000.0)));
+    tone(1175, 100);
+    _delay((unsigned long)((140)*(4000000/4000.0)));
+    tone(1568, 120);
+    _delay((unsigned long)((120)*(4000000/4000.0)));
+    tone(1760, 180);
 }
 
 void main(void) {
@@ -18652,9 +18760,17 @@ void main(void) {
     TRISCbits.TRISC6 = 0;
     TRISDbits.TRISD3 = 1;
     TRISDbits.TRISD2 = 0;
+    TRISDbits.TRISD1 = 0;
 
 
     T1CON = 0x10;
+
+    T2CON = 0x00;
+    PIE1bits.TMR2IE = 1;
+    PIR1bits.TMR2IF = 0;
+
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
 
     _delay((unsigned long)((500)*(4000000/4000.0)));
     I2C_Init();
@@ -18663,33 +18779,32 @@ void main(void) {
     _delay((unsigned long)((500)*(4000000/4000.0)));
     SSD1306_ClearScreen();
     _delay((unsigned long)((500)*(4000000/4000.0)));
-    SSD1306_String("USART test: ");
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
     USART_Init();
     _delay((unsigned long)((100)*(4000000/4000.0)));
 
-    SendString("Connected to HC-06\n");
     unsigned char cmd = 0;
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
     unsigned int dist = 0;
-    unsigned int dist_cm = 0;
-    unsigned char a[7];
 
     while (1) {
 
         if (cmd != oldCmd) {
             if (cmd == '1') {
-                LATDbits.LATD1 = 1;
-            } else if (cmd == '0') {
-                LATDbits.LATD1 = 0;
+                dist = GetDistance();
+            }else if (cmd == '2') {
+                playNotes();
+            }else if (cmd == '3') {
+                playConfusedTone();
+            }else if (cmd == '4') {
+                playHappyTone();
             }
             oldCmd = cmd;
             updateScn = 1;
         }
 
         if (updateScn == 1) {
-            UpdateScreen(oldCmd);
+            UpdateScreen(dist);
             updateScn = 0;
         }
 
@@ -18699,15 +18814,6 @@ void main(void) {
             rxFlag = 0;
         }
 
-        dist = GetDistance();
-
-        SSD1306_ClearScreen();
-        SSD1306_GotoStart();
-        sprintf(a, "%u cm\n", dist);
-        SendString(a);
-        SSD1306_String(a);
-
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
     }
 
     return;
