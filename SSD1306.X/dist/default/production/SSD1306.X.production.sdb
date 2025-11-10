@@ -91,9 +91,9 @@
 [v _playNotes playNotes `(v  1 e 1 0 ]
 "192
 [v _playConfusedTone playConfusedTone `(v  1 e 1 0 ]
-"206
-[v _playHappyTone playHappyTone `(v  1 e 1 0 ]
 "218
+[v _noise noise `(v  1 e 1 0 ]
+"268
 [v _main main `(v  1 e 1 0 ]
 "19 C:\Users\sesha\Desktop\Workspace\Repos\sesha489\PIC18fRef\SSD1306.X/EUSART.h
 [v _rxData rxData `VEuc  1 e 1 0 ]
@@ -366,33 +366,45 @@
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "70 C:\Users\sesha\Desktop\Workspace\Repos\sesha489\PIC18fRef\SSD1306.X\main.c
 [v _tone_toggle_count tone_toggle_count `VEul  1 e 4 0 ]
-"218
+"268
 [v _main main `(v  1 e 1 0 ]
 {
-"252
+"302
 [v main@dist dist `ui  1 a 2 59 ]
-"249
+"299
 [v main@cmd cmd `uc  1 a 1 63 ]
-"251
+"301
 [v main@updateScn updateScn `uc  1 a 1 62 ]
-"250
+"300
 [v main@oldCmd oldCmd `uc  1 a 1 61 ]
-"284
+"334
 } 0
 "174
 [v _playNotes playNotes `(v  1 e 1 0 ]
 {
 "190
 } 0
-"206
-[v _playHappyTone playHappyTone `(v  1 e 1 0 ]
-{
-"216
-} 0
 "192
 [v _playConfusedTone playConfusedTone `(v  1 e 1 0 ]
 {
 "204
+} 0
+"218
+[v _noise noise `(v  1 e 1 0 ]
+{
+"260
+[v noise@i_583 i `i  1 a 2 50 ]
+"253
+[v noise@i_582 i `i  1 a 2 48 ]
+"244
+[v noise@i_581 i `i  1 a 2 46 ]
+"237
+[v noise@i_580 i `i  1 a 2 44 ]
+"228
+[v noise@i_579 i `i  1 a 2 54 ]
+"219
+[v noise@i i `i  1 a 2 52 ]
+"266
 } 0
 "126
 [v _tone tone `(v  1 e 1 0 ]
@@ -444,10 +456,10 @@
 "9 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1054 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[u S1061 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
 "13
-[s S1057 _IO_FILE 11 `S1054 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1057  1 a 11 32 ]
+[s S1064 _IO_FILE 11 `S1061 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1064  1 a 11 32 ]
 "12
 [v sprintf@ap ap `[1]*.30v  1 a 1 31 ]
 "9
@@ -460,9 +472,9 @@
 {
 "1820
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 24 ]
-[s S1089 _IO_FILE 0 ]
+[s S1096 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.30S1089  1 p 1 20 ]
+[v vfprintf@fp fp `*.30S1096  1 p 1 20 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 21 ]
 [v vfprintf@ap ap `*.30*.30v  1 p 1 23 ]
 "1840
@@ -470,15 +482,15 @@
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1102 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+[u S1109 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1102  1 a 4 15 ]
+[v vfpfcnvrt@convarg convarg `S1109  1 a 4 15 ]
 "1179
 [v vfpfcnvrt@cp cp `*.32uc  1 a 2 13 ]
 [v vfpfcnvrt@c c `uc  1 a 1 19 ]
-[s S1089 _IO_FILE 0 ]
+[s S1096 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.30S1089  1 p 1 8 ]
+[v vfpfcnvrt@fp fp `*.30S1096  1 p 1 8 ]
 [v vfpfcnvrt@fmt fmt `*.30*.32uc  1 p 1 9 ]
 [v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 10 ]
 "1814
@@ -487,9 +499,9 @@
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[u S1054 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1057 _IO_FILE 11 `S1054 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.30S1057  1 p 1 2 ]
+[u S1061 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1064 _IO_FILE 11 `S1061 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.30S1064  1 p 1 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\putch.c
@@ -658,17 +670,17 @@
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S912 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S919 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S917 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S920 . 4 `l 1 i 4 0 `d 1 f 4 0 `S912 1 fAsBytes 4 0 `S917 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S920  1 a 4 33 ]
+[s S924 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S927 . 4 `l 1 i 4 0 `d 1 f 4 0 `S919 1 fAsBytes 4 0 `S924 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S927  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 27 ]
-[s S988 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S995 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S991 . 2 `s 1 i 2 0 `us 1 n 2 0 `S988 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S991  1 a 2 37 ]
+[u S998 . 2 `s 1 i 2 0 `us 1 n 2 0 `S995 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S998  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11

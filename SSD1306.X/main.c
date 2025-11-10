@@ -215,6 +215,56 @@ void playHappyTone(void) {
     tone(1760, 180); // C6
 }
 
+void noise(void) {
+    for (int i=50; i<1500; i=i+50) {
+        tone(i, 5);
+        __delay_ms(5);
+        tone((i-20), 5);
+        __delay_ms(5);
+    }
+    
+    __delay_ms(500);
+    
+    for (int i=1500; i>50; i=i-25) {
+        tone(i, 5);
+        __delay_ms(5);
+        tone((i-20), 5);
+        __delay_ms(5);
+    }
+    
+    __delay_ms(500);
+    //Ah-huh
+    for (int i=0; i<20; i++) {
+        tone(1500, 5);
+        __delay_ms(5);
+        tone(1480, 5);
+        __delay_ms(5);
+    }
+    __delay_ms(50);
+    for (int i=0; i<10; i++) {
+        tone(1550, 5);
+        __delay_ms(5);
+        tone(1530, 5);
+        __delay_ms(5);
+    }
+    
+    __delay_ms(500);
+    //uh-huh
+    for (int i=0; i<10; i++) {
+        tone(750, 5);
+        __delay_ms(5);
+        tone(730, 5);
+        __delay_ms(5);
+    }
+    __delay_ms(100);
+    for (int i=0; i<20; i++) {
+        tone(700, 5);
+        __delay_ms(5);
+        tone(680, 5);
+        __delay_ms(5);
+    }
+}
+
 void main(void) {
     OSCCON = 0b01100010;
     ADCON1 = 0x0F;
@@ -261,7 +311,7 @@ void main(void) {
             }else if (cmd == '3') {
                 playConfusedTone();
             }else if (cmd == '4') {
-                playHappyTone();
+                noise();
             }
             oldCmd = cmd;
             updateScn = 1;

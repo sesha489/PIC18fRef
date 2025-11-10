@@ -18751,6 +18751,56 @@ void playHappyTone(void) {
     tone(1760, 180);
 }
 
+void noise(void) {
+    for (int i=50; i<1500; i=i+50) {
+        tone(i, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone((i-20), 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+
+    for (int i=1500; i>50; i=i-25) {
+        tone(i, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone((i-20), 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+
+    for (int i=0; i<20; i++) {
+        tone(1500, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone(1480, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+    _delay((unsigned long)((50)*(4000000/4000.0)));
+    for (int i=0; i<10; i++) {
+        tone(1550, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone(1530, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+
+    for (int i=0; i<10; i++) {
+        tone(750, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone(730, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+    _delay((unsigned long)((100)*(4000000/4000.0)));
+    for (int i=0; i<20; i++) {
+        tone(700, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        tone(680, 5);
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+    }
+}
+
 void main(void) {
     OSCCON = 0b01100010;
     ADCON1 = 0x0F;
@@ -18797,7 +18847,7 @@ void main(void) {
             }else if (cmd == '3') {
                 playConfusedTone();
             }else if (cmd == '4') {
-                playHappyTone();
+                noise();
             }
             oldCmd = cmd;
             updateScn = 1;
