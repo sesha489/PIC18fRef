@@ -62,9 +62,9 @@
 // Use project enums instead of #define for ON and OFF.
 
 #define _XTAL_FREQ 4000000
-#define SSD1306_I2C_ADDRESS 0x78 // SSD1306 I2C ADDRESS (0x3C << 1)
 
 #include "SSD1306.h"
+#include "MPU6050.h"
 #include "EUSART.h"
 
 volatile unsigned long tone_toggle_count = 0; // how many toggles left
@@ -92,7 +92,7 @@ void UpdateScreen(unsigned int dist) {
     unsigned char a[7];
     SSD1306_ClearScreen();
     SSD1306_GotoStart();
-    sprintf(a, "%u cm\n", dist);
+    sprintf(a, "%u\n", dist);
     SendString(a);
     SSD1306_String(a);
     
@@ -275,6 +275,7 @@ void main(void) {
     TRISDbits.TRISD3 = 1;   //HC-SR04 Echo
     TRISDbits.TRISD2 = 0;   //HC-SR04 Trigger
     TRISDbits.TRISD1 = 0;   //Output for passive buzzer
+    TRISDbits.TRISD0 = 1;   //TTP-223 Touch sensor
 
     //Timer-1 for HC-SR04
     T1CON = 0x10;
@@ -295,13 +296,27 @@ void main(void) {
     __delay_ms(500);
     USART_Init();
     __delay_ms(100);
+    MPU6050_Init();
+    __delay_ms(500);
     
     unsigned char cmd = 0;
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
     unsigned int dist = 0;
+    
+    unsigned char a[10];
+    
+    unsigned int sensorTouch = 0;
 
     while (1) {
+        
+        if (PORTDbits.RD0 && (sensorTouch == 0)) {
+            sensorTouch = 1;
+            noise();
+        }
+        
+        if (!PORTDbits.RD0)
+            sensorTouch = 0;
         
         if (cmd != oldCmd) {
             if (cmd == '1') {
@@ -327,6 +342,14 @@ void main(void) {
             SendByte(cmd);
             rxFlag = 0;
         }
+        
+        updateYaw();
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
+        sprintf(a, "%f\n", yaw_angle);
+        SSD1306_String(a);
+        
+        __delay_ms(50);
         
     }
     

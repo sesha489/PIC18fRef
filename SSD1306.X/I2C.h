@@ -38,6 +38,12 @@ void I2C_Start(void) {
 	while (SEN);
 }
 
+void I2C_RepeatedStart(void) {
+    I2C_Hold();
+    RSEN = 1;
+    while (RSEN);
+}
+
 void I2C_Stop(void) {
 	I2C_Hold();
 	PEN = 1;
@@ -49,6 +55,23 @@ void I2C_Write(unsigned char data) {
 	SSPBUF = data;
 	while(!SSPIF);
 	SSPIF = 0;
+}
+
+unsigned char I2C_Read(unsigned char ack) {
+    unsigned char data;
+
+    I2C_Hold();
+    RCEN = 1;          // Enable receive
+
+    while (!SSPSTATbits.BF);   // Wait for buffer full
+    data = SSPBUF;
+
+    I2C_Hold();
+    ACKDT = (ack) ? 0 : 1;     // ack=1 ? ACK, ack=0 ? NACK
+    ACKEN = 1;                 // Send ACK/NACK
+    while (ACKEN);
+
+    return data;
 }
 
 #ifdef	__cplusplus

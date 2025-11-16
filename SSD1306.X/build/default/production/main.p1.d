@@ -3,4 +3,5 @@ main.c  \
 SSD1306.h  \
 font.h  \
 I2C.h  \
+MPU6050.h  \
 EUSART.h 

@@ -72,7 +72,6 @@
 
 
 
-
 # 1 "./SSD1306.h" 1
 # 15 "./SSD1306.h"
 # 1 "./font.h" 1
@@ -18264,6 +18263,12 @@ void I2C_Start(void) {
  while (SEN);
 }
 
+void I2C_RepeatedStart(void) {
+    I2C_Hold();
+    RSEN = 1;
+    while (RSEN);
+}
+
 void I2C_Stop(void) {
  I2C_Hold();
  PEN = 1;
@@ -18276,8 +18281,25 @@ void I2C_Write(unsigned char data) {
  while(!SSPIF);
  SSPIF = 0;
 }
+
+unsigned char I2C_Read(unsigned char ack) {
+    unsigned char data;
+
+    I2C_Hold();
+    RCEN = 1;
+
+    while (!SSPSTATbits.BF);
+    data = SSPBUF;
+
+    I2C_Hold();
+    ACKDT = (ack) ? 0 : 1;
+    ACKEN = 1;
+    while (ACKEN);
+
+    return data;
+}
 # 17 "./SSD1306.h" 2
-# 32 "./SSD1306.h"
+# 34 "./SSD1306.h"
 void SSD1306_Init(void);
 void SSD1306_WriteCommand(unsigned char cmd);
 void SSD1306_String(const unsigned char *data);
@@ -18385,6 +18407,147 @@ void SSD1306_ClearScreen(void) {
   }
  }
     I2C_Stop();
+}
+# 67 "main.c" 2
+# 1 "./MPU6050.h" 1
+# 12 "./MPU6050.h"
+int16_t gyro_z_offset = 0;
+
+void MPU6050_Init(void);
+void CalibrateGyro(void);
+void updateYaw(void);
+
+int16_t MPU6050_ReadAccelX(void);
+int16_t MPU6050_ReadAccelY(void);
+int16_t MPU6050_ReadAccelZ(void);
+int16_t MPU6050_ReadGyroX(void);
+int16_t MPU6050_ReadGyroY(void);
+int16_t MPU6050_ReadGyroZ(void);
+
+void MPU6050_Init(void) {
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x6B);
+    I2C_Write(0x00);
+    I2C_Stop();
+
+    CalibrateGyro();
+}
+
+void CalibrateGyro() {
+    long sum = 0;
+
+    _delay((unsigned long)((200)*(4000000/4000.0)));
+
+    for (int i=0; i<2000; i++) {
+        sum += MPU6050_ReadGyroZ();
+        _delay((unsigned long)((2)*(4000000/4000.0)));
+    }
+    gyro_z_offset = sum / 2000;
+
+    _delay((unsigned long)((200)*(4000000/4000.0)));
+}
+
+volatile float yaw_angle = 0.0f;
+
+void updateYaw() {
+    int16_t gyro_z_raw = 0;
+    float gyro_z_dps = 0.0f;
+
+
+    gyro_z_raw = MPU6050_ReadGyroZ();
+
+
+    int16_t corrected = gyro_z_raw - gyro_z_offset;
+
+
+    gyro_z_dps = (float)corrected / 131.0f;
+
+
+    yaw_angle += gyro_z_dps * 0.25f;
+
+
+
+    if (yaw_angle > 360) yaw_angle -= 360;
+    if (yaw_angle < 0) yaw_angle += 360;
+}
+
+int16_t MPU6050_ReadAccelX(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x3B);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
+}
+
+int16_t MPU6050_ReadAccelY(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x3D);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
+}
+
+int16_t MPU6050_ReadAccelZ(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x3F);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
+}
+
+int16_t MPU6050_ReadGyroX(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x43);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
+}
+
+int16_t MPU6050_ReadGyroY(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x45);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
+}
+
+int16_t MPU6050_ReadGyroZ(void) {
+    uint8_t high, low;
+    I2C_Start();
+    I2C_Write(0x68 << 1);
+    I2C_Write(0x47);
+    I2C_RepeatedStart();
+    I2C_Write((0x68 << 1) | 1);
+    high = I2C_Read(1);
+    low = I2C_Read(0);
+    I2C_Stop();
+    return (int16_t)((high << 8) | low);
 }
 # 68 "main.c" 2
 # 1 "./EUSART.h" 1
@@ -18628,7 +18791,7 @@ void UpdateScreen(unsigned int dist) {
     unsigned char a[7];
     SSD1306_ClearScreen();
     SSD1306_GotoStart();
-    sprintf(a, "%u cm\n", dist);
+    sprintf(a, "%u\n", dist);
     SendString(a);
     SSD1306_String(a);
 
@@ -18811,6 +18974,7 @@ void main(void) {
     TRISDbits.TRISD3 = 1;
     TRISDbits.TRISD2 = 0;
     TRISDbits.TRISD1 = 0;
+    TRISDbits.TRISD0 = 1;
 
 
     T1CON = 0x10;
@@ -18831,13 +18995,27 @@ void main(void) {
     _delay((unsigned long)((500)*(4000000/4000.0)));
     USART_Init();
     _delay((unsigned long)((100)*(4000000/4000.0)));
+    MPU6050_Init();
+    _delay((unsigned long)((500)*(4000000/4000.0)));
 
     unsigned char cmd = 0;
     unsigned char oldCmd = 0;
     unsigned char updateScn = 0;
     unsigned int dist = 0;
 
+    unsigned char a[10];
+
+    unsigned int sensorTouch = 0;
+
     while (1) {
+
+        if (PORTDbits.RD0 && (sensorTouch == 0)) {
+            sensorTouch = 1;
+            noise();
+        }
+
+        if (!PORTDbits.RD0)
+            sensorTouch = 0;
 
         if (cmd != oldCmd) {
             if (cmd == '1') {
@@ -18863,6 +19041,14 @@ void main(void) {
             SendByte(cmd);
             rxFlag = 0;
         }
+
+        updateYaw();
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
+        sprintf(a, "%f\n", yaw_angle);
+        SSD1306_String(a);
+
+        _delay((unsigned long)((50)*(4000000/4000.0)));
 
     }
 

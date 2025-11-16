@@ -14,6 +14,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38860
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 38860: extern volatile __bit SEN __attribute__((address(0x7E28)));
 [v _SEN `Vb ~T0 @X0 0 e@32296 ]
+"36367
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 36367: extern volatile __bit RSEN __attribute__((address(0x7E29)));
+[v _RSEN `Vb ~T0 @X0 0 e@32297 ]
 "36091
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 36091: extern volatile __bit PEN __attribute__((address(0x7E2A)));
 [v _PEN `Vb ~T0 @X0 0 e@32298 ]
@@ -23,6 +26,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38905
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 38905: extern volatile __bit SSPIF __attribute__((address(0x7CF3)));
 [v _SSPIF `Vb ~T0 @X0 0 e@31987 ]
+"36274
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 36274: extern volatile __bit RCEN __attribute__((address(0x7E2B)));
+[v _RCEN `Vb ~T0 @X0 0 e@32299 ]
+"30551
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30551:     struct {
+[s S1011 :2 `uc 1 :1 `uc 1 ]
+[n S1011 . . R_NOT_W ]
+"30555
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30555:     struct {
+[s S1012 :5 `uc 1 :1 `uc 1 ]
+[n S1012 . . D_NOT_A ]
+"30559
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30559:     struct {
+[s S1013 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1013 . BF UA R_nW S P D_nA CKE SMP ]
+"30569
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30569:     struct {
+[s S1014 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1014 . . R_W . D_A ]
+"30575
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30575:     struct {
+[s S1015 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1015 . . I2C_READ I2C_START I2C_STOP I2C_DAT ]
+"30582
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30582:     struct {
+[s S1016 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1016 . . nW . nA ]
+"30588
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30588:     struct {
+[s S1017 :2 `uc 1 :1 `uc 1 ]
+[n S1017 . . NOT_WRITE ]
+"30592
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30592:     struct {
+[s S1018 :5 `uc 1 :1 `uc 1 ]
+[n S1018 . . NOT_ADDRESS ]
+"30596
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30596:     struct {
+[s S1019 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1019 . . nWRITE . nADDRESS ]
+"30602
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30602:     struct {
+[s S1020 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1020 . . READ_WRITE . DATA_ADDRESS ]
+"30608
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30608:     struct {
+[s S1021 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1021 . . R . D ]
+"30614
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30614:     struct {
+[s S1022 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1022 . . RW START STOP DA ]
+"30621
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30621:     struct {
+[s S1023 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1023 . . NOT_W . NOT_A ]
+"30550
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30550: typedef union {
+[u S1010 `S1011 1 `S1012 1 `S1013 1 `S1014 1 `S1015 1 `S1016 1 `S1017 1 `S1018 1 `S1019 1 `S1020 1 `S1021 1 `S1022 1 `S1023 1 ]
+[n S1010 . . . . . . . . . . . . . . ]
+"30628
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 30628: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0xFC7)));
+[v _SSPSTATbits `VS1010 ~T0 @X0 0 e@4039 ]
+"32485
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 32485: extern volatile __bit ACKDT __attribute__((address(0x7E2D)));
+[v _ACKDT `Vb ~T0 @X0 0 e@32301 ]
+"32488
+[; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 32488: extern volatile __bit ACKEN __attribute__((address(0x7E2C)));
+[v _ACKEN `Vb ~T0 @X0 0 e@32300 ]
 [v F374 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF374 ~T0 @X0 0 e ]
@@ -30,6 +101,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h
 [; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
 [v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"15 ./MPU6050.h
+[; ;./MPU6050.h: 15: void CalibrateGyro(void);
+[v _CalibrateGyro `(v ~T0 @X0 0 ef ]
+"23
+[; ;./MPU6050.h: 23: int16_t MPU6050_ReadGyroZ(void);
+[v _MPU6050_ReadGyroZ `(s ~T0 @X0 0 ef ]
 "29269 C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h
 [; ;C:/Users/sesha/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4580.h: 29269: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
 [v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
@@ -2322,388 +2399,839 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1094 ]
 }
 "41
-[; ;./I2C.h: 41: void I2C_Stop(void) {
-[v _I2C_Stop `(v ~T0 @X0 1 ef ]
+[; ;./I2C.h: 41: void I2C_RepeatedStart(void) {
+[v _I2C_RepeatedStart `(v ~T0 @X0 1 ef ]
 {
-[e :U _I2C_Stop ]
+[e :U _I2C_RepeatedStart ]
 [f ]
 "42
-[; ;./I2C.h: 42:  I2C_Hold();
+[; ;./I2C.h: 42:     I2C_Hold();
 [e ( _I2C_Hold ..  ]
 "43
-[; ;./I2C.h: 43:  PEN = 1;
-[e = _PEN -> -> 1 `i `b ]
+[; ;./I2C.h: 43:     RSEN = 1;
+[e = _RSEN -> -> 1 `i `b ]
 "44
-[; ;./I2C.h: 44:  while(PEN);
+[; ;./I2C.h: 44:     while (RSEN);
 [e $U 1099  ]
 [e :U 1100 ]
 [e :U 1099 ]
-[e $ _PEN 1100  ]
+[e $ _RSEN 1100  ]
 [e :U 1101 ]
 "45
 [; ;./I2C.h: 45: }
 [e :UE 1098 ]
 }
 "47
-[; ;./I2C.h: 47: void I2C_Write(unsigned char data) {
-[v _I2C_Write `(v ~T0 @X0 1 ef1`uc ]
+[; ;./I2C.h: 47: void I2C_Stop(void) {
+[v _I2C_Stop `(v ~T0 @X0 1 ef ]
 {
-[e :U _I2C_Write ]
-[v _data `uc ~T0 @X0 1 r1 ]
+[e :U _I2C_Stop ]
 [f ]
 "48
 [; ;./I2C.h: 48:  I2C_Hold();
 [e ( _I2C_Hold ..  ]
 "49
-[; ;./I2C.h: 49:  SSPBUF = data;
-[e = _SSPBUF _data ]
+[; ;./I2C.h: 49:  PEN = 1;
+[e = _PEN -> -> 1 `i `b ]
 "50
-[; ;./I2C.h: 50:  while(!SSPIF);
+[; ;./I2C.h: 50:  while(PEN);
 [e $U 1103  ]
 [e :U 1104 ]
 [e :U 1103 ]
-[e $ ! _SSPIF 1104  ]
+[e $ _PEN 1104  ]
 [e :U 1105 ]
 "51
-[; ;./I2C.h: 51:  SSPIF = 0;
-[e = _SSPIF -> -> 0 `i `b ]
-"52
-[; ;./I2C.h: 52: }
+[; ;./I2C.h: 51: }
 [e :UE 1102 ]
 }
-"38 ./SSD1306.h
-[; ;./SSD1306.h: 38: void SSD1306_WriteCommand(unsigned char cmd) {
+"53
+[; ;./I2C.h: 53: void I2C_Write(unsigned char data) {
+[v _I2C_Write `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _I2C_Write ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"54
+[; ;./I2C.h: 54:  I2C_Hold();
+[e ( _I2C_Hold ..  ]
+"55
+[; ;./I2C.h: 55:  SSPBUF = data;
+[e = _SSPBUF _data ]
+"56
+[; ;./I2C.h: 56:  while(!SSPIF);
+[e $U 1107  ]
+[e :U 1108 ]
+[e :U 1107 ]
+[e $ ! _SSPIF 1108  ]
+[e :U 1109 ]
+"57
+[; ;./I2C.h: 57:  SSPIF = 0;
+[e = _SSPIF -> -> 0 `i `b ]
+"58
+[; ;./I2C.h: 58: }
+[e :UE 1106 ]
+}
+"60
+[; ;./I2C.h: 60: unsigned char I2C_Read(unsigned char ack) {
+[v _I2C_Read `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _I2C_Read ]
+[v _ack `uc ~T0 @X0 1 r1 ]
+[f ]
+"61
+[; ;./I2C.h: 61:     unsigned char data;
+[v _data `uc ~T0 @X0 1 a ]
+"63
+[; ;./I2C.h: 63:     I2C_Hold();
+[e ( _I2C_Hold ..  ]
+"64
+[; ;./I2C.h: 64:     RCEN = 1;
+[e = _RCEN -> -> 1 `i `b ]
+"66
+[; ;./I2C.h: 66:     while (!SSPSTATbits.BF);
+[e $U 1111  ]
+[e :U 1112 ]
+[e :U 1111 ]
+[e $ ! != -> . . _SSPSTATbits 2 0 `i -> 0 `i 1112  ]
+[e :U 1113 ]
+"67
+[; ;./I2C.h: 67:     data = SSPBUF;
+[e = _data _SSPBUF ]
+"69
+[; ;./I2C.h: 69:     I2C_Hold();
+[e ( _I2C_Hold ..  ]
+"70
+[; ;./I2C.h: 70:     ACKDT = (ack) ? 0 : 1;
+[e = _ACKDT -> ? != -> _ack `i -> 0 `i : -> 0 `i -> 1 `i `b ]
+"71
+[; ;./I2C.h: 71:     ACKEN = 1;
+[e = _ACKEN -> -> 1 `i `b ]
+"72
+[; ;./I2C.h: 72:     while (ACKEN);
+[e $U 1114  ]
+[e :U 1115 ]
+[e :U 1114 ]
+[e $ _ACKEN 1115  ]
+[e :U 1116 ]
+"74
+[; ;./I2C.h: 74:     return data;
+[e ) _data ]
+[e $UE 1110  ]
+"75
+[; ;./I2C.h: 75: }
+[e :UE 1110 ]
+}
+"40 ./SSD1306.h
+[; ;./SSD1306.h: 40: void SSD1306_WriteCommand(unsigned char cmd) {
 [v _SSD1306_WriteCommand `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _SSD1306_WriteCommand ]
 [v _cmd `uc ~T0 @X0 1 r1 ]
 [f ]
-"39
-[; ;./SSD1306.h: 39:  I2C_Start();
-[e ( _I2C_Start ..  ]
-"40
-[; ;./SSD1306.h: 40:  I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "41
-[; ;./SSD1306.h: 41:  I2C_Write(0x00);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+[; ;./SSD1306.h: 41:  I2C_Start();
+[e ( _I2C_Start ..  ]
 "42
-[; ;./SSD1306.h: 42:  I2C_Write(cmd);
-[e ( _I2C_Write (1 _cmd ]
+[; ;./SSD1306.h: 42:  I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "43
-[; ;./SSD1306.h: 43:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;./SSD1306.h: 43:  I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
 "44
-[; ;./SSD1306.h: 44: }
-[e :UE 1106 ]
-}
+[; ;./SSD1306.h: 44:  I2C_Write(cmd);
+[e ( _I2C_Write (1 _cmd ]
+"45
+[; ;./SSD1306.h: 45:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
 "46
-[; ;./SSD1306.h: 46: void SSD1306_Init(void) {
+[; ;./SSD1306.h: 46: }
+[e :UE 1117 ]
+}
+"48
+[; ;./SSD1306.h: 48: void SSD1306_Init(void) {
 [v _SSD1306_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _SSD1306_Init ]
 [f ]
-"47
-[; ;./SSD1306.h: 47:  I2C_Start();
-[e ( _I2C_Start ..  ]
-"48
-[; ;./SSD1306.h: 48:  I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "49
-[; ;./SSD1306.h: 49:  I2C_Write(0x00);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"51
-[; ;./SSD1306.h: 51:  SSD1306_WriteCommand(0xAE);
-[e ( _SSD1306_WriteCommand (1 -> -> 174 `i `uc ]
-"52
-[; ;./SSD1306.h: 52:  SSD1306_WriteCommand(0xD5);
-[e ( _SSD1306_WriteCommand (1 -> -> 213 `i `uc ]
-"53
-[; ;./SSD1306.h: 53:  SSD1306_WriteCommand(0x80);
-[e ( _SSD1306_WriteCommand (1 -> -> 128 `i `uc ]
-"54
-[; ;./SSD1306.h: 54:  SSD1306_WriteCommand(0xA8);
-[e ( _SSD1306_WriteCommand (1 -> -> 168 `i `uc ]
-"55
-[; ;./SSD1306.h: 55:  SSD1306_WriteCommand(0x3F);
-[e ( _SSD1306_WriteCommand (1 -> -> 63 `i `uc ]
-"56
-[; ;./SSD1306.h: 56:  SSD1306_WriteCommand(0xD3);
-[e ( _SSD1306_WriteCommand (1 -> -> 211 `i `uc ]
-"57
-[; ;./SSD1306.h: 57:  SSD1306_WriteCommand(0x00);
-[e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
-"58
-[; ;./SSD1306.h: 58:  SSD1306_WriteCommand(0x40);
-[e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
-"59
-[; ;./SSD1306.h: 59:  SSD1306_WriteCommand(0x8D);
-[e ( _SSD1306_WriteCommand (1 -> -> 141 `i `uc ]
-"60
-[; ;./SSD1306.h: 60:  SSD1306_WriteCommand(0x14);
-[e ( _SSD1306_WriteCommand (1 -> -> 20 `i `uc ]
-"61
-[; ;./SSD1306.h: 61:  SSD1306_WriteCommand(0x20);
-[e ( _SSD1306_WriteCommand (1 -> -> 32 `i `uc ]
-"62
-[; ;./SSD1306.h: 62:  SSD1306_WriteCommand(0x00);
-[e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
-"65
-[; ;./SSD1306.h: 65:  SSD1306_WriteCommand(0xA1);
-[e ( _SSD1306_WriteCommand (1 -> -> 161 `i `uc ]
-"66
-[; ;./SSD1306.h: 66:  SSD1306_WriteCommand(0xC8);
-[e ( _SSD1306_WriteCommand (1 -> -> 200 `i `uc ]
-"67
-[; ;./SSD1306.h: 67:  SSD1306_WriteCommand(0xDA);
-[e ( _SSD1306_WriteCommand (1 -> -> 218 `i `uc ]
-"68
-[; ;./SSD1306.h: 68:  SSD1306_WriteCommand(0x12);
-[e ( _SSD1306_WriteCommand (1 -> -> 18 `i `uc ]
-"70
-[; ;./SSD1306.h: 70:  SSD1306_WriteCommand(0x81);
-[e ( _SSD1306_WriteCommand (1 -> -> 129 `i `uc ]
-"71
-[; ;./SSD1306.h: 71:  SSD1306_WriteCommand(0x7F);
-[e ( _SSD1306_WriteCommand (1 -> -> 127 `i `uc ]
-"72
-[; ;./SSD1306.h: 72:  SSD1306_WriteCommand(0xD9);
-[e ( _SSD1306_WriteCommand (1 -> -> 217 `i `uc ]
-"73
-[; ;./SSD1306.h: 73:  SSD1306_WriteCommand(0xF1);
-[e ( _SSD1306_WriteCommand (1 -> -> 241 `i `uc ]
-"74
-[; ;./SSD1306.h: 74:  SSD1306_WriteCommand(0xDB);
-[e ( _SSD1306_WriteCommand (1 -> -> 219 `i `uc ]
-"75
-[; ;./SSD1306.h: 75:  SSD1306_WriteCommand(0x40);
-[e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
-"76
-[; ;./SSD1306.h: 76:  SSD1306_WriteCommand(0xA4);
-[e ( _SSD1306_WriteCommand (1 -> -> 164 `i `uc ]
-"77
-[; ;./SSD1306.h: 77:  SSD1306_WriteCommand(0xA6);
-[e ( _SSD1306_WriteCommand (1 -> -> 166 `i `uc ]
-"78
-[; ;./SSD1306.h: 78:  SSD1306_WriteCommand(0xAF);
-[e ( _SSD1306_WriteCommand (1 -> -> 175 `i `uc ]
-"80
-[; ;./SSD1306.h: 80:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"82
-[; ;./SSD1306.h: 82:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"83
-[; ;./SSD1306.h: 83:     I2C_Start();
+[; ;./SSD1306.h: 49:  I2C_Start();
 [e ( _I2C_Start ..  ]
-"84
-[; ;./SSD1306.h: 84:  I2C_Write(0x78);
+"50
+[; ;./SSD1306.h: 50:  I2C_Write(0x78);
 [e ( _I2C_Write (1 -> -> 120 `i `uc ]
-"85
-[; ;./SSD1306.h: 85:  I2C_Write(0x00);
+"51
+[; ;./SSD1306.h: 51:  I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"53
+[; ;./SSD1306.h: 53:  SSD1306_WriteCommand(0xAE);
+[e ( _SSD1306_WriteCommand (1 -> -> 174 `i `uc ]
+"54
+[; ;./SSD1306.h: 54:  SSD1306_WriteCommand(0xD5);
+[e ( _SSD1306_WriteCommand (1 -> -> 213 `i `uc ]
+"55
+[; ;./SSD1306.h: 55:  SSD1306_WriteCommand(0x80);
+[e ( _SSD1306_WriteCommand (1 -> -> 128 `i `uc ]
+"56
+[; ;./SSD1306.h: 56:  SSD1306_WriteCommand(0xA8);
+[e ( _SSD1306_WriteCommand (1 -> -> 168 `i `uc ]
+"57
+[; ;./SSD1306.h: 57:  SSD1306_WriteCommand(0x3F);
+[e ( _SSD1306_WriteCommand (1 -> -> 63 `i `uc ]
+"58
+[; ;./SSD1306.h: 58:  SSD1306_WriteCommand(0xD3);
+[e ( _SSD1306_WriteCommand (1 -> -> 211 `i `uc ]
+"59
+[; ;./SSD1306.h: 59:  SSD1306_WriteCommand(0x00);
+[e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
+"60
+[; ;./SSD1306.h: 60:  SSD1306_WriteCommand(0x40);
+[e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
+"61
+[; ;./SSD1306.h: 61:  SSD1306_WriteCommand(0x8D);
+[e ( _SSD1306_WriteCommand (1 -> -> 141 `i `uc ]
+"62
+[; ;./SSD1306.h: 62:  SSD1306_WriteCommand(0x14);
+[e ( _SSD1306_WriteCommand (1 -> -> 20 `i `uc ]
+"63
+[; ;./SSD1306.h: 63:  SSD1306_WriteCommand(0x20);
+[e ( _SSD1306_WriteCommand (1 -> -> 32 `i `uc ]
+"64
+[; ;./SSD1306.h: 64:  SSD1306_WriteCommand(0x00);
+[e ( _SSD1306_WriteCommand (1 -> -> 0 `i `uc ]
+"67
+[; ;./SSD1306.h: 67:  SSD1306_WriteCommand(0xA1);
+[e ( _SSD1306_WriteCommand (1 -> -> 161 `i `uc ]
+"68
+[; ;./SSD1306.h: 68:  SSD1306_WriteCommand(0xC8);
+[e ( _SSD1306_WriteCommand (1 -> -> 200 `i `uc ]
+"69
+[; ;./SSD1306.h: 69:  SSD1306_WriteCommand(0xDA);
+[e ( _SSD1306_WriteCommand (1 -> -> 218 `i `uc ]
+"70
+[; ;./SSD1306.h: 70:  SSD1306_WriteCommand(0x12);
+[e ( _SSD1306_WriteCommand (1 -> -> 18 `i `uc ]
+"72
+[; ;./SSD1306.h: 72:  SSD1306_WriteCommand(0x81);
+[e ( _SSD1306_WriteCommand (1 -> -> 129 `i `uc ]
+"73
+[; ;./SSD1306.h: 73:  SSD1306_WriteCommand(0x7F);
+[e ( _SSD1306_WriteCommand (1 -> -> 127 `i `uc ]
+"74
+[; ;./SSD1306.h: 74:  SSD1306_WriteCommand(0xD9);
+[e ( _SSD1306_WriteCommand (1 -> -> 217 `i `uc ]
+"75
+[; ;./SSD1306.h: 75:  SSD1306_WriteCommand(0xF1);
+[e ( _SSD1306_WriteCommand (1 -> -> 241 `i `uc ]
+"76
+[; ;./SSD1306.h: 76:  SSD1306_WriteCommand(0xDB);
+[e ( _SSD1306_WriteCommand (1 -> -> 219 `i `uc ]
+"77
+[; ;./SSD1306.h: 77:  SSD1306_WriteCommand(0x40);
+[e ( _SSD1306_WriteCommand (1 -> -> 64 `i `uc ]
+"78
+[; ;./SSD1306.h: 78:  SSD1306_WriteCommand(0xA4);
+[e ( _SSD1306_WriteCommand (1 -> -> 164 `i `uc ]
+"79
+[; ;./SSD1306.h: 79:  SSD1306_WriteCommand(0xA6);
+[e ( _SSD1306_WriteCommand (1 -> -> 166 `i `uc ]
+"80
+[; ;./SSD1306.h: 80:  SSD1306_WriteCommand(0xAF);
+[e ( _SSD1306_WriteCommand (1 -> -> 175 `i `uc ]
+"82
+[; ;./SSD1306.h: 82:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"84
+[; ;./SSD1306.h: 84:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"85
+[; ;./SSD1306.h: 85:     I2C_Start();
+[e ( _I2C_Start ..  ]
 "86
-[; ;./SSD1306.h: 86:  I2C_Write(0x21);
-[e ( _I2C_Write (1 -> -> 33 `i `uc ]
+[; ;./SSD1306.h: 86:  I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "87
-[; ;./SSD1306.h: 87:  I2C_Write(0);
+[; ;./SSD1306.h: 87:  I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
 "88
-[; ;./SSD1306.h: 88:  I2C_Write(127);
-[e ( _I2C_Write (1 -> -> 127 `i `uc ]
+[; ;./SSD1306.h: 88:  I2C_Write(0x21);
+[e ( _I2C_Write (1 -> -> 33 `i `uc ]
 "89
-[; ;./SSD1306.h: 89:  I2C_Write(0x22);
-[e ( _I2C_Write (1 -> -> 34 `i `uc ]
-"90
-[; ;./SSD1306.h: 90:  I2C_Write(0);
+[; ;./SSD1306.h: 89:  I2C_Write(0);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"90
+[; ;./SSD1306.h: 90:  I2C_Write(127);
+[e ( _I2C_Write (1 -> -> 127 `i `uc ]
 "91
-[; ;./SSD1306.h: 91:  I2C_Write(7);
-[e ( _I2C_Write (1 -> -> 7 `i `uc ]
+[; ;./SSD1306.h: 91:  I2C_Write(0x22);
+[e ( _I2C_Write (1 -> -> 34 `i `uc ]
 "92
-[; ;./SSD1306.h: 92:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;./SSD1306.h: 92:  I2C_Write(0);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
 "93
-[; ;./SSD1306.h: 93: }
-[e :UE 1107 ]
-}
+[; ;./SSD1306.h: 93:  I2C_Write(7);
+[e ( _I2C_Write (1 -> -> 7 `i `uc ]
+"94
+[; ;./SSD1306.h: 94:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
 "95
-[; ;./SSD1306.h: 95: void SSD1306_GotoStart(void) {
+[; ;./SSD1306.h: 95: }
+[e :UE 1118 ]
+}
+"97
+[; ;./SSD1306.h: 97: void SSD1306_GotoStart(void) {
 [v _SSD1306_GotoStart `(v ~T0 @X0 1 ef ]
 {
 [e :U _SSD1306_GotoStart ]
 [f ]
-"96
-[; ;./SSD1306.h: 96:     I2C_Start();
-[e ( _I2C_Start ..  ]
-"97
-[; ;./SSD1306.h: 97:  I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "98
-[; ;./SSD1306.h: 98:  I2C_Write(0x00);
-[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+[; ;./SSD1306.h: 98:     I2C_Start();
+[e ( _I2C_Start ..  ]
 "99
-[; ;./SSD1306.h: 99:  I2C_Write(0x21);
-[e ( _I2C_Write (1 -> -> 33 `i `uc ]
+[; ;./SSD1306.h: 99:  I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "100
-[; ;./SSD1306.h: 100:  I2C_Write(0);
+[; ;./SSD1306.h: 100:  I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
 "101
-[; ;./SSD1306.h: 101:  I2C_Write(127);
-[e ( _I2C_Write (1 -> -> 127 `i `uc ]
+[; ;./SSD1306.h: 101:  I2C_Write(0x21);
+[e ( _I2C_Write (1 -> -> 33 `i `uc ]
 "102
-[; ;./SSD1306.h: 102:  I2C_Write(0x22);
-[e ( _I2C_Write (1 -> -> 34 `i `uc ]
-"103
-[; ;./SSD1306.h: 103:  I2C_Write(0);
+[; ;./SSD1306.h: 102:  I2C_Write(0);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"103
+[; ;./SSD1306.h: 103:  I2C_Write(127);
+[e ( _I2C_Write (1 -> -> 127 `i `uc ]
 "104
-[; ;./SSD1306.h: 104:  I2C_Write(7);
-[e ( _I2C_Write (1 -> -> 7 `i `uc ]
+[; ;./SSD1306.h: 104:  I2C_Write(0x22);
+[e ( _I2C_Write (1 -> -> 34 `i `uc ]
 "105
-[; ;./SSD1306.h: 105:  I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;./SSD1306.h: 105:  I2C_Write(0);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
 "106
-[; ;./SSD1306.h: 106: }
-[e :UE 1108 ]
-}
+[; ;./SSD1306.h: 106:  I2C_Write(7);
+[e ( _I2C_Write (1 -> -> 7 `i `uc ]
+"107
+[; ;./SSD1306.h: 107:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
 "108
-[; ;./SSD1306.h: 108: void SSD1306_String(const unsigned char *data) {
+[; ;./SSD1306.h: 108: }
+[e :UE 1119 ]
+}
+"110
+[; ;./SSD1306.h: 110: void SSD1306_String(const unsigned char *data) {
 [v _SSD1306_String `(v ~T0 @X0 1 ef1`*Cuc ]
 {
 [e :U _SSD1306_String ]
 [v _data `*Cuc ~T0 @X0 1 r1 ]
 [f ]
-"110
-[; ;./SSD1306.h: 110:     unsigned char pixData[5];
-[v _pixData `uc ~T0 @X0 -> 5 `i a ]
 "112
-[; ;./SSD1306.h: 112:     for (int a=0; data[a]!='\0'; a++){
+[; ;./SSD1306.h: 112:     unsigned char pixData[5];
+[v _pixData `uc ~T0 @X0 -> 5 `i a ]
+"114
+[; ;./SSD1306.h: 114:     for (int a=0; data[a]!='\0'; a++){
 {
 [v _a `i ~T0 @X0 1 a ]
 [e = _a -> 0 `i ]
-[e $U 1113  ]
-[e :U 1110 ]
+[e $U 1124  ]
+[e :U 1121 ]
 {
-"113
-[; ;./SSD1306.h: 113:         if (data[a] <= '~'){
-[e $ ! <= -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 126 `ui 1114  ]
-{
-"114
-[; ;./SSD1306.h: 114:             memcpy(pixData, TEXT5x8[data[a]-' '], 5);
-[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> - -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 32 `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
 "115
-[; ;./SSD1306.h: 115:         }else{
-}
-[e $U 1115  ]
-[e :U 1114 ]
+[; ;./SSD1306.h: 115:         if (data[a] <= '~'){
+[e $ ! <= -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 126 `ui 1125  ]
 {
 "116
-[; ;./SSD1306.h: 116:             memcpy(pixData, TEXT5x8[95], 5);
-[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> -> -> 95 `i `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
+[; ;./SSD1306.h: 116:             memcpy(pixData, TEXT5x8[data[a]-' '], 5);
+[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> - -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 32 `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
 "117
-[; ;./SSD1306.h: 117:         }
+[; ;./SSD1306.h: 117:         }else{
 }
-[e :U 1115 ]
+[e $U 1126  ]
+[e :U 1125 ]
+{
+"118
+[; ;./SSD1306.h: 118:             memcpy(pixData, TEXT5x8[95], 5);
+[e ( _memcpy (3 , , -> &U _pixData `*v -> &U *U + &U _TEXT5x8 * -> -> -> 95 `i `ui `ux -> * -> # *U &U *U &U _TEXT5x8 `ui -> -> 5 `i `ui `ux `*Cv -> -> 5 `i `ui ]
 "119
-[; ;./SSD1306.h: 119:         I2C_Start();
-[e ( _I2C_Start ..  ]
-"120
-[; ;./SSD1306.h: 120:         I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+[; ;./SSD1306.h: 119:         }
+}
+[e :U 1126 ]
 "121
-[; ;./SSD1306.h: 121:         I2C_Write(0x40);
-[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+[; ;./SSD1306.h: 121:         I2C_Start();
+[e ( _I2C_Start ..  ]
 "122
-[; ;./SSD1306.h: 122:         for (int i=0; i<5; i++){
+[; ;./SSD1306.h: 122:         I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"123
+[; ;./SSD1306.h: 123:         I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"124
+[; ;./SSD1306.h: 124:         for (int i=0; i<5; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 5 `i 1116  ]
-[e $U 1117  ]
-[e :U 1116 ]
+[e $ < _i -> 5 `i 1127  ]
+[e $U 1128  ]
+[e :U 1127 ]
 {
-"123
-[; ;./SSD1306.h: 123:             I2C_Write(pixData[i]);
+"125
+[; ;./SSD1306.h: 125:             I2C_Write(pixData[i]);
 [e ( _I2C_Write (1 *U + &U _pixData * -> -> _i `ui `ux -> -> # *U &U _pixData `ui `ux ]
-"124
-[; ;./SSD1306.h: 124:         }
+"126
+[; ;./SSD1306.h: 126:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 5 `i 1116  ]
-[e :U 1117 ]
-}
-"125
-[; ;./SSD1306.h: 125:         I2C_Stop();
-[e ( _I2C_Stop ..  ]
-"126
-[; ;./SSD1306.h: 126:     }
-}
-[e ++ _a -> 1 `i ]
-[e :U 1113 ]
-[e $ != -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 0 `ui 1110  ]
-[e :U 1111 ]
+[e $ < _i -> 5 `i 1127  ]
+[e :U 1128 ]
 }
 "127
-[; ;./SSD1306.h: 127: }
-[e :UE 1109 ]
+[; ;./SSD1306.h: 127:         I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"128
+[; ;./SSD1306.h: 128:     }
+}
+[e ++ _a -> 1 `i ]
+[e :U 1124 ]
+[e $ != -> *U + _data * -> _a `x -> -> # *U _data `i `x `ui -> 0 `ui 1121  ]
+[e :U 1122 ]
 }
 "129
-[; ;./SSD1306.h: 129: void SSD1306_ClearScreen(void) {
+[; ;./SSD1306.h: 129: }
+[e :UE 1120 ]
+}
+"131
+[; ;./SSD1306.h: 131: void SSD1306_ClearScreen(void) {
 [v _SSD1306_ClearScreen `(v ~T0 @X0 1 ef ]
 {
 [e :U _SSD1306_ClearScreen ]
 [f ]
-"130
-[; ;./SSD1306.h: 130:     I2C_Start();
-[e ( _I2C_Start ..  ]
-"131
-[; ;./SSD1306.h: 131:  I2C_Write(0x78);
-[e ( _I2C_Write (1 -> -> 120 `i `uc ]
 "132
-[; ;./SSD1306.h: 132:  I2C_Write(0x40);
-[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+[; ;./SSD1306.h: 132:     I2C_Start();
+[e ( _I2C_Start ..  ]
 "133
-[; ;./SSD1306.h: 133:  for (int i=0; i<8; i++) {
+[; ;./SSD1306.h: 133:  I2C_Write(0x78);
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"134
+[; ;./SSD1306.h: 134:  I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"135
+[; ;./SSD1306.h: 135:  for (int i=0; i<8; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 1120  ]
-[e $U 1121  ]
-[e :U 1120 ]
+[e $ < _i -> 8 `i 1131  ]
+[e $U 1132  ]
+[e :U 1131 ]
 {
-"134
-[; ;./SSD1306.h: 134:   for (int j=0; j<128; j++) {
+"136
+[; ;./SSD1306.h: 136:   for (int j=0; j<128; j++) {
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-[e $ < _j -> 128 `i 1123  ]
-[e $U 1124  ]
-[e :U 1123 ]
+[e $ < _j -> 128 `i 1134  ]
+[e $U 1135  ]
+[e :U 1134 ]
 {
-"135
-[; ;./SSD1306.h: 135:    I2C_Write(0x00);
+"137
+[; ;./SSD1306.h: 137:    I2C_Write(0x00);
 [e ( _I2C_Write (1 -> -> 0 `i `uc ]
-"136
-[; ;./SSD1306.h: 136:   }
+"138
+[; ;./SSD1306.h: 138:   }
 }
 [e ++ _j -> 1 `i ]
-[e $ < _j -> 128 `i 1123  ]
-[e :U 1124 ]
+[e $ < _j -> 128 `i 1134  ]
+[e :U 1135 ]
 }
-"137
-[; ;./SSD1306.h: 137:  }
+"139
+[; ;./SSD1306.h: 139:  }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 1120  ]
-[e :U 1121 ]
+[e $ < _i -> 8 `i 1131  ]
+[e :U 1132 ]
+}
+"140
+[; ;./SSD1306.h: 140:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"141
+[; ;./SSD1306.h: 141: }
+[e :UE 1130 ]
+}
+"12 ./MPU6050.h
+[; ;./MPU6050.h: 12: int16_t gyro_z_offset = 0;
+[v _gyro_z_offset `s ~T0 @X0 1 e ]
+[i _gyro_z_offset
+-> -> 0 `i `s
+]
+"25
+[; ;./MPU6050.h: 25: void MPU6050_Init(void) {
+[v _MPU6050_Init `(v ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_Init ]
+[f ]
+"26
+[; ;./MPU6050.h: 26:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"27
+[; ;./MPU6050.h: 27:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"28
+[; ;./MPU6050.h: 28:     I2C_Write(0x6B);
+[e ( _I2C_Write (1 -> -> 107 `i `uc ]
+"29
+[; ;./MPU6050.h: 29:     I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"30
+[; ;./MPU6050.h: 30:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"32
+[; ;./MPU6050.h: 32:     CalibrateGyro();
+[e ( _CalibrateGyro ..  ]
+"33
+[; ;./MPU6050.h: 33: }
+[e :UE 1137 ]
+}
+"35
+[; ;./MPU6050.h: 35: void CalibrateGyro() {
+[v _CalibrateGyro `(v ~T0 @X0 1 ef ]
+{
+[e :U _CalibrateGyro ]
+[f ]
+"36
+[; ;./MPU6050.h: 36:     long sum = 0;
+[v _sum `l ~T0 @X0 1 a ]
+[e = _sum -> -> 0 `i `l ]
+"38
+[; ;./MPU6050.h: 38:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"40
+[; ;./MPU6050.h: 40:     for (int i=0; i<2000; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 2000 `i 1139  ]
+[e $U 1140  ]
+[e :U 1139 ]
+{
+"41
+[; ;./MPU6050.h: 41:         sum += MPU6050_ReadGyroZ();
+[e =+ _sum -> ( _MPU6050_ReadGyroZ ..  `l ]
+"42
+[; ;./MPU6050.h: 42:         _delay((unsigned long)((2)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"43
+[; ;./MPU6050.h: 43:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 2000 `i 1139  ]
+[e :U 1140 ]
+}
+"44
+[; ;./MPU6050.h: 44:     gyro_z_offset = sum / 2000;
+[e = _gyro_z_offset -> / _sum -> -> 2000 `i `l `s ]
+"46
+[; ;./MPU6050.h: 46:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"47
+[; ;./MPU6050.h: 47: }
+[e :UE 1138 ]
+}
+"49
+[; ;./MPU6050.h: 49: volatile float yaw_angle = 0.0f;
+[v _yaw_angle `Vf ~T0 @X0 1 e ]
+[i _yaw_angle
+-> .0.0 `f
+]
+"51
+[; ;./MPU6050.h: 51: void updateYaw() {
+[v _updateYaw `(v ~T0 @X0 1 ef ]
+{
+[e :U _updateYaw ]
+[f ]
+"52
+[; ;./MPU6050.h: 52:     int16_t gyro_z_raw = 0;
+[v _gyro_z_raw `s ~T0 @X0 1 a ]
+[e = _gyro_z_raw -> -> 0 `i `s ]
+"53
+[; ;./MPU6050.h: 53:     float gyro_z_dps = 0.0f;
+[v _gyro_z_dps `f ~T0 @X0 1 a ]
+[e = _gyro_z_dps -> .0.0 `f ]
+"56
+[; ;./MPU6050.h: 56:     gyro_z_raw = MPU6050_ReadGyroZ();
+[e = _gyro_z_raw ( _MPU6050_ReadGyroZ ..  ]
+"59
+[; ;./MPU6050.h: 59:     int16_t corrected = gyro_z_raw - gyro_z_offset;
+[v _corrected `s ~T0 @X0 1 a ]
+[e = _corrected -> - -> _gyro_z_raw `i -> _gyro_z_offset `i `s ]
+"62
+[; ;./MPU6050.h: 62:     gyro_z_dps = (float)corrected / 131.0f;
+[e = _gyro_z_dps / -> _corrected `f -> .131.0 `f ]
+"65
+[; ;./MPU6050.h: 65:     yaw_angle += gyro_z_dps * 0.25f;
+[e =+ _yaw_angle -> * _gyro_z_dps -> .0.25 `f `Vf ]
+"69
+[; ;./MPU6050.h: 69:     if (yaw_angle > 360) yaw_angle -= 360;
+[e $ ! > _yaw_angle -> -> 360 `i `f 1143  ]
+[e =- _yaw_angle -> -> 360 `i `Vf ]
+[e :U 1143 ]
+"70
+[; ;./MPU6050.h: 70:     if (yaw_angle < 0) yaw_angle += 360;
+[e $ ! < _yaw_angle -> -> 0 `i `f 1144  ]
+[e =+ _yaw_angle -> -> 360 `i `Vf ]
+[e :U 1144 ]
+"71
+[; ;./MPU6050.h: 71: }
+[e :UE 1142 ]
+}
+"73
+[; ;./MPU6050.h: 73: int16_t MPU6050_ReadAccelX(void) {
+[v _MPU6050_ReadAccelX `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadAccelX ]
+[f ]
+"74
+[; ;./MPU6050.h: 74:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"75
+[; ;./MPU6050.h: 75:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"76
+[; ;./MPU6050.h: 76:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"77
+[; ;./MPU6050.h: 77:     I2C_Write(0x3B);
+[e ( _I2C_Write (1 -> -> 59 `i `uc ]
+"78
+[; ;./MPU6050.h: 78:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"79
+[; ;./MPU6050.h: 79:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"80
+[; ;./MPU6050.h: 80:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"81
+[; ;./MPU6050.h: 81:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"82
+[; ;./MPU6050.h: 82:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"83
+[; ;./MPU6050.h: 83:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1145  ]
+"84
+[; ;./MPU6050.h: 84: }
+[e :UE 1145 ]
+}
+"86
+[; ;./MPU6050.h: 86: int16_t MPU6050_ReadAccelY(void) {
+[v _MPU6050_ReadAccelY `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadAccelY ]
+[f ]
+"87
+[; ;./MPU6050.h: 87:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"88
+[; ;./MPU6050.h: 88:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"89
+[; ;./MPU6050.h: 89:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"90
+[; ;./MPU6050.h: 90:     I2C_Write(0x3D);
+[e ( _I2C_Write (1 -> -> 61 `i `uc ]
+"91
+[; ;./MPU6050.h: 91:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"92
+[; ;./MPU6050.h: 92:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"93
+[; ;./MPU6050.h: 93:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"94
+[; ;./MPU6050.h: 94:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"95
+[; ;./MPU6050.h: 95:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"96
+[; ;./MPU6050.h: 96:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1146  ]
+"97
+[; ;./MPU6050.h: 97: }
+[e :UE 1146 ]
+}
+"99
+[; ;./MPU6050.h: 99: int16_t MPU6050_ReadAccelZ(void) {
+[v _MPU6050_ReadAccelZ `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadAccelZ ]
+[f ]
+"100
+[; ;./MPU6050.h: 100:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"101
+[; ;./MPU6050.h: 101:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"102
+[; ;./MPU6050.h: 102:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"103
+[; ;./MPU6050.h: 103:     I2C_Write(0x3F);
+[e ( _I2C_Write (1 -> -> 63 `i `uc ]
+"104
+[; ;./MPU6050.h: 104:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"105
+[; ;./MPU6050.h: 105:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"106
+[; ;./MPU6050.h: 106:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"107
+[; ;./MPU6050.h: 107:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"108
+[; ;./MPU6050.h: 108:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"109
+[; ;./MPU6050.h: 109:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1147  ]
+"110
+[; ;./MPU6050.h: 110: }
+[e :UE 1147 ]
+}
+"112
+[; ;./MPU6050.h: 112: int16_t MPU6050_ReadGyroX(void) {
+[v _MPU6050_ReadGyroX `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadGyroX ]
+[f ]
+"113
+[; ;./MPU6050.h: 113:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"114
+[; ;./MPU6050.h: 114:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"115
+[; ;./MPU6050.h: 115:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"116
+[; ;./MPU6050.h: 116:     I2C_Write(0x43);
+[e ( _I2C_Write (1 -> -> 67 `i `uc ]
+"117
+[; ;./MPU6050.h: 117:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"118
+[; ;./MPU6050.h: 118:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"119
+[; ;./MPU6050.h: 119:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"120
+[; ;./MPU6050.h: 120:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"121
+[; ;./MPU6050.h: 121:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"122
+[; ;./MPU6050.h: 122:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1148  ]
+"123
+[; ;./MPU6050.h: 123: }
+[e :UE 1148 ]
+}
+"125
+[; ;./MPU6050.h: 125: int16_t MPU6050_ReadGyroY(void) {
+[v _MPU6050_ReadGyroY `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadGyroY ]
+[f ]
+"126
+[; ;./MPU6050.h: 126:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"127
+[; ;./MPU6050.h: 127:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"128
+[; ;./MPU6050.h: 128:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"129
+[; ;./MPU6050.h: 129:     I2C_Write(0x45);
+[e ( _I2C_Write (1 -> -> 69 `i `uc ]
+"130
+[; ;./MPU6050.h: 130:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"131
+[; ;./MPU6050.h: 131:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"132
+[; ;./MPU6050.h: 132:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"133
+[; ;./MPU6050.h: 133:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"134
+[; ;./MPU6050.h: 134:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"135
+[; ;./MPU6050.h: 135:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1149  ]
+"136
+[; ;./MPU6050.h: 136: }
+[e :UE 1149 ]
 }
 "138
-[; ;./SSD1306.h: 138:     I2C_Stop();
-[e ( _I2C_Stop ..  ]
+[; ;./MPU6050.h: 138: int16_t MPU6050_ReadGyroZ(void) {
+[v _MPU6050_ReadGyroZ `(s ~T0 @X0 1 ef ]
+{
+[e :U _MPU6050_ReadGyroZ ]
+[f ]
 "139
-[; ;./SSD1306.h: 139: }
-[e :UE 1119 ]
+[; ;./MPU6050.h: 139:     uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"140
+[; ;./MPU6050.h: 140:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"141
+[; ;./MPU6050.h: 141:     I2C_Write(0x68 << 1);
+[e ( _I2C_Write (1 -> << -> 104 `i -> 1 `i `uc ]
+"142
+[; ;./MPU6050.h: 142:     I2C_Write(0x47);
+[e ( _I2C_Write (1 -> -> 71 `i `uc ]
+"143
+[; ;./MPU6050.h: 143:     I2C_RepeatedStart();
+[e ( _I2C_RepeatedStart ..  ]
+"144
+[; ;./MPU6050.h: 144:     I2C_Write((0x68 << 1) | 1);
+[e ( _I2C_Write (1 -> | << -> 104 `i -> 1 `i -> 1 `i `uc ]
+"145
+[; ;./MPU6050.h: 145:     high = I2C_Read(1);
+[e = _high ( _I2C_Read (1 -> -> 1 `i `uc ]
+"146
+[; ;./MPU6050.h: 146:     low = I2C_Read(0);
+[e = _low ( _I2C_Read (1 -> -> 0 `i `uc ]
+"147
+[; ;./MPU6050.h: 147:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"148
+[; ;./MPU6050.h: 148:     return (int16_t)((high << 8) | low);
+[e ) -> | << -> _high `i -> 8 `i -> _low `i `s ]
+[e $UE 1150  ]
+"149
+[; ;./MPU6050.h: 149: }
+[e :UE 1150 ]
 }
 "19 ./EUSART.h
 [; ;./EUSART.h: 19: volatile char rxData;
@@ -2763,7 +3291,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TXEN -> -> 1 `i `b ]
 "51
 [; ;./EUSART.h: 51: }
-[e :UE 1128 ]
+[e :UE 1153 ]
 }
 "53
 [; ;./EUSART.h: 53: void SendByte(unsigned char ch)
@@ -2780,17 +3308,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "55
 [; ;./EUSART.h: 55:     while(!TXIF);
-[e $U 1130  ]
-[e :U 1131 ]
-[e :U 1130 ]
-[e $ ! _TXIF 1131  ]
-[e :U 1132 ]
+[e $U 1155  ]
+[e :U 1156 ]
+[e :U 1155 ]
+[e $ ! _TXIF 1156  ]
+[e :U 1157 ]
 "56
 [; ;./EUSART.h: 56:     TXREG = ch;
 [e = _TXREG _ch ]
 "57
 [; ;./EUSART.h: 57: }
-[e :UE 1129 ]
+[e :UE 1154 ]
 }
 "59
 [; ;./EUSART.h: 59: void SendString(unsigned char *str) {
@@ -2801,8 +3329,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "60
 [; ;./EUSART.h: 60:     while (*str != '\0') {
-[e $U 1134  ]
-[e :U 1135 ]
+[e $U 1159  ]
+[e :U 1160 ]
 {
 "61
 [; ;./EUSART.h: 61:         SendByte(*str++);
@@ -2810,14 +3338,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;./EUSART.h: 62:     }
 }
-[e :U 1134 ]
+[e :U 1159 ]
 "60
 [; ;./EUSART.h: 60:     while (*str != '\0') {
-[e $ != -> *U _str `ui -> 0 `ui 1135  ]
-[e :U 1136 ]
+[e $ != -> *U _str `ui -> 0 `ui 1160  ]
+[e :U 1161 ]
 "63
 [; ;./EUSART.h: 63: }
-[e :UE 1133 ]
+[e :UE 1158 ]
 }
 "65
 [; ;./EUSART.h: 65: unsigned char GetByte()
@@ -2829,18 +3357,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "67
 [; ;./EUSART.h: 67:     while(!RCIF);
-[e $U 1138  ]
-[e :U 1139 ]
-[e :U 1138 ]
-[e $ ! _RCIF 1139  ]
-[e :U 1140 ]
+[e $U 1163  ]
+[e :U 1164 ]
+[e :U 1163 ]
+[e $ ! _RCIF 1164  ]
+[e :U 1165 ]
 "68
 [; ;./EUSART.h: 68:     return RCREG;
 [e ) _RCREG ]
-[e $UE 1137  ]
+[e $UE 1162  ]
 "69
 [; ;./EUSART.h: 69: }
-[e :UE 1137 ]
+[e :UE 1162 ]
 }
 "71
 [; ;./EUSART.h: 71: void EUSART_Rx_InterruptHandler (void) {
@@ -2856,7 +3384,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _rxFlag -> -> 1 `i `uc ]
 "74
 [; ;./EUSART.h: 74: }
-[e :UE 1141 ]
+[e :UE 1166 ]
 }
 "70 main.c
 [; ;main.c: 70: volatile unsigned long tone_toggle_count = 0;
@@ -2873,7 +3401,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "73
 [; ;main.c: 73:     if (PIR1bits.RCIF) {
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 1143  ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 1168  ]
 {
 "74
 [; ;main.c: 74:         EUSART_Rx_InterruptHandler();
@@ -2881,17 +3409,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75
 [; ;main.c: 75:     }
 }
-[e :U 1143 ]
+[e :U 1168 ]
 "77
 [; ;main.c: 77:     if (PIR1bits.TMR2IF) {
-[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 1144  ]
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 1169  ]
 {
 "78
 [; ;main.c: 78:         PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
 "80
 [; ;main.c: 80:         if (tone_toggle_count > 0) {
-[e $ ! > _tone_toggle_count -> -> -> 0 `i `l `ul 1145  ]
+[e $ ! > _tone_toggle_count -> -> -> 0 `i `l `ul 1170  ]
 {
 "81
 [; ;main.c: 81:             LATDbits.LATD1 ^= 1;
@@ -2902,8 +3430,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;main.c: 83:         } else {
 }
-[e $U 1146  ]
-[e :U 1145 ]
+[e $U 1171  ]
+[e :U 1170 ]
 {
 "84
 [; ;main.c: 84:             T2CONbits.TMR2ON = 0;
@@ -2914,14 +3442,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;main.c: 86:         }
 }
-[e :U 1146 ]
+[e :U 1171 ]
 "87
 [; ;main.c: 87:     }
 }
-[e :U 1144 ]
+[e :U 1169 ]
 "88
 [; ;main.c: 88: }
-[e :UE 1142 ]
+[e :UE 1167 ]
 }
 "90
 [; ;main.c: 90: void UpdateScreen(unsigned int dist) {
@@ -2940,7 +3468,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 94:     SSD1306_GotoStart();
 [e ( _SSD1306_GotoStart ..  ]
 "95
-[; ;main.c: 95:     sprintf(a, "%u cm\n", dist);
+[; ;main.c: 95:     sprintf(a, "%u\n", dist);
 [e ( _sprintf (1 , (. , -> &U _a `*uc :s 1C _dist ]
 "96
 [; ;main.c: 96:     SendString(a);
@@ -2950,7 +3478,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SSD1306_String (1 -> &U _a `*Cuc ]
 "99
 [; ;main.c: 99: }
-[e :UE 1147 ]
+[e :UE 1172 ]
 }
 "101
 [; ;main.c: 101: unsigned int GetDistance (void) {
@@ -2992,21 +3520,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
 "115
 [; ;main.c: 115:     while (!PORTDbits.RD3);
-[e $U 1149  ]
-[e :U 1150 ]
-[e :U 1149 ]
-[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 1150  ]
-[e :U 1151 ]
+[e $U 1174  ]
+[e :U 1175 ]
+[e :U 1174 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 1175  ]
+[e :U 1176 ]
 "116
 [; ;main.c: 116:     T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
 "117
 [; ;main.c: 117:     while (PORTDbits.RD3);
-[e $U 1152  ]
-[e :U 1153 ]
-[e :U 1152 ]
-[e $ != -> . . _PORTDbits 0 3 `i -> 0 `i 1153  ]
-[e :U 1154 ]
+[e $U 1177  ]
+[e :U 1178 ]
+[e :U 1177 ]
+[e $ != -> . . _PORTDbits 0 3 `i -> 0 `i 1178  ]
+[e :U 1179 ]
 "118
 [; ;main.c: 118:     T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
@@ -3019,10 +3547,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "123
 [; ;main.c: 123:     return distance_cm;
 [e ) _distance_cm ]
-[e $UE 1148  ]
+[e $UE 1173  ]
 "124
 [; ;main.c: 124: }
-[e :UE 1148 ]
+[e :UE 1173 ]
 }
 "126
 [; ;main.c: 126: void tone(unsigned int frequency, unsigned int duration_ms) {
@@ -3034,9 +3562,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "127
 [; ;main.c: 127:     if (frequency == 0) return;
-[e $ ! == _frequency -> -> 0 `i `ui 1156  ]
-[e $UE 1155  ]
-[e :U 1156 ]
+[e $ ! == _frequency -> -> 0 `i `ui 1181  ]
+[e $UE 1180  ]
+[e :U 1181 ]
 "130
 [; ;main.c: 130:     T2CONbits.TMR2ON = 0;
 [e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
@@ -3061,7 +3589,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _pr -> -> 0 `i `ui ]
 "142
 [; ;main.c: 142:     if (toggle_time_us <= 256) {
-[e $ ! <= _toggle_time_us -> -> 256 `i `ui 1157  ]
+[e $ ! <= _toggle_time_us -> -> 256 `i `ui 1182  ]
 {
 "143
 [; ;main.c: 143:         prescaler_bits = 0;
@@ -3072,9 +3600,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "145
 [; ;main.c: 145:     } else if ((toggle_time_us / 4) <= 256) {
 }
-[e $U 1158  ]
-[e :U 1157 ]
-[e $ ! <= / _toggle_time_us -> -> 4 `i `ui -> -> 256 `i `ui 1159  ]
+[e $U 1183  ]
+[e :U 1182 ]
+[e $ ! <= / _toggle_time_us -> -> 4 `i `ui -> -> 256 `i `ui 1184  ]
 {
 "146
 [; ;main.c: 146:         prescaler_bits = 1;
@@ -3085,9 +3613,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "148
 [; ;main.c: 148:     } else if ((toggle_time_us / 16) <= 256) {
 }
-[e $U 1160  ]
-[e :U 1159 ]
-[e $ ! <= / _toggle_time_us -> -> 16 `i `ui -> -> 256 `i `ui 1161  ]
+[e $U 1185  ]
+[e :U 1184 ]
+[e $ ! <= / _toggle_time_us -> -> 16 `i `ui -> -> 256 `i `ui 1186  ]
 {
 "149
 [; ;main.c: 149:         prescaler_bits = 2;
@@ -3098,18 +3626,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "151
 [; ;main.c: 151:     } else {
 }
-[e $U 1162  ]
-[e :U 1161 ]
+[e $U 1187  ]
+[e :U 1186 ]
 {
 "153
 [; ;main.c: 153:         return;
-[e $UE 1155  ]
+[e $UE 1180  ]
 "154
 [; ;main.c: 154:     }
 }
-[e :U 1162 ]
-[e :U 1160 ]
-[e :U 1158 ]
+[e :U 1187 ]
+[e :U 1185 ]
+[e :U 1183 ]
 "157
 [; ;main.c: 157:     T2CONbits.T2CKPS = prescaler_bits;
 [e = . . _T2CONbits 0 0 _prescaler_bits ]
@@ -3133,7 +3661,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
 "172
 [; ;main.c: 172: }
-[e :UE 1155 ]
+[e :UE 1180 ]
 }
 "174
 [; ;main.c: 174: void playNotes (void) {
@@ -3188,7 +3716,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _tone (2 , -> -> 523 `i `ui -> -> 500 `i `ui ]
 "190
 [; ;main.c: 190: }
-[e :UE 1163 ]
+[e :UE 1188 ]
 }
 "192
 [; ;main.c: 192: void playConfusedTone(void) {
@@ -3231,7 +3759,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _tone (2 , -> -> 370 `i `ui -> -> 200 `i `ui ]
 "204
 [; ;main.c: 204: }
-[e :UE 1164 ]
+[e :UE 1189 ]
 }
 "206
 [; ;main.c: 206: void playHappyTone(void) {
@@ -3268,7 +3796,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _tone (2 , -> -> 1760 `i `ui -> -> 180 `i `ui ]
 "216
 [; ;main.c: 216: }
-[e :UE 1165 ]
+[e :UE 1190 ]
 }
 "218
 [; ;main.c: 218: void noise(void) {
@@ -3281,9 +3809,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 50 `i ]
-[e $ < _i -> 1500 `i 1167  ]
-[e $U 1168  ]
-[e :U 1167 ]
+[e $ < _i -> 1500 `i 1192  ]
+[e $U 1193  ]
+[e :U 1192 ]
 {
 "220
 [; ;main.c: 220:         tone(i, 5);
@@ -3301,8 +3829,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 224:     }
 }
 [e = _i + _i -> 50 `i ]
-[e $ < _i -> 1500 `i 1167  ]
-[e :U 1168 ]
+[e $ < _i -> 1500 `i 1192  ]
+[e :U 1193 ]
 }
 "226
 [; ;main.c: 226:     _delay((unsigned long)((500)*(4000000/4000.0)));
@@ -3312,9 +3840,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 1500 `i ]
-[e $ > _i -> 50 `i 1170  ]
-[e $U 1171  ]
-[e :U 1170 ]
+[e $ > _i -> 50 `i 1195  ]
+[e $U 1196  ]
+[e :U 1195 ]
 {
 "229
 [; ;main.c: 229:         tone(i, 5);
@@ -3332,8 +3860,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 233:     }
 }
 [e = _i - _i -> 25 `i ]
-[e $ > _i -> 50 `i 1170  ]
-[e :U 1171 ]
+[e $ > _i -> 50 `i 1195  ]
+[e :U 1196 ]
 }
 "235
 [; ;main.c: 235:     _delay((unsigned long)((500)*(4000000/4000.0)));
@@ -3343,9 +3871,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 1173  ]
-[e $U 1174  ]
-[e :U 1173 ]
+[e $ < _i -> 20 `i 1198  ]
+[e $U 1199  ]
+[e :U 1198 ]
 {
 "238
 [; ;main.c: 238:         tone(1500, 5);
@@ -3363,8 +3891,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 242:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 1173  ]
-[e :U 1174 ]
+[e $ < _i -> 20 `i 1198  ]
+[e :U 1199 ]
 }
 "243
 [; ;main.c: 243:     _delay((unsigned long)((50)*(4000000/4000.0)));
@@ -3374,9 +3902,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 1176  ]
-[e $U 1177  ]
-[e :U 1176 ]
+[e $ < _i -> 10 `i 1201  ]
+[e $U 1202  ]
+[e :U 1201 ]
 {
 "245
 [; ;main.c: 245:         tone(1550, 5);
@@ -3394,8 +3922,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 249:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 1176  ]
-[e :U 1177 ]
+[e $ < _i -> 10 `i 1201  ]
+[e :U 1202 ]
 }
 "251
 [; ;main.c: 251:     _delay((unsigned long)((500)*(4000000/4000.0)));
@@ -3405,9 +3933,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 1179  ]
-[e $U 1180  ]
-[e :U 1179 ]
+[e $ < _i -> 10 `i 1204  ]
+[e $U 1205  ]
+[e :U 1204 ]
 {
 "254
 [; ;main.c: 254:         tone(750, 5);
@@ -3425,8 +3953,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 258:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 1179  ]
-[e :U 1180 ]
+[e $ < _i -> 10 `i 1204  ]
+[e :U 1205 ]
 }
 "259
 [; ;main.c: 259:     _delay((unsigned long)((100)*(4000000/4000.0)));
@@ -3436,9 +3964,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 1182  ]
-[e $U 1183  ]
-[e :U 1182 ]
+[e $ < _i -> 20 `i 1207  ]
+[e $U 1208  ]
+[e :U 1207 ]
 {
 "261
 [; ;main.c: 261:         tone(700, 5);
@@ -3456,12 +3984,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 265:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 1182  ]
-[e :U 1183 ]
+[e $ < _i -> 20 `i 1207  ]
+[e :U 1208 ]
 }
 "266
 [; ;main.c: 266: }
-[e :UE 1166 ]
+[e :UE 1191 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "268
@@ -3497,172 +4025,228 @@ Version 4.0 HI-TECH Software Intermediate Code
 "277
 [; ;main.c: 277:     TRISDbits.TRISD1 = 0;
 [e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-"280
-[; ;main.c: 280:     T1CON = 0x10;
+"278
+[; ;main.c: 278:     TRISDbits.TRISD0 = 1;
+[e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
+"281
+[; ;main.c: 281:     T1CON = 0x10;
 [e = _T1CON -> -> 16 `i `uc ]
-"282
-[; ;main.c: 282:     T2CON = 0x00;
-[e = _T2CON -> -> 0 `i `uc ]
 "283
-[; ;main.c: 283:     PIE1bits.TMR2IE = 1;
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 283:     T2CON = 0x00;
+[e = _T2CON -> -> 0 `i `uc ]
 "284
-[; ;main.c: 284:     PIR1bits.TMR2IF = 0;
+[; ;main.c: 284:     PIE1bits.TMR2IE = 1;
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+"285
+[; ;main.c: 285:     PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"286
-[; ;main.c: 286:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "287
-[; ;main.c: 287:     INTCONbits.GIE = 1;
+[; ;main.c: 287:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"288
+[; ;main.c: 288:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"289
-[; ;main.c: 289:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "290
-[; ;main.c: 290:     I2C_Init();
-[e ( _I2C_Init ..  ]
+[; ;main.c: 290:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "291
-[; ;main.c: 291:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 291:     I2C_Init();
+[e ( _I2C_Init ..  ]
 "292
-[; ;main.c: 292:     SSD1306_Init();
-[e ( _SSD1306_Init ..  ]
+[; ;main.c: 292:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "293
-[; ;main.c: 293:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 293:     SSD1306_Init();
+[e ( _SSD1306_Init ..  ]
 "294
-[; ;main.c: 294:     SSD1306_ClearScreen();
-[e ( _SSD1306_ClearScreen ..  ]
-"295
-[; ;main.c: 295:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;main.c: 294:     _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"295
+[; ;main.c: 295:     SSD1306_ClearScreen();
+[e ( _SSD1306_ClearScreen ..  ]
 "296
-[; ;main.c: 296:     USART_Init();
-[e ( _USART_Init ..  ]
+[; ;main.c: 296:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "297
-[; ;main.c: 297:     _delay((unsigned long)((100)*(4000000/4000.0)));
+[; ;main.c: 297:     USART_Init();
+[e ( _USART_Init ..  ]
+"298
+[; ;main.c: 298:     _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "299
-[; ;main.c: 299:     unsigned char cmd = 0;
+[; ;main.c: 299:     MPU6050_Init();
+[e ( _MPU6050_Init ..  ]
+"300
+[; ;main.c: 300:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"302
+[; ;main.c: 302:     unsigned char cmd = 0;
 [v _cmd `uc ~T0 @X0 1 a ]
 [e = _cmd -> -> 0 `i `uc ]
-"300
-[; ;main.c: 300:     unsigned char oldCmd = 0;
+"303
+[; ;main.c: 303:     unsigned char oldCmd = 0;
 [v _oldCmd `uc ~T0 @X0 1 a ]
 [e = _oldCmd -> -> 0 `i `uc ]
-"301
-[; ;main.c: 301:     unsigned char updateScn = 0;
+"304
+[; ;main.c: 304:     unsigned char updateScn = 0;
 [v _updateScn `uc ~T0 @X0 1 a ]
 [e = _updateScn -> -> 0 `i `uc ]
-"302
-[; ;main.c: 302:     unsigned int dist = 0;
+"305
+[; ;main.c: 305:     unsigned int dist = 0;
 [v _dist `ui ~T0 @X0 1 a ]
 [e = _dist -> -> 0 `i `ui ]
-"304
-[; ;main.c: 304:     while (1) {
-[e :U 1187 ]
-{
-"306
-[; ;main.c: 306:         if (cmd != oldCmd) {
-[e $ ! != -> _cmd `i -> _oldCmd `i 1189  ]
-{
 "307
-[; ;main.c: 307:             if (cmd == '1') {
-[e $ ! == -> _cmd `ui -> 49 `ui 1190  ]
-{
-"308
-[; ;main.c: 308:                 dist = GetDistance();
-[e = _dist ( _GetDistance ..  ]
+[; ;main.c: 307:     unsigned char a[10];
+[v _a `uc ~T0 @X0 -> 10 `i a ]
 "309
-[; ;main.c: 309:             }else if (cmd == '2') {
-}
-[e $U 1191  ]
-[e :U 1190 ]
-[e $ ! == -> _cmd `ui -> 50 `ui 1192  ]
-{
-"310
-[; ;main.c: 310:                 playNotes();
-[e ( _playNotes ..  ]
+[; ;main.c: 309:     unsigned int sensorTouch = 0;
+[v _sensorTouch `ui ~T0 @X0 1 a ]
+[e = _sensorTouch -> -> 0 `i `ui ]
 "311
-[; ;main.c: 311:             }else if (cmd == '3') {
-}
-[e $U 1193  ]
-[e :U 1192 ]
-[e $ ! == -> _cmd `ui -> 51 `ui 1194  ]
+[; ;main.c: 311:     while (1) {
+[e :U 1212 ]
 {
-"312
-[; ;main.c: 312:                 playConfusedTone();
-[e ( _playConfusedTone ..  ]
 "313
-[; ;main.c: 313:             }else if (cmd == '4') {
-}
-[e $U 1195  ]
-[e :U 1194 ]
-[e $ ! == -> _cmd `ui -> 52 `ui 1196  ]
+[; ;main.c: 313:         if (PORTDbits.RD0 && (sensorTouch == 0)) {
+[e $ ! && != -> . . _PORTDbits 0 0 `i -> 0 `i == _sensorTouch -> -> 0 `i `ui 1214  ]
 {
 "314
-[; ;main.c: 314:                 noise();
-[e ( _noise ..  ]
+[; ;main.c: 314:             sensorTouch = 1;
+[e = _sensorTouch -> -> 1 `i `ui ]
 "315
-[; ;main.c: 315:             }
-}
-[e :U 1196 ]
-[e :U 1195 ]
-[e :U 1193 ]
-[e :U 1191 ]
+[; ;main.c: 315:             noise();
+[e ( _noise ..  ]
 "316
-[; ;main.c: 316:             oldCmd = cmd;
-[e = _oldCmd _cmd ]
-"317
-[; ;main.c: 317:             updateScn = 1;
-[e = _updateScn -> -> 1 `i `uc ]
+[; ;main.c: 316:         }
+}
+[e :U 1214 ]
 "318
-[; ;main.c: 318:         }
-}
-[e :U 1189 ]
-"320
-[; ;main.c: 320:         if (updateScn == 1) {
-[e $ ! == -> _updateScn `i -> 1 `i 1197  ]
-{
+[; ;main.c: 318:         if (!PORTDbits.RD0)
+[e $ ! ! != -> . . _PORTDbits 0 0 `i -> 0 `i 1215  ]
+"319
+[; ;main.c: 319:             sensorTouch = 0;
+[e = _sensorTouch -> -> 0 `i `ui ]
+[e :U 1215 ]
 "321
-[; ;main.c: 321:             UpdateScreen(dist);
-[e ( _UpdateScreen (1 _dist ]
-"322
-[; ;main.c: 322:             updateScn = 0;
-[e = _updateScn -> -> 0 `i `uc ]
-"323
-[; ;main.c: 323:         }
-}
-[e :U 1197 ]
-"325
-[; ;main.c: 325:         if (rxFlag) {
-[e $ ! != -> _rxFlag `i -> 0 `i 1198  ]
+[; ;main.c: 321:         if (cmd != oldCmd) {
+[e $ ! != -> _cmd `i -> _oldCmd `i 1216  ]
 {
+"322
+[; ;main.c: 322:             if (cmd == '1') {
+[e $ ! == -> _cmd `ui -> 49 `ui 1217  ]
+{
+"323
+[; ;main.c: 323:                 dist = GetDistance();
+[e = _dist ( _GetDistance ..  ]
+"324
+[; ;main.c: 324:             }else if (cmd == '2') {
+}
+[e $U 1218  ]
+[e :U 1217 ]
+[e $ ! == -> _cmd `ui -> 50 `ui 1219  ]
+{
+"325
+[; ;main.c: 325:                 playNotes();
+[e ( _playNotes ..  ]
 "326
-[; ;main.c: 326:             cmd = rxData;
-[e = _cmd -> _rxData `uc ]
+[; ;main.c: 326:             }else if (cmd == '3') {
+}
+[e $U 1220  ]
+[e :U 1219 ]
+[e $ ! == -> _cmd `ui -> 51 `ui 1221  ]
+{
 "327
-[; ;main.c: 327:             SendByte(cmd);
-[e ( _SendByte (1 _cmd ]
+[; ;main.c: 327:                 playConfusedTone();
+[e ( _playConfusedTone ..  ]
 "328
-[; ;main.c: 328:             rxFlag = 0;
-[e = _rxFlag -> -> 0 `i `uc ]
+[; ;main.c: 328:             }else if (cmd == '4') {
+}
+[e $U 1222  ]
+[e :U 1221 ]
+[e $ ! == -> _cmd `ui -> 52 `ui 1223  ]
+{
 "329
-[; ;main.c: 329:         }
+[; ;main.c: 329:                 noise();
+[e ( _noise ..  ]
+"330
+[; ;main.c: 330:             }
 }
-[e :U 1198 ]
+[e :U 1223 ]
+[e :U 1222 ]
+[e :U 1220 ]
+[e :U 1218 ]
 "331
-[; ;main.c: 331:     }
-}
-[e :U 1186 ]
-[e $U 1187  ]
-[e :U 1188 ]
+[; ;main.c: 331:             oldCmd = cmd;
+[e = _oldCmd _cmd ]
+"332
+[; ;main.c: 332:             updateScn = 1;
+[e = _updateScn -> -> 1 `i `uc ]
 "333
-[; ;main.c: 333:     return;
-[e $UE 1185  ]
-"334
-[; ;main.c: 334: }
-[e :UE 1185 ]
+[; ;main.c: 333:         }
 }
-[p f _sprintf 8389632 ]
-[a 1C 37 117 32 99 109 10 0 ]
+[e :U 1216 ]
+"335
+[; ;main.c: 335:         if (updateScn == 1) {
+[e $ ! == -> _updateScn `i -> 1 `i 1224  ]
+{
+"336
+[; ;main.c: 336:             UpdateScreen(dist);
+[e ( _UpdateScreen (1 _dist ]
+"337
+[; ;main.c: 337:             updateScn = 0;
+[e = _updateScn -> -> 0 `i `uc ]
+"338
+[; ;main.c: 338:         }
+}
+[e :U 1224 ]
+"340
+[; ;main.c: 340:         if (rxFlag) {
+[e $ ! != -> _rxFlag `i -> 0 `i 1225  ]
+{
+"341
+[; ;main.c: 341:             cmd = rxData;
+[e = _cmd -> _rxData `uc ]
+"342
+[; ;main.c: 342:             SendByte(cmd);
+[e ( _SendByte (1 _cmd ]
+"343
+[; ;main.c: 343:             rxFlag = 0;
+[e = _rxFlag -> -> 0 `i `uc ]
+"344
+[; ;main.c: 344:         }
+}
+[e :U 1225 ]
+"346
+[; ;main.c: 346:         updateYaw();
+[e ( _updateYaw ..  ]
+"347
+[; ;main.c: 347:         SSD1306_ClearScreen();
+[e ( _SSD1306_ClearScreen ..  ]
+"348
+[; ;main.c: 348:         SSD1306_GotoStart();
+[e ( _SSD1306_GotoStart ..  ]
+"349
+[; ;main.c: 349:         sprintf(a, "%f\n", yaw_angle);
+[e ( _sprintf (1 , (. , -> &U _a `*uc :s 2C -> _yaw_angle `d ]
+"350
+[; ;main.c: 350:         SSD1306_String(a);
+[e ( _SSD1306_String (1 -> &U _a `*Cuc ]
+"352
+[; ;main.c: 352:         _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"354
+[; ;main.c: 354:     }
+}
+[e :U 1211 ]
+[e $U 1212  ]
+[e :U 1213 ]
+"356
+[; ;main.c: 356:     return;
+[e $UE 1210  ]
+"357
+[; ;main.c: 357: }
+[e :UE 1210 ]
+}
+[p f _sprintf 8397824 ]
+[a 1C 37 117 10 0 ]
+[a 2C 37 102 10 0 ]

@@ -15,6 +15,8 @@ extern "C" {
 #include "font.h"
 #include "I2C.h"
 
+#define SSD1306_I2C_ADDRESS 0x78 // SSD1306 I2C ADDRESS (0x3C << 1)
+
 /*
  * Implement below code for selective page and column update
  * 
