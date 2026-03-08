@@ -10,8 +10,8 @@
 
 // CONFIG2L
 #pragma config PWRT = OFF       // Power-up Timer Enable bit (PWRT disabled)
-#pragma config BOREN = OFF      // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
-#pragma config BORV = 3         // Brown-out Reset Voltage bits (VBOR set to 2.1V)
+#pragma config BOREN = BOHW     // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
+#pragma config BORV = 2         // Brown-out Reset Voltage bits (VBOR set to 2.1V)
 
 // CONFIG2H
 #pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
@@ -20,7 +20,7 @@
 // CONFIG3H
 #pragma config PBADEN = ON      // PORTB A/D Enable bit (PORTB<4:0> pins are configured as analog input channels on Reset)
 #pragma config LPT1OSC = OFF    // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)
-#pragma config MCLRE = OFF      // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
+#pragma config MCLRE = ON       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
 
 // CONFIG4L
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
@@ -66,6 +66,7 @@
 #include "SSD1306.h"
 #include "MPU6050.h"
 #include "EUSART.h"
+#include "PWM.h"
 
 volatile unsigned long tone_toggle_count = 0; // how many toggles left
 
@@ -265,6 +266,34 @@ void noise(void) {
     }
 }
 
+void delay_us_variable(unsigned int us)
+{
+    while(us--)
+    {
+        __delay_us(1);
+    }
+}
+
+void ServoPosition(int percent)
+{
+    unsigned int pulse;
+    int count;
+
+    if(percent < 0) percent = 0;
+    if(percent > 100) percent = 100;
+
+    pulse = 1000 + (percent * 10);   // 1000?2000 µs
+
+    for (count=0; count<5; count++)
+    {
+        LATCbits.LATC2 = 1;
+        delay_us_variable(pulse);
+        LATCbits.LATC2 = 0;
+
+        delay_us_variable(20000 - pulse);
+    }
+}
+
 void main(void) {
     OSCCON = 0b01100010;
     ADCON1 = 0x0F;
@@ -276,6 +305,17 @@ void main(void) {
     TRISDbits.TRISD2 = 0;   //HC-SR04 Trigger
     TRISDbits.TRISD1 = 0;   //Output for passive buzzer
     TRISDbits.TRISD0 = 1;   //TTP-223 Touch sensor
+    TRISCbits.TRISC2 = 0;   //RC2 made output for PWM
+    
+    TRISCbits.TRISC0 = 0;   //Motor pins
+    TRISCbits.TRISC1 = 0;
+    TRISDbits.TRISD5 = 0;
+    TRISDbits.TRISD6 = 0;
+    
+    LATCbits.LATC0 = 0;
+    LATCbits.LATC1 = 0;
+    LATDbits.LATD5 = 0;
+    LATDbits.LATD6 = 0;
 
     //Timer-1 for HC-SR04
     T1CON = 0x10;
@@ -294,7 +334,10 @@ void main(void) {
     __delay_ms(500);
     SSD1306_ClearScreen();
     __delay_ms(500);
-    USART_Init();
+    //PWM_Init(4000000, 1000, 4);
+    
+    //Commenting below block to test servo
+    /*USART_Init();
     __delay_ms(100);
     MPU6050_Init();
     __delay_ms(500);
@@ -306,19 +349,23 @@ void main(void) {
     
     unsigned char a[10];
     
-    unsigned int sensorTouch = 0;
+    unsigned int sensorTouch = 0;*/
+    
+    SSD1306_String("Initiated");
 
     while (1) {
         
-        if (PORTDbits.RD0 && (sensorTouch == 0)) {
+        //Touch sensor block
+        /*if (PORTDbits.RD0 && (sensorTouch == 0)) {
             sensorTouch = 1;
             noise();
         }
         
         if (!PORTDbits.RD0)
-            sensorTouch = 0;
+            sensorTouch = 0;*/
         
-        if (cmd != oldCmd) {
+        //UART block
+        /*if (cmd != oldCmd) {
             if (cmd == '1') {
                 dist = GetDistance();
             }else if (cmd == '2') {
@@ -341,16 +388,54 @@ void main(void) {
             cmd = rxData;
             SendByte(cmd);
             rxFlag = 0;
-        }
+        }*/
         
-        updateYaw();
+        //MPU6050 block
+        /*updateYaw();
         SSD1306_ClearScreen();
         SSD1306_GotoStart();
         sprintf(a, "%f\n", yaw_angle);
-        SSD1306_String(a);
+        SSD1306_String(a);*/
         
-        __delay_ms(50);
+        //__delay_ms(50);
         
+        LATCbits.LATC0 = 1;
+        //LATCbits.LATC1 = 1;
+        LATDbits.LATD5 = 1;
+        //LATDbits.LATD6 = 1;
+        
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
+        SSD1306_String("Motor ON");
+        
+        //PWM_DutyCycle(0);
+        LATCbits.LATC2 = 1;
+        __delay_us(1000);
+        LATCbits.LATC2 = 0;
+        __delay_ms(20);
+        __delay_ms(1000);
+        //PWM_DutyCycle(50);
+        LATCbits.LATC2 = 1;
+        __delay_us(1500);
+        LATCbits.LATC2 = 0;
+        __delay_ms(20);
+        __delay_ms(1000);
+        //PWM_DutyCycle(100);
+        LATCbits.LATC2 = 1;
+        __delay_us(2000);
+        LATCbits.LATC2 = 0;
+        __delay_ms(20);
+        __delay_ms(1000);
+        
+        LATCbits.LATC0 = 0;
+        LATCbits.LATC1 = 0;
+        LATDbits.LATD5 = 0;
+        LATDbits.LATD6 = 0;
+        
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
+        SSD1306_String("Motor OFF");
+        __delay_ms(1000);
     }
     
     return;

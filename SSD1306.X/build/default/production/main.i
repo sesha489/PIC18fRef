@@ -19,8 +19,8 @@
 
 
 #pragma config PWRT = OFF
-#pragma config BOREN = OFF
-#pragma config BORV = 3
+#pragma config BOREN = BOHW
+#pragma config BORV = 2
 
 
 #pragma config WDT = OFF
@@ -29,7 +29,7 @@
 
 #pragma config PBADEN = ON
 #pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
 
 #pragma config STVREN = ON
@@ -18765,6 +18765,58 @@ void EUSART_Rx_InterruptHandler (void) {
     rxFlag = 1;
 }
 # 69 "main.c" 2
+# 1 "./PWM.h" 1
+# 17 "./PWM.h"
+int TMR2PRESCALE;
+
+void PWM_Start()
+{
+ CCP1M0 = 0;
+ CCP1M1 = 0;
+    CCP1M2 = 1;
+    CCP1M3 = 1;
+
+ if(TMR2PRESCALE == 1){
+  T2CKPS0 = 0;
+  T2CKPS1 = 0;
+ }else if(TMR2PRESCALE == 4){
+  T2CKPS0 = 1;
+  T2CKPS1 = 0;
+ }else if(TMR2PRESCALE == 16){
+  T2CKPS0 = 0;
+  T2CKPS1 = 1;
+ }
+ TMR2ON = 1;
+}
+
+void PWM_Stop()
+{
+ CCP1M0 = 0;
+ CCP1M1 = 0;
+    CCP1M2 = 0;
+    CCP1M3 = 0;
+}
+
+void PWM_Init(long xtal, long pwmFreq, int TMR2PRS)
+{
+    TMR2PRESCALE = TMR2PRS;
+
+ PR2 = (xtal/(pwmFreq * 4 * TMR2PRESCALE))-1;
+
+ PWM_Start();
+}
+
+void PWM_DutyCycle(int percent)
+{
+ int Duty;
+
+    Duty = (percent * 4 * (PR2 + 1)) / 100;
+
+ CCPR1L = Duty>>2;
+    DC1B0 = Duty & 1;
+    DC1B1 = (Duty >> 1) & 1;
+}
+# 70 "main.c" 2
 
 volatile unsigned long tone_toggle_count = 0;
 
@@ -18964,6 +19016,34 @@ void noise(void) {
     }
 }
 
+void delay_us_variable(unsigned int us)
+{
+    while(us--)
+    {
+        _delay((unsigned long)((1)*(4000000/4000000.0)));
+    }
+}
+
+void ServoPosition(int percent)
+{
+    unsigned int pulse;
+    int count;
+
+    if(percent < 0) percent = 0;
+    if(percent > 100) percent = 100;
+
+    pulse = 1000 + (percent * 10);
+
+    for (count=0; count<5; count++)
+    {
+        LATCbits.LATC2 = 1;
+        delay_us_variable(pulse);
+        LATCbits.LATC2 = 0;
+
+        delay_us_variable(20000 - pulse);
+    }
+}
+
 void main(void) {
     OSCCON = 0b01100010;
     ADCON1 = 0x0F;
@@ -18975,6 +19055,17 @@ void main(void) {
     TRISDbits.TRISD2 = 0;
     TRISDbits.TRISD1 = 0;
     TRISDbits.TRISD0 = 1;
+    TRISCbits.TRISC2 = 0;
+
+    TRISCbits.TRISC0 = 0;
+    TRISCbits.TRISC1 = 0;
+    TRISDbits.TRISD5 = 0;
+    TRISDbits.TRISD6 = 0;
+
+    LATCbits.LATC0 = 0;
+    LATCbits.LATC1 = 0;
+    LATDbits.LATD5 = 0;
+    LATDbits.LATD6 = 0;
 
 
     T1CON = 0x10;
@@ -18993,63 +19084,48 @@ void main(void) {
     _delay((unsigned long)((500)*(4000000/4000.0)));
     SSD1306_ClearScreen();
     _delay((unsigned long)((500)*(4000000/4000.0)));
-    USART_Init();
-    _delay((unsigned long)((100)*(4000000/4000.0)));
-    MPU6050_Init();
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-
-    unsigned char cmd = 0;
-    unsigned char oldCmd = 0;
-    unsigned char updateScn = 0;
-    unsigned int dist = 0;
-
-    unsigned char a[10];
-
-    unsigned int sensorTouch = 0;
+# 354 "main.c"
+    SSD1306_String("Initiated");
 
     while (1) {
+# 402 "main.c"
+        LATCbits.LATC0 = 1;
 
-        if (PORTDbits.RD0 && (sensorTouch == 0)) {
-            sensorTouch = 1;
-            noise();
-        }
+        LATDbits.LATD5 = 1;
 
-        if (!PORTDbits.RD0)
-            sensorTouch = 0;
 
-        if (cmd != oldCmd) {
-            if (cmd == '1') {
-                dist = GetDistance();
-            }else if (cmd == '2') {
-                playNotes();
-            }else if (cmd == '3') {
-                playConfusedTone();
-            }else if (cmd == '4') {
-                noise();
-            }
-            oldCmd = cmd;
-            updateScn = 1;
-        }
-
-        if (updateScn == 1) {
-            UpdateScreen(dist);
-            updateScn = 0;
-        }
-
-        if (rxFlag) {
-            cmd = rxData;
-            SendByte(cmd);
-            rxFlag = 0;
-        }
-
-        updateYaw();
         SSD1306_ClearScreen();
         SSD1306_GotoStart();
-        sprintf(a, "%f\n", yaw_angle);
-        SSD1306_String(a);
+        SSD1306_String("Motor ON");
 
-        _delay((unsigned long)((50)*(4000000/4000.0)));
 
+        LATCbits.LATC2 = 1;
+        _delay((unsigned long)((1000)*(4000000/4000000.0)));
+        LATCbits.LATC2 = 0;
+        _delay((unsigned long)((20)*(4000000/4000.0)));
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+
+        LATCbits.LATC2 = 1;
+        _delay((unsigned long)((1500)*(4000000/4000000.0)));
+        LATCbits.LATC2 = 0;
+        _delay((unsigned long)((20)*(4000000/4000.0)));
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+
+        LATCbits.LATC2 = 1;
+        _delay((unsigned long)((2000)*(4000000/4000000.0)));
+        LATCbits.LATC2 = 0;
+        _delay((unsigned long)((20)*(4000000/4000.0)));
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+
+        LATCbits.LATC0 = 0;
+        LATCbits.LATC1 = 0;
+        LATDbits.LATD5 = 0;
+        LATDbits.LATD6 = 0;
+
+        SSD1306_ClearScreen();
+        SSD1306_GotoStart();
+        SSD1306_String("Motor OFF");
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
     }
 
     return;
